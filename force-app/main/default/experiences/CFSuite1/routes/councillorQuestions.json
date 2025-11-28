@@ -1,0 +1,12 @@
+{
+  "activeViewId" : null,
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Councillor_Requests__c",
+  "id" : "efcb8e5f-9380-4cf5-9356-e6120e9e532e",
+  "label" : "Councillor Questions",
+  "pageAccess" : "RequiresLogin",
+  "routeType" : "custom-councillor-requests",
+  "type" : "route",
+  "urlPrefix" : "councillor-requests"
+}

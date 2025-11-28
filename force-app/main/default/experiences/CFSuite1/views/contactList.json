@@ -1,0 +1,33 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2c4d98cb-beb3-46eb-84a6-67e2547dc362",
+  "label" : "Contact List",
+  "regions" : [ {
+    "id" : "fedb5d5b-191c-42a3-950d-22e7fa64d302",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "ead8b9d7-03c8-4757-998a-136060622d7f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4ed3c2b2-c57b-432c-b653-6a311e75d1cc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "9a611042-ba78-42a3-b5e2-cf833e18a83b",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-003"
+}

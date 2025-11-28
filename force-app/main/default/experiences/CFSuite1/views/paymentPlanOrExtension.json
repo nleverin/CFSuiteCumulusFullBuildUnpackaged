@@ -1,0 +1,58 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "6ee1b149-207d-41a4-936a-a9377b278196",
+  "label" : "Payment plan or extension",
+  "regions" : [ {
+    "id" : "19aedd9b-0604-4ed8-9118-cb29fb3540aa",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "813f0f6f-49b7-413c-8e1f-0dcb40425d65",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:paymentPlanorExtensionLWC",
+      "id" : "c07dc8cf-fe7a-430f-b4e8-812feed1279c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "af23cde7-f868-4e6b-9b05-0f55c35eb751",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "1aee33c6-24e3-4d0c-b130-28be2ba692aa",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Payment plan or short term arrangement"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "cad3f444-87c9-49bf-9a89-da2261a5d338",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0fd42bb5-e19d-4fbd-a87f-9fbff7d3702d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-paymentextension"
+}

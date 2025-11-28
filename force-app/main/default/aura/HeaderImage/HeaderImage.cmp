@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+    <aura:attribute name="backgroundUrl" type="String" default="" />
+    
+    <div class="">
+        <aura:if isTrue="{! not(empty(v.backgroundUrl)) }">
+            <div id="headerContent" class="headerContent" style="{! 'background-image:url(' + v.backgroundUrl + ')'}">
+            </div>
+            <aura:set attribute="else">
+                <div id="headerContent" class="headerContent">
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

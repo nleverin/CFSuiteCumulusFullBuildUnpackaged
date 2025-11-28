@@ -1,0 +1,36 @@
+<!-- c:HeaderLinks -->
+<aura:component controller="CustomLoginController">
+    <aura:attribute name="isGuest" type="Boolean" />
+    <aura:attribute name="notificationCount" type="Integer" default="0" />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.onInit }"/>
+    
+	<div>
+        <div class="nav-links">
+            <aura:if isTrue="{! (!v.isGuest)}">
+            <a class="nav-link" href="/s/">
+                <i class="fas fa-home"></i>
+                MY DASHBOARD
+            </a>
+            <a class="nav-link" href="/s/redirect-to-profile">
+                <i class="fas fa-user"></i>
+                MY ACCOUNT
+            </a>
+            </aura:if>
+             <aura:if isTrue="{!v.notificationCount}">
+            <div class="notification-container">
+                <i class="icon-notification fas fa-bell">
+                    <aura:if isTrue="{! v.notificationCount > 0 }">
+                        <span class="notification-count">{! v.notificationCount }</span>
+                    </aura:if>
+                </i>
+            </div>
+            </aura:if>
+            <div class="login-container">
+                <c:Login />
+            </div>
+        </div>
+        
+        
+    </div>
+</aura:component>

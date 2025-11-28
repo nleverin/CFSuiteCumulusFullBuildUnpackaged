@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFSuite_Customer_Insight__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The customer insight record that created this log</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The customer insight record that created this log</inlineHelpText>
+    <label>Customer Insight</label>
+    <referenceTo>CFSuite_Customer_Insight__c</referenceTo>
+    <relationshipLabel>CFSuite GPT Logs</relationshipLabel>
+    <relationshipName>CFSuite_GPT_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

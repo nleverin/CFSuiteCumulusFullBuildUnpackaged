@@ -1,0 +1,91 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Rates Add Property Manually</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Import the Design System style sheet -->
+      <apex:slds />
+        
+        <style>
+            body {
+            background-color: #f6f6f6;
+            font-family: "Open Sans", Arial, sans-serif;
+            margin-top: 2rem;
+    		margin-bottom: 2rem;
+            }
+            .container {
+            width: 640px;
+            margin: 0px auto;
+            border: 1px #eee solid;
+            padding: 30px;
+            background-color: #fff;
+            }
+            h1 {
+    		text-align: center;
+    		font-weight: bold;
+    		font-size: 1.8rem;
+            margin-top: 0px;
+            margin-bottom: 1.5rem;
+            }
+            p {
+            font-weight: normal;
+    		font-size: .96rem;
+            color: #252525;
+            -webkit-font-smoothing: antialiased;
+    		line-height: 1.5rem;
+            }
+            li {
+            margin-bottom: 1.5rem;
+            }
+            img {
+    		width: 90%;
+    		height: auto;
+    		border: 1px solid #eee;
+    		padding: .8rem;
+            }
+        </style>
+        
+    </head>
+    <body>
+      <!-- REQUIRED SLDS WRAPPER -->
+      <div class="container">
+        <!-- MASTHEAD -->
+          <h1>
+              How to manually add a property to your existing portal account
+          </h1>
+        <p class="slds-text-heading_label slds-m-bottom_small"> If you have already signed up for the Marion portal you don’t need to create another account, you can follow the instructions below to add the property to your account once your logged in. </p>
+        <!-- / MASTHEAD -->
+        <!-- PAGE HEADER -->
+        <!-- / PAGE HEADER -->
+        <!-- PRIMARY CONTENT WRAPPER -->
+        <div class="myapp slds-p-horizontal_medium">
+          <ol>
+            <li>
+                <p>Login to your account</p>
+                <p><b>Login Page -</b> 
+                    <a href="/CustomCommunityLogin" target="_blank">https://my.marion.sa.gov.au/CustomCommunityLogin</a>
+                </p>
+            </li>
+            <li><p>Once you are logged in click on the <b>My Property and Rates Tile</b></p>
+                <apex:image url="{!$Resource.MyPropertyRatesTile}"/>
+            </li>
+            <li><p>Click the <b>Add Property</b> button</p>
+                <apex:image url="{!$Resource.MyPropertyButton}"/>
+            </li>
+            <li><p>Now you should be able to use the relevant details on your rates notice to add the property to your account.</p>
+                <apex:image url="{!$Resource.AddAProperty}"/>
+            </li>
+          </ol>
+        </div>
+        <!-- / PRIMARY CONTENT WRAPPER -->
+        <!-- FOOTER -->
+        <!-- / FOOTER -->
+      </div>
+      <!-- / REQUIRED SLDS WRAPPER -->
+      <!-- JAVASCRIPT -->
+      <!-- / JAVASCRIPT -->
+    </body>
+  </html>
+</apex:page>

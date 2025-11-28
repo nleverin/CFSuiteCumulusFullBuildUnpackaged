@@ -1,0 +1,75 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "cfsuite1:Top_2_1_ColumnLayout",
+  "dataProviders" : [ ],
+  "id" : "3de704bd-41ac-43f3-8084-6a9476976e86",
+  "label" : "Refund credit balance",
+  "regions" : [ {
+    "id" : "0288f636-f726-4c41-a343-9724b47b6991",
+    "regionName" : "headerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "8e09298d-b222-490d-8ead-27c22018a7fb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e36baecf-8ad8-460f-8e29-92a66e7ef7c9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:refundCreditLWC",
+      "id" : "20e219aa-fc61-462a-9aab-db958644c04e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b7601f37-7c1d-48e0-812b-767827b50300",
+    "regionName" : "content_col1",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:needHelpLWC",
+      "id" : "243e2a1c-3207-4ff0-82c9-2fc62132d9bc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "832dd376-a271-43e9-9b47-6d42937c64d4",
+    "regionName" : "content_col2",
+    "type" : "region"
+  }, {
+    "id" : "bca1e163-2d17-4f67-a373-cce26cc10b71",
+    "regionName" : "footerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Refund credit balance"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "06a89495-79f9-4163-ac70-5f71d3c8a669",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "18b3107c-5d3d-400a-ae50-2c22c0e027a1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-refund-credit"
+}

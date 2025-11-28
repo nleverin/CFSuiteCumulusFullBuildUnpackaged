@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "3f52d635-c4b5-40d2-b483-2459e7365530",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "propertypayment__c",
+  "id" : "b32229a6-c57f-42f3-a331-868dcc55d5a4",
+  "label" : "Make a payment",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-property-payment",
+  "type" : "route",
+  "urlPrefix" : "property-payment"
+}

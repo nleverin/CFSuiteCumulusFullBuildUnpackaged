@@ -1,0 +1,58 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2f08120b-e77a-4a90-9703-d94351d3195d",
+  "label" : "My Questions",
+  "regions" : [ {
+    "id" : "0997a882-c843-4910-b663-03baa6eb039d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "",
+        "link2Path" : ""
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "43b3903e-dc5c-46f1-b6c7-e3aa04be40e2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:AllQuestions",
+      "id" : "8738c6d6-6cc3-47a7-8b50-58d95be00898",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aefb82d4-ca73-4f1c-8134-2b2f49d89efe",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "d7a93635-1856-44b4-b2f8-7e797937df1e",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Questions"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f2849c50-8456-4625-8a46-0815e1c2ccfd",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "24543082-66b5-49b1-b85e-54efd25f9500",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "custom-my-questions"
+}

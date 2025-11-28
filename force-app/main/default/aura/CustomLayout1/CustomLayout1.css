@@ -1,0 +1,24 @@
+.THIS .logoContainer {
+    background-image: t('url(' + brandLogoImage  + ')');	/*default file uploaded for theme*/
+}
+
+.THIS .cHeaderMobile .btn-login {
+    background-color: t(brandPrimary);
+}
+
+.THIS .cfsuite1RecentRequests button.followupButton {
+        background-color: red !important;
+}
+
+/* focus */
+.THIS .slds-button:focus {
+    filter: brightness(85%);
+}
+
+.THIS .btn-login:focus {
+    filter: brightness(85%) !important;
+}
+
+.THIS .hamburger-wrapper button:focus {
+    filter: brightness(85%) !important;
+}

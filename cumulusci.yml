@@ -1,0 +1,415 @@
+minimum_cumulusci_version: '4.6.0'
+project:
+    name: CFSuiteCumulusFullBuildUnpackaged
+    package:
+        name: CFSuiteCumulusFullBuildUnpackaged
+        api_version: '63.0'
+    dependencies:
+        - github: 'https://github.com/nleverin/CFSuitePkgFull'
+          unmanaged: True
+          password_env_name: CFSUITE_INSTALL_KEY
+          skip:
+            - unpackaged/post/communityConfig
+            - unpackaged/post/communityDeploy
+            - unpackaged/post/flowsForCommunity
+            - unpackaged/post/objects
+        - github: 'https://github.com/nleverin/CFSuiteSecurePayConnector' 
+          unmanaged: True
+          password_env_name: CFSUITE_INSTALL_KEY
+        - github: 'https://github.com/nleverin/CFSuiteRatesSecurepay'
+          unmanaged: True
+          password_env_name: CFSUITE_INSTALL_KEY
+          skip: 
+            - unpackaged/post/paymentPlanPage
+        - github: 'https://github.com/nleverin/CFSuitePulse' 
+          unmanaged: True
+          password_env_name: CFSUITE_INSTALL_KEY
+          skip:
+            - unpackaged/post/load_first
+            - unpackaged/post/load_second
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+    
+
+
+tasks:
+    robot:
+        options:
+            suites: robot/CFSuiteCumulusFullBuild/tests
+            options:
+                outputdir: robot/CFSuiteCumulusFullBuild/results
+
+    robot_testdoc:
+        options:
+            path: robot/CFSuiteCumulusFullBuild/tests
+            output: robot/CFSuiteCumulusFullBuild/doc/CFSuiteCumulusFullBuild_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
+    add_required_org_settings:
+        description: enable all missing settings 
+        class_path: cumulusci.tasks.salesforce.org_settings.DeployOrgSettings
+        options: 
+                definition_file: config/project-scratch-def.json
+    add_department_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Department__c
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            entries:
+                - fullName: "Environmental Health and Community Compliance"
+                  label: "Environmental Health and Community Compliance"
+
+    add_division_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Division_Portfolio__c
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            entries:
+                - fullName: "City Development"
+                  label: "City Development"
+    
+    add_team_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Team__c
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            entries:
+                - fullName: "Community Compliance"
+                  label: "Community Compliance"
+
+    add_work_category_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Work_Category__c
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            entries:
+                - fullName: "Animals - Dog and Cat - Unauthorised Breeder"
+                  label: "Animals - Dog and Cat - Unauthorised Breeder"
+                - fullName: "Animals - Dog - Attack : Investigate &amp; Resolve"
+                  label: "Animals - Dog - Attack : Investigate &amp; Resolve"
+                - fullName: "Animals - Dog - Noise"
+                  label: "Animals - Dog - Noise"
+                - fullName: "Animals - Dog - Wandering at Large"
+                  label: "Animals - Dog - Wandering at Large"
+                - fullName: "Bills Posting - Unauthorised"
+                  label: "Bills Posting - Unauthorised"
+                - fullName: "Finance - Update Personal Details - Business Name"
+                  label: "Finance - Update Personal Details - Business Name"
+                - fullName: "Footpaths - Maintenance - Repair"
+                  label: "Footpaths - Maintenance - Repair"
+                - fullName: "Roads - Maintenance - Repair"
+                  label: "Roads - Maintenance - Repair"
+                - fullName: "Councillor Question"
+                  label: "Councillor Question"
+                - fullName: "Animals - Dog - Keeping Excess Dogs"
+                  label: "Animals - Dog - Keeping Excess Dogs"
+
+    add_form_type_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: CFSuite_Request_Flow__c.Form_Type__c
+            record_types: "Case_Assignment,Case_Mapping,Category_Journey,Display_Category,Work_Order_Mapping"
+            entries:
+                - fullName: "Deflection"
+                  label: "Deflection"
+
+    add_next_step_values_no_ns:
+        description: "adds form type to picklists."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Data_Settings__c.Next_Step__c
+            record_types: "Guided_Request_Process,Question,Response,Display_Category,Work_Order_Mapping"
+            entries:
+                - fullName: "Flow"
+                  label: "Flow"
+    update_admin_profile_scratch_org: 
+        description: deploys the Trailforce data 
+        class_path: cumulusci.tasks.salesforce.ProfileGrantAllAccess 
+        options: 
+                record_types: 
+                - record_type: Data_Settings__c.Guided_Request_Process 
+                  page_layout: "Data_Settings__c-Data Settings Layout"
+                  default: true 
+                - record_type: Data_Settings__c.Response 
+                  page_layout: "Data_Settings__c-Response Layout"
+                - record_type: Data_Settings__c.Question 
+                  page_layout: "Data_Settings__c-Question Layout"
+                - record_type: CFSuite_Request_Flow__c.Display_Category 
+                  page_layout: "CFSuite_Request_Flow__c-Display Category Layout"
+                  default: true 
+                - record_type: CFSuite_Request_Flow__c.Category_Journey
+                  page_layout: "CFSuite_Request_Flow__c-Category Journey"
+                - record_type: CFSuite_Request_Flow__c.Case_Assignment 
+                  page_layout: "CFSuite_Request_Flow__c-Case Assignment Layout"
+                - record_type: CFSuite_Request_Flow__c.Work_Order_Mapping 
+                  page_layout: "CFSuite_Request_Flow__c-Work Order Mapping Layout"
+                - record_type: CFSuite_Preferred_Comms_Config__c.Customer_Notification 
+                  page_layout: "CFSuite_Preferred_Comms_Config__c-Communication Configuration Layout"
+                  default: true 
+                - record_type: CFSuite_Preferred_Comms_Config__c.Emergency_Notification 
+                  page_layout: "CFSuite_Preferred_Comms_Config__c-Emergency Notification Layout"
+                - record_type: Case.Application 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                - record_type: Case.Assess_Assign 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                - record_type: Case.Councillor_Question 
+                  page_layout: "Case-Councillor Question Layout"
+                - record_type: Case.Investigation 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                - record_type: Case.Perform_Works 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                - record_type: Case.Request_New 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                - record_type: Case.Standard_Request 
+                  page_layout: "Case-Standard Request Case Only CFSuite"
+                  default: true 
+                - record_type: Case.Standard_Request_Initial 
+                  page_layout: "Case-Standard_Request_Initial"
+                - record_type: Case.Update_Details 
+                  page_layout: "Case-Finance-PersonalDetails"
+                - record_type: PersonAccount.PersonAccount 
+                  default: true 
+                  person_account_default: true
+                - record_type: Account.Business 
+                  default: true
+                - record_type: Account.Business_Account
+                  default: false
+                  visible: false 
+                - record_type: Account.Overseas_Business
+                - record_type: Contact.Business_Contact
+                  default: true 
+                - record_type: Contact.Overseas_Contact 
+                - record_type: CFSuite_Misc__c.Category_Change_Log 
+                - record_type: CFSuite_Misc__c.Exception_Logs 
+                  default: true 
+                - record_type: CFSuite_Misc__c.File_Logs 
+                - record_type: CFSuite_Misc__c.Guest_User_Update 
+                - record_type: CFSuite_Misc__c.On_Behalf_Of 
+                include_packaged_objects: true
+                api_names: "Admin,cfsuite community login user,cfsuite councillor login user,Action Officer,Contact Centre"
+
+    update_admin_profile_scratch_org_no_rt: 
+        description: deploys the Trailforce data 
+        class_path: cumulusci.tasks.salesforce.ProfileGrantAllAccess 
+        options: 
+                record_types: 
+                - record_type: Property__c.Assessment 
+                  default: true 
+                - record_type: Property__c.Parcel 
+                - record_type: Data_Settings__c.Guided_Request_Process 
+                  default: true 
+                - record_type: Data_Settings__c.Response 
+                - record_type: Data_Settings__c.Question 
+                - record_type: CFSuite_Request_Flow__c.Display_Category 
+                  default: true 
+                - record_type: CFSuite_Request_Flow__c.Category_Journey
+                - record_type: CFSuite_Request_Flow__c.Case_Assignment 
+                - record_type: CFSuite_Request_Flow__c.Work_Order_Mapping 
+                - record_type: CFSuite_Preferred_Comms_Config__c.Customer_Notification 
+                  default: true 
+                - record_type: CFSuite_Preferred_Comms_Config__c.Emergency_Notification 
+                - record_type: Case.Application 
+                - record_type: Case.Assess_Assign 
+                - record_type: Case.Councillor_Question 
+                - record_type: Case.Investigation 
+                - record_type: Case.Perform_Works 
+                - record_type: Case.Request_New 
+                - record_type: Case.Standard_Request 
+                  default: true 
+                - record_type: Case.Standard_Request_Initial 
+                - record_type: Case.Update_Details 
+                - record_type: PersonAccount.PersonAccount 
+                  default: true 
+                  person_account_default: true
+                - record_type: Account.Business 
+                  default: true
+                - record_type: Account.Overseas_Business
+                - record_type: Contact.Business_Contact
+                  default: true 
+                - record_type: Contact.Overseas_Contact 
+                - record_type: CFSuite_Misc__c.Category_Change_Log 
+                - record_type: CFSuite_Misc__c.Exception_Logs 
+                  default: true 
+                - record_type: CFSuite_Misc__c.File_Logs 
+                - record_type: CFSuite_Misc__c.Guest_User_Update 
+                - record_type: CFSuite_Misc__c.On_Behalf_Of 
+                include_packaged_objects: true
+                api_names: "Admin,cfsuite community login user,cfsuite councillor login user,Action Officer,Contact Centre"
+
+    deploy_trial_data: 
+        description: deploys the Trailforce data 
+        class_path: cumulusci.tasks.bulkdata.load.LoadData 
+        options: 
+            mapping: "datasets/fullTrialData/mapping.yml" 
+            sql_path: "datasets/fullTrialData/data.sql" 
+            drop_missing_schema: True 
+            ignore_row_errors: True
+
+    execute_anon_entitlement_load:
+        description: Load the 2 trialforce data entitlements
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts\buildScripts\CreateEntitlement.apex
+
+
+    execute_anon_display_category_fix:
+        description: remove any form types from the display category
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts\buildScripts\SetDisplayCattoBlankFormType.apex
+    
+    data_mapping_trial: 
+        description: pulls the data mappings from the trialforce org 
+        class_path: cumulusci.tasks.bulkdata.GenerateMapping 
+        options: 
+            mapping: "datasets/fullTrialData/mapping.yml" 
+            sql_path: "datasets/fullTrialData/data.sql" 
+            include: "Account,cfsuite1__Property__c,cfsuite1__Property_Customer__c,cfsuite1__CFSuite_Request_Flow__c,cfsuite1__CFSuite_Map__c,cfsuite1__CFSuite_Map_Layers__c,cfsuite1__CFSuite_Map_Management__c,cfsuite1__CFSuite_Preferred_Comms_Config__c,cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_User_Setting__c,cfsuite1__CFSuite_User_Team__c,cfsuite1__CFSuiteIntegrationSettings__c,cfsuite1__CFSuiteSettings__c,cfsuite1__Data_Settings__c,cfsuite1__CFSuiteRatesSettings__c" 
+            ignore: "cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_Payment__c,cfsuite1__CFSuite_Bill__c,cfsuite1__CFSuite_Bill_Line_Item__c,cfsuite1__CFSuite_Inbox_Message__c,cfsuite1__CFSuite_Payment_Transaction_Log__c,CFSuite_Restricted_Page_Access__c,Resource__c, Asset,Case,Contact,cfsuite1__CFSuite_Misc__c,Knowledge__kav,Apex_Log__c,Campaign,Pricebook2,Product2,Opportunity,EmailMessage,SurveyInvitation,WorkOrder,WorkOrderLineItem,cfsuite1__Message_Queue__c,cfsuite1__SMS_Message__c,ContentVersion,cfsuite1__CFSuite_Article__c,cfsuite1__CFSuite_Categories__c,cfsuite1__Interested_Parties__c,cfsuite1__Installment_Plan__c" 
+            namespace_prefix: "cfsuite1" 
+            path: "datasets/fullTrialData/mapping.yml"
+
+    delete_reference_data:
+        description: this task removes all bill settings records
+        class_path: cumulusci.tasks.bulkdata.DeleteData
+        options:
+            objects: "cfsuite1__Property__c,cfsuite1__Property_Customer__c,cfsuite1__CFSuite_Request_Flow__c,cfsuite1__CFSuite_Map__c,cfsuite1__CFSuite_Map_Layers__c,cfsuite1__CFSuite_Map_Management__c,cfsuite1__CFSuite_Preferred_Comms_Config__c,cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_User_Setting__c,cfsuite1__CFSuite_User_Team__c,cfsuite1__CFSuiteIntegrationSettings__c,cfsuite1__CFSuiteSettings__c,cfsuite1__Data_Settings__c,cfsuite1__CFSuiteRatesSettings__c" 
+    
+    deploy_post_tokens:
+        description: Deploy unpackaged/post with token replacement
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+          unmanaged: true
+          replace_tokens:
+            - token: "%%%NAMESPACE%%%"
+              value: "cfsuite1__"
+    
+flows: 
+    dependencies: 
+        steps: 
+                .2:
+                    task: create_community
+                    options:
+                        name: CFSuite
+                        template: "Customer Service"
+                        skip_existing: true
+                .3: 
+                    task: create_blank_profile
+                    options:
+                        name: "cfsuite community login user"
+                        license: "Customer Community Login"
+                .4: 
+                    task: create_blank_profile
+                    options:
+                        name: "cfsuite councillor login user"
+                        license: "Customer Community Login"
+                .5: 
+                    task: create_blank_profile
+                    options:
+                        name: "Action Officer"
+                        license: "Salesforce"
+                .6: 
+                    task: create_blank_profile
+                    options:
+                        name: "Contact Centre"
+                        license: "Salesforce"
+                3:
+                    task: add_department_values_no_ns
+                3.1:
+                    task: add_division_values_no_ns
+                3.2:
+                    task: add_team_values_no_ns
+                3.3:
+                    task: add_work_category_values_no_ns
+                3.4:
+                    task: add_form_type_values_no_ns
+                3.5:
+                    task: add_next_step_values_no_ns
+
+    install_prod: 
+        steps: 
+                2: 
+                    flow: deploy_unmanaged
+
+    config_managed:
+        steps:
+                0:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_first
+                1:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_second
+                2:
+                    task: update_admin_profile_scratch_org_no_rt
+                90: 
+                    task: None
+                91: 
+                    task: deploy_trial_data
+                95:
+                    task: execute_anon_entitlement_load
+                96:
+                    task: execute_anon_display_category_fix
+
+    config_dev: 
+        steps: 
+                0:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_first
+                1:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_second
+                2:
+                    task: update_admin_profile_scratch_org_no_rt
+                90: 
+                    task: None
+                91: 
+                    task: deploy_trial_data
+                95:
+                    task: execute_anon_entitlement_load
+                96:
+                    task: execute_anon_display_category_fix
+
+orgs: 
+    scratch: 
+        release: 
+            config_file: orgs/release.json 
+            days: 30 
+            namespaced: "false" 
+ 
+        dev_namespaced: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True" 
+        
+        dev_namespaced_1: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+        
+        dev_namespaced_2: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+        
+        dev_namespaced_3: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+        
+        dev_namespaced_4: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"

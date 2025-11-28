@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "8c935612-4436-4236-8c96-e767197667c2",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "propertylink__c",
+  "id" : "88e29ad4-f7be-44e0-97b1-a4d6abe67c38",
+  "label" : "Add a property",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-propertylink",
+  "type" : "route",
+  "urlPrefix" : "propertylink"
+}

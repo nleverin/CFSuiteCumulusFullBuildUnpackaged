@@ -1,0 +1,89 @@
+<!--
+  @description       : 
+  @author            : Hugh Wheeler
+  @group             : 
+  @last modified on  : 05-25-2022
+  @last modified by  : Hugh Wheeler
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   03-18-2021   Hugh Wheeler   Initial Version
+-->
+<aura:component implements="forceCommunity:themeLayout">
+    <aura:attribute name="headerContent" type="Aura.Component[]" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="true" />
+    <aura:attribute name="search" type="Aura.Component[]" required="false" />
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
+    <aura:attribute name="topContent" type="Aura.Component[]" required="false" />
+    <aura:attribute name="bottomContent" type="Aura.Component[]" required="false" />
+    <aura:attribute name="footerContent" type="Aura.Component[]" />
+    <aura:attribute name="breadcrumbs" type="Aura.Component[]" />
+    <aura:attribute name="isMobile" type="Boolean" default="false" />
+    <aura:attribute name="isGuest" type="Boolean" default="true" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="Determine if device is mobile" />
+
+    <ltng:require styles="{!join(',',	
+                           $Resource.cfsuite1__FontAwesome + '/css/all.css')}" scripts="{!join(',',	
+                           $Resource.cfsuite1__HeaderMobileResource + '/q.js')}" />
+    <ltng:require styles="{! $Resource.cfsuite1__FontAwesome6 + '/css/all.css' }" />
+    <ltng:require styles="{!$Resource.ExternalCSSPortal}" />
+    <ltng:require styles="{!$Resource.ExternalCSSRates}" />
+    <div>
+        <div class="header-top">
+            <div class="{! v.isMobile ? 'mobile' : 'desktop'}">
+                <div class="slds-grid container">
+                    <div class="logo-wrapper">
+                        <a href="/s/">
+                            <div class="logoContainer" role="img" aria-label="Main homepage - City of Charles Sturt">
+                            </div>
+                        </a>
+
+
+                    </div>
+                    <div class="slds-col  logoLine">
+                        <p class="slds-show_large">Customer Portal</p>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical slds-col login-wrapper">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="profileMenuRegion">
+                                <p class="links"><i class="fa-solid fa-left slds-p-right_x-small"></i><a
+                                        href="https://www.charlessturt.sa.gov.au/">Back to Council website</a></p>
+                                <c:HeaderLinks isGuest='{!v.isGuest}' />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <c:HeaderMobile isGuest='{!v.isGuest}' notification="false"></c:HeaderMobile>
+
+
+        <div class="slds-grid slds-text-align_center">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="headerContent">
+                    {!v.headerContent}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 fullwidth">
+                {!v.topContent}
+            </div>
+        </div>
+
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 content">
+                {!v.body}
+            </div>
+        </div>
+        <div class="slds-grid template-footer">
+            <div class="slds-col slds-size_1-of-1">
+                {!v.footerContent}
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,48 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "08629fe6-bd7f-409c-8e74-a0b4ec91f30e",
+  "label" : "Account Management",
+  "regions" : [ {
+    "id" : "0cc83acb-97cd-40f9-bfbc-569df741cdaa",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "05a8f9ae-5d28-421e-bb57-5df2b53a0e5c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bf1db906-c1ed-4241-b2fd-634f08e4a874",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5c3f60f0-6b63-4563-b16d-a605fdc874e8",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Account Management"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e3a8a94f-fc0a-4256-bd52-92e0b3be6bbd",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c6f0a972-d91a-4d85-8d93-7bae2050b06f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "account-management"
+}

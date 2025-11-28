@@ -1,0 +1,33 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "4c9bd7a1-09de-4bfd-ad75-e9b19e3ec35b",
+  "label" : "Customer List",
+  "regions" : [ {
+    "id" : "3ebc783c-3421-48fb-bf86-c9cdba2fb38e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "37ba255e-1adc-4e87-95bc-74faebff2ad9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5a41da7c-0057-44ca-a7ef-1c6e13957f79",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5b1a3107-45dc-48e5-998c-1703f3abc981",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "list-001"
+}

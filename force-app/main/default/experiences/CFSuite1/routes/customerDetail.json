@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "688f1507-f4cf-4747-ad50-9a57db2716b6",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Account_Detail__c",
+  "id" : "90b825a3-aecc-4a62-ae87-43b3df91abb8",
+  "label" : "Customer Detail",
+  "routeType" : "detail-001",
+  "type" : "route",
+  "urlPrefix" : "account"
+}

@@ -1,0 +1,33 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "33f2a1aa-b847-45c1-bd17-f14fa05582a1",
+  "label" : "Feed Detail",
+  "regions" : [ {
+    "id" : "96f51673-3b3f-4ddb-9a7f-5677d156272a",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "ed7262f6-3d62-4d3a-9754-5bcb78bccf14",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c0e54ad2-d799-4a1f-9672-fef9ed1c9941",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ffa6e080-1501-4cd9-8353-dde5041fd151",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "feeditem-generic"
+}

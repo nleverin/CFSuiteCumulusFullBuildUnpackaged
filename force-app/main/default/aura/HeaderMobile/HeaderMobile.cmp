@@ -1,0 +1,90 @@
+<aura:component >
+    <aura:attribute name="loginUrl" type="String" default="/CustomCommunityLogin" />
+    <aura:attribute name="isGuest" type="Boolean"  />
+    <aura:attribute name ="notification" type ="integer"/>
+
+
+    <header class="header">
+        <div class="container">
+        <div class="container-fluid">
+            <div class="row row--main">
+                <div class="col-xs-9 col-sm-2 header__logo-wrapper"> 
+                    
+                    <a href="/s/" class="header__logo"> 	
+                        <div class="logoContainer" role="img" aria-label="Main homepage - CFSuite"></div>
+                    </a>	
+
+                </div>
+                <aura:if isTrue="{! (!v.isGuest)}">
+                <div class="col-sm-8 header__menu-wrapper" style="display: none;">
+                    <div class="row header__nav-wrapper">
+                        <div class="col-sm-12 header__utility-wrapper">
+                            <nav class="nav nav--utility">
+                                <ul class="nav__list">
+   
+                                    <li class="nav__list-item nav__list-item--0 nav__sub-list-item--no-children"> <a href="/s/" class="nav__list-link"> 
+                                        MY DASHBOARD
+                                        <span class="plus-minus-wrapper js-nav-icon"> <span class="plus-minus"></span> </span> </a> 
+                                    </li>
+                                    <li class="nav__list-item nav__list-item--1 nav__sub-list-item--no-children"> <a href="/s/redirect-to-profile" class="nav__list-link"> 
+                                        MY ACCOUNT
+                                        <span class="plus-minus-wrapper js-nav-icon"> <span class="plus-minus"></span> </span> </a> 
+                                    </li>
+                                    <aura:if isTrue="{! v.notification }">
+                                        <li class="nav__list-item nav__list-item--0 nav__sub-list-item--no-children"> <a href="/s/" class="nav__list-link"> 
+                                            <div class="notification-container"> NOTIFICATIONS 
+                                                <i class="icon-notification fas fa-bell"><span class="notification-count">{!v.notification}</span></i>
+                                            </div>
+                                            <span class="plus-minus-wrapper js-nav-icon"> <span class="plus-minus"></span> </span> </a> 
+                                        </li>
+                                    </aura:if>
+                                    <aura:if isTrue="{! v.isGuest }">
+                                        <li class="nav__list-item nav__list-item--3 nav__sub-list-item--no-children">
+                                            <a href="/CustomCommunityLogin" class="nav__list-link">
+                                                Login
+                                                <span class="plus-minus-wrapper js-nav-icon"> <span class="plus-minus"></span> </span> </a> 
+                                        </li>
+                                    </aura:if>
+                                    <aura:if isTrue="{!!v.isGuest }">
+                                        <li class="nav__list-item nav__list-item--3 nav__sub-list-item--no-children">
+                                            <a href="/secur/logout.jsp" class="nav__list-link">
+                                                Logout
+                                                <span class="plus-minus-wrapper js-nav-icon"> <span class="plus-minus"></span> </span> </a> 
+                                        </li>
+                                    </aura:if>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-sm-12 header__main-menu-wrapper">
+                            <nav class=" nav nav--main js-nav-main">
+                                <div class="nav__backdrop" style="top: 118px; height: 0px;"></div>
+                                
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-2 header__search-wrapper">
+                    <div class="hamburger-wrapper" > 
+                        <button type="button" onclick='{!c.hideshowMenu}' class="hamburger js-hamburger"  aria-label="Open or Close Menu">
+                            
+                            <span class="hamburger__inner"></span> 
+                        </button> 
+                    </div>
+                </div>
+               
+                    <aura:set attribute="else">
+                        
+                        <a href="{! v.loginUrl }" class="btn-login slds-button">Login</a>
+                    </aura:set>
+                    
+                </aura:if>
+            </div>
+            </div>
+            <div class="navbar-line"></div>
+        </div>
+    </header>
+
+  
+
+    
+</aura:component>

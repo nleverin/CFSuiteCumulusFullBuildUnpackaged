@@ -1,0 +1,60 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3f52d635-c4b5-40d2-b483-2459e7365530",
+  "label" : "Make a payment",
+  "regions" : [ {
+    "id" : "a3349fac-de17-42e6-938a-b55162a6dd4c",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "c73fc9a0-140a-4cde-97ca-5279e40edb50",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "directory" : "Sandbox"
+      },
+      "componentName" : "cfsuite1:makePropertyPaymentLWC",
+      "id" : "070efd25-0af7-4538-b9a4-2031767c1e88",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d2f2c03d-b724-4a38-88a0-1df63f9066db",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "04b6f0ff-601c-4746-8d4f-32bdf35a395a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Make a payment"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c1b55960-0ba4-4f4f-864a-416b8ca9c816",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8a087f2c-24e7-4d99-b0f4-aeb3e87f7680",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-property-payment"
+}

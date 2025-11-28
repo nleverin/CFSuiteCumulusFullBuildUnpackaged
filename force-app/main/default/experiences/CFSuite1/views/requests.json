@@ -1,0 +1,139 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d638a675-2806-4c03-b325-163cb2e3e7b0",
+  "label" : "Requests",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:HeaderImage",
+      "id" : "68fce0a8-7639-4123-b680-1a4d47e3b791",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "environmentType" : "Community"
+      },
+      "componentName" : "cfsuite1:cf_SmartSearch",
+      "id" : "659d066d-ab35-4387-aa86-b7f44da0e7b5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ce40fd6c-10d9-4557-b51e-765dfb5ba7b8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "Box10Color" : "#ffffff",
+        "Box11Color" : "#ffffff",
+        "Box12Color" : "#ffffff",
+        "Box1Color" : "#0F8C3B",
+        "Box1HoverText" : "Create a request about animals.",
+        "Box1Icon" : "fas fa-paw",
+        "Box1Link" : "/s/request-submit?id=DS-0004",
+        "Box1Order" : "1",
+        "Box1Title" : "Animals",
+        "Box2Color" : "#7BA63C",
+        "Box2HoverText" : "Create a request for anything to do with footpath maintenance.",
+        "Box2Icon" : "fas fa-walking",
+        "Box2Link" : "/s/request-submit?id=DS-0002",
+        "Box2Order" : "2",
+        "Box2Title" : "Footpaths",
+        "Box3Color" : "#B8BE23",
+        "Box3HoverText" : "Create a request about bill posting around the city.",
+        "Box3Icon" : "fas fa-paint-roller",
+        "Box3Link" : "/s/request-submit?id=DS-0003",
+        "Box3Order" : "3",
+        "Box3Title" : "Bill Posting",
+        "Box4Color" : "",
+        "Box4HoverText" : "",
+        "Box4Icon" : "",
+        "Box4Link" : "",
+        "Box4Order" : "4",
+        "Box4Title" : "",
+        "Box5Color" : "",
+        "Box5HoverText" : "",
+        "Box5Icon" : "",
+        "Box5Link" : "",
+        "Box5Order" : "5",
+        "Box5Title" : "",
+        "Box6Color" : "",
+        "Box6HoverText" : "",
+        "Box6Icon" : "",
+        "Box6Link" : "",
+        "Box6Order" : "6",
+        "Box6Title" : "",
+        "Box7Color" : "#B8BE23",
+        "Box7HoverText" : "",
+        "Box7Icon" : "",
+        "Box7Link" : "",
+        "Box7Order" : "7",
+        "Box7Title" : "",
+        "Box8Color" : "#D13132",
+        "Box8HoverText" : "",
+        "Box8Icon" : "",
+        "Box8Link" : "",
+        "Box8Order" : "8",
+        "Box8Title" : "",
+        "Box9Color" : "#0F8C3B",
+        "Box9HoverText" : "",
+        "Box9Icon" : "",
+        "Box9Link" : "",
+        "Box9Order" : "9",
+        "Box9Title" : "",
+        "displayLines" : "1",
+        "numberoftiles" : "3"
+      },
+      "componentName" : "cfsuite1:ShowMoreTopics",
+      "id" : "4846f4d5-951a-4993-9ca9-ca089f89cb80",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<hr />"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "e1eeb48b-c913-4ffb-8001-bd8085a02d64",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:CaseSearchBox",
+      "id" : "92655ae7-1f61-4339-9338-28f65eca0c68",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4c9d7e80-04f3-4f7b-bed2-1ed606fb59e6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "33d6f216-3e37-423b-b968-588c2d6529f0",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Requests"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a3c50612-e2ca-4084-873b-bacced1685af",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "41016b2c-cbe4-4c13-9b2a-69efa392fa3b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "GmaO63hLh8WZvq0wKd17GoRLxmPf60",
+  "type" : "view",
+  "viewType" : "custom-requests"
+}

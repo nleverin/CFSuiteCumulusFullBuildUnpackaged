@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "f286d50c-1f1a-474f-b086-666454f4a485",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "PropertySummary__c",
+  "id" : "79a1c71a-e6c1-4210-a0bc-a60a90ec3f41",
+  "label" : "PropertySummary",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-propertysummary",
+  "type" : "route",
+  "urlPrefix" : "propertysummary"
+}

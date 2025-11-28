@@ -1,0 +1,52 @@
+{
+"orgName": "Demo Company",
+"edition": "Enterprise",
+"features": ["PersonAccounts", "FieldService:5", "Knowledge", "ServiceCloud", "Entitlements", "AuthorApex", "Communities", "CustomerCommunityLogin", "DefaultWorkflowUser", "MarketingUser","ServiceUser"],
+  "settings": {
+    "nameSettings": {
+      "enableMiddleName": true,
+      "enableNameSuffix": true
+    },
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "forecastingSettings":{
+      "enableForecasts": true
+    },
+    "quoteSettings":{
+      "enableQuote": true
+    },
+    "pathAssistantSettings":{
+      "pathAssistantEnabled": true
+     },
+    "enhancedNotesSettings":{
+     "enableEnhancedNotes": true
+    },
+    "knowledgeSettings":{
+     "enableLightningKnowledge": true
+    },
+    "emailAdministrationSettings":{
+      "enableEnhancedEmailEnabled": true
+     },
+    "entitlementSettings":{
+     "enableEntitlements": true,
+     "enableMilestoneStoppedTime": true
+    },
+    "fieldServiceSettings":{
+     "enableWorkOrders": true
+    },
+    "surveySettings": {
+        "enableSurvey": true,
+        "enableSurveyOwnerCanManageResponse": true
+    },
+    "communitiesSettings":{
+      "enableNetworksEnabled": true,
+      "enableOotbProfExtUserOpsEnable": true
+     },
+       "experienceBundleSettings":{
+          "enableExperienceBundleMetadata": true
+       }
+
+    
+  }
+}

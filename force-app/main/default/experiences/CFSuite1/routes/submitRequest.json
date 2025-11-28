@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "68023bc8-8f79-4811-9d7a-6455414adcc4",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "request_submit__c",
+  "id" : "9f54b11a-9207-4546-9b6e-18206cae9acf",
+  "label" : "Submit request",
+  "pageAccess" : "Public",
+  "routeType" : "custom-request-submit",
+  "type" : "route",
+  "urlPrefix" : "request-submit"
+}

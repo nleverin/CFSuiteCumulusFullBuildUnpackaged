@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "6ee1b149-207d-41a4-936a-a9377b278196",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "paymentextension__c",
+  "id" : "6acbd71e-ed75-4f69-b191-df08f5949816",
+  "label" : "Payment plan or short term arrangement",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-paymentextension",
+  "type" : "route",
+  "urlPrefix" : "paymentextension"
+}

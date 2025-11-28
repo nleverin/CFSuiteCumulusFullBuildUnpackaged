@@ -1,0 +1,75 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "cfsuite1:Top_2_1_ColumnLayout",
+  "dataProviders" : [ ],
+  "id" : "694eca08-0945-4cd5-83e9-ad8bf1e7cdc5",
+  "label" : "Request payment plan",
+  "regions" : [ {
+    "id" : "61d30d9c-2e28-4d05-8d6f-7923bfa1516c",
+    "regionName" : "headerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "11ed66f2-cd15-40f6-a56d-974f7e94d66d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bbf2432d-3294-4207-8be9-a6121e901c9f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:requestPaymentPlanLWC",
+      "id" : "e129bc17-39e2-4ed4-8dfc-49d0bd3ae893",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "eee031b5-1edb-4be9-bcc7-cda02b6a1337",
+    "regionName" : "content_col1",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:needHelpLWC",
+      "id" : "6e197b15-eb85-44a2-9529-3d589445bb18",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fe092a27-7503-4c89-89ae-7a71afb5a41e",
+    "regionName" : "content_col2",
+    "type" : "region"
+  }, {
+    "id" : "6584dcfe-7449-4050-9706-1bebc9385374",
+    "regionName" : "footerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Request payment plan"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ca246a95-d46c-4133-8e21-e7eadf9145e1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "22e039d7-d540-45b7-ac82-f8ae6819c6e5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-request-payment-plan"
+}

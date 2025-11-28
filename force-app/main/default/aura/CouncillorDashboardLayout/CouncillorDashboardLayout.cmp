@@ -1,0 +1,92 @@
+<!--
+  @description       : 
+  @author            : Hugh Wheeler
+  @group             : 
+  @last modified on  : 05-25-2022
+  @last modified by  : Hugh Wheeler
+-->
+<aura:component implements="forceCommunity:themeLayout">
+    <ltng:require styles="{!$Resource.ExternalCSS}" />
+    <aura:attribute name="isGuest" type="Boolean" />
+    <aura:attribute name="headerContent" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="true" />
+    <aura:attribute name="search" type="Aura.Component[]" required="false" />
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
+    <aura:attribute name="topContent" type="Aura.Component[]" required="false" />
+    <aura:attribute name="bottomContent" type="Aura.Component[]" required="false" />
+    <aura:attribute name="footerContent" type="Aura.Component[]"/>
+    <aura:attribute name="isMobile" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="Determine if device is mobile"/>    
+    
+     <ltng:require  styles="{!join(',',
+                            $Resource.cfsuite1__FontAwesome + '/css/all.css')}"
+                   scripts="{!join(',',
+                            $Resource.cfsuite1__HeaderMobileResource + '/q.js')}"
+                  />
+    <div>
+        <div class="header-row">
+            <div class="container slds-text-align_right">
+                <i class="fas fa-home slds-p-right_x-small"></i><a href="https://www.marion.sa.gov.au/">Back to Council website</a> 
+            </div>
+        </div>
+    </div>
+    <div class="{! v.isMobile ? 'mobile' : 'desktop'}">
+
+        <div class="header-top">
+            <div class="header-content slds-grid slds-grid_align-spread">
+                <div class="slds-col logo-wrapper">
+                    <a href="/s/">	
+                        <div class="logoContainer" role="img" aria-label="Main homepage - City of Marion"></div>
+                    </a>	
+                    <div class="logoLine">Customer Portal</div>	
+                    
+                </div>	
+                <div class="slds-grid slds-grid_vertical slds-col login-wrapper">
+                <span>
+                                          <span class="slds-p-right_x-large"><a href="/s/frequently-asked-questions" target="_blank"><i class="fas fa-home slds-p-right_x-small"></i>Need help with your rates?</a></span> 
+                                <a href="https://www.marion.sa.gov.au/"><i class="fas fa-triangle slds-p-right_x-small tag"></i>Back to Council website</a>
+                    </span>                   <div class="slds-col slds-size_1-of-1">
+                        <div class="profileMenuRegion">
+                            
+                            <c:HeaderLinks isGuest='{!v.isGuest}' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <c:HeaderMobile isGuest='{!v.isGuest}' notification="{!v.notification}"></c:HeaderMobile>
+        <div class="slds-grid slds-text-align_center">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="headerContent">
+                    {!v.headerContent}
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 fullwidth">
+                {!v.topContent}
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 content">
+                {!v.body}
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 fullwidth">
+                {!v.bottomContent}
+            </div>
+        </div>
+        
+        <div class="slds-grid template-footer">
+            <div class="slds-col slds-size_1-of-1">
+                {!v.footerContent}
+            </div>
+        </div>
+    </div>
+</aura:component>

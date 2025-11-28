@@ -1,0 +1,48 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "42b253da-da4f-43da-a149-360ac7a437f9",
+  "label" : "Councillor Questions",
+  "regions" : [ {
+    "id" : "ce67b2f0-c2b1-476f-9c05-33841a4888bb",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flowName" : "Greensbay_Councillor_Case"
+      },
+      "componentName" : "cfsuite1:CouncillorRequest",
+      "id" : "1b52b16f-5b58-4cb4-95ef-abfe747d356c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "10f76a23-9f4e-429d-bf71-1c648ac90137",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4499c009-00d2-4bae-b749-09c79cf115ed",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Councillor Questions"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "87e7c42f-c9be-40fe-867b-6cf365138dd0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "84918d62-f685-4be3-b877-dd3c84f9b22f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "custom-councillor-requests"
+}

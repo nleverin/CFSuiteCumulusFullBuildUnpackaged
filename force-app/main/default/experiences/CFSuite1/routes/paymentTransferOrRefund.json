@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "3256a2e7-5606-46a5-b9f2-7ca14b09b452",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Payment_transfer_or_refund__c",
+  "id" : "357f05c9-b9ff-498b-bdb3-5e45dd336392",
+  "label" : "Payment transfer or refund",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-payment-transfer-or-refund",
+  "type" : "route",
+  "urlPrefix" : "payment-transfer-or-refund"
+}

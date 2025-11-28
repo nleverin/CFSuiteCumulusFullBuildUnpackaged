@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "694eca08-0945-4cd5-83e9-ad8bf1e7cdc5",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Request_payment_plan__c",
+  "id" : "1d0f365a-f15b-47ff-863b-2001705ea062",
+  "label" : "Request payment plan",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-request-payment-plan",
+  "type" : "route",
+  "urlPrefix" : "request-payment-plan"
+}

@@ -1,0 +1,66 @@
+{
+  "appPageId" : "70b6a2be-98ff-416f-b5bf-e693edfd30d9",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "cffbffa7-37a0-49bc-b0e5-559c118447b9",
+  "label" : "Login",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "forgotPasswordLabel" : "Forgot your password?",
+        "forgotPasswordUrl" : "/ForgotPassword",
+        "loginButtonLabel" : "Log in",
+        "passwordLabel" : "Password",
+        "selfRegisterLabel" : "Not a member?",
+        "selfRegisterUrl" : "/SelfRegister",
+        "startUrl" : "",
+        "usernameLabel" : "Email"
+      },
+      "componentName" : "salesforceIdentity:loginForm2",
+      "id" : "1e956c26-2129-4133-b776-825d49b304ce",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p><a href=\"https://dev1-cttg.cs115.force.com/services/auth/sso/Facebook\" target=\"_self\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.X584ac2d03ac3a570f94a666d.1}\" style=\"width: 80.4px; height: 80.4px;\" /></a></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "a0be1033-3401-4cf8-8fff-77d087934146",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "headerText" : "",
+        "showHeader" : false
+      },
+      "componentName" : "salesforceIdentity:socialLogin2",
+      "id" : "293b7d42-efcf-42b1-9813-332fbcea2aae",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e098a46a-b8de-4591-a9cf-24ba9991da43",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Login"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a142cb8e-1922-4e2b-94ac-bbca5392d90d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "efbb4481-1c55-4e83-9b62-25443f6a9ed1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "login-home"
+}

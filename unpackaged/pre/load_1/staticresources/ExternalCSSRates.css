@@ -1,0 +1,7043 @@
+:root {
+    --primaryColor: #0055a4;
+    --secondaryColor: #008a5f;
+    --primaryFontColor: #1D1D1F;
+    --secondaryFontColor: #4A4A4A;
+    --backgroundLight: #F7F7F7;
+    --borderLight: #d6d6d6;
+}
+
+/* START Common styles */
+
+.rates,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: 'Lato' !important;
+}
+
+/* BUTTONS */
+
+.btn-customstd,
+.slds-button_neutral {
+    padding: 9px;
+}
+
+.rates .slds-button_brand {
+    margin-top: 2rem;
+}
+
+.slds-button_neutral {
+    color: #0055a4;
+    border: 1px solid #0055a4;
+    background-color: #fff;
+}
+
+.slds-button_neutral:hover,
+.slds-button_neutral:focus,
+c-linked-properties-detail-l-w-c .actions .btn-block:hover,
+c-linked-properties-detail-l-w-c .actions .btn-block:focus {
+    color: #0055a4 !important;
+    background-color: #f9f9f9;
+}
+
+.rates .btn-return {
+    color: var(--lwc-brandTextLink, rgb(0, 85, 164));
+    text-decoration: underline;
+    width: auto;
+    padding-top: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Lato' !important;
+}
+
+.rates .slds-radio_button-group {
+    border-color: #858585;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #D1D5DB;
+}
+
+.rates .frequency .slds-radio_faux {
+    border: none;
+    font-family: 'Lato';
+}
+
+.rates .slds-radio_button-group .slds-radio_faux {
+    border: none;
+    font-family: 'Lato';
+}
+
+.rates .payment .slds-radio_button-group {
+    background-color: transparent;
+}
+
+c-linked-properties-detail-l-w-c .actions button {
+    margin-top: 0.8rem;
+}
+
+.rates .details .option {
+    margin-bottom: 8px;
+    line-height: 30px;
+}
+
+.rates .slds-radio_button-group .slds-radio_button__label {
+    line-height: 1.875rem;
+    width: 100%;
+    text-align: center;
+    color: #1b1b1b;
+    font-size: 1rem;
+    padding: 0.5rem 0px;
+    display: block;
+}
+
+.rates .slds-radio_button:first-child>.slds-radio_button__label {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.rates .slds-radio_button-group .slds-radio_button__label:hover,
+.slds-radio_button [type=radio]:checked+.slds-radio_button__label:hover {
+    background-color: #eee;
+    color: #1b1b1b;
+}
+
+.frequency .slds-radio_button:first-child {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px solid #D1D5DB;
+}
+
+.rates .slds-radio_button:last-child>.slds-radio_button__label {
+    border-radius: 0 4px 4px 0;
+}
+
+.frequency .slds-radio_button:last-child {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #D1D5DB;
+}
+
+.info-wraper {
+    font-size: 1rem;
+}
+
+.rates .slds-modal .custom .slds-button_brand {
+    width: auto;
+}
+
+.rates .btn-continue {
+    width: auto;
+}
+
+.rates .slds-radio_button [type=radio]:checked+.slds-radio_button__label,
+.slds-radio_button [type=radio]:checked+.slds-radio_button__label {
+    background-color: #0055a4;
+}
+
+/* HEADERS & p */
+
+.slds-text-body_regular {
+    font-size: 1rem;
+}
+
+.slds-text-color_weak {
+    color: #4B5563;
+}
+
+.cfsuite1Subbanner h1 {
+    display: none;
+}
+
+.rates h3,
+.rates h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0px 0 10px 0;
+    color: #000;
+    font-family: 'Lato';
+}
+
+.rates .details h3,
+.rates .details h4,
+.rates .reason-info h4 {
+    margin: 10px 0 20px 0;
+}
+
+.rates .property-title {
+    margin-bottom: 0px;
+}
+
+.rates .details .pay-title {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #D1D5DB;
+    padding-bottom: 20px;
+}
+
+.rates .details h2.pay-title {
+    font-size: 1.1rem;
+}
+
+.cfsuite1SetupDirectDebit .details h4 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 36px 0 14px 0;
+    margin: 0px;
+}
+
+.cfsuite1SetupDirectDebit .frequency h4:first-child {
+    margin-top: 0;
+    padding-top: 12px;
+}
+
+.rates .reason-info h4,
+.rates .frequency h4 {
+    padding: 32px 0 10px 0;
+    margin: 0px;
+}
+
+
+/* ICONS */
+
+.rates .pay-title i {
+    color: var(--lwc-brandTextLink, rgb(0, 85, 164));
+    position: relative;
+    top: -1px;
+}
+
+.rates .pay-title i.fa-check-circle,
+.rates .pay-title .info i {
+    /* .rates .details i  */
+    color: #008857;
+}
+
+.rates .pay-title .info i {
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+.rates .download-link i {
+    color: #0055a4;
+}
+
+.rates .details i.date-icon {
+    color: #5e6063;
+}
+
+.icon-light {
+    color: #9A9FA5;
+}
+
+.info-text i {
+    font-size: 1.2rem;
+}
+
+.check-icon {
+    background-color: #DCFCE7;
+    border-radius: 50%;
+    padding: 1.4rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: 68px;
+    height: 68px;
+}
+
+.check-icon i {
+      color: #009265;
+      font-size: 1.7rem;
+    }
+
+/* FORM FIELDS */
+
+.rates .slds-input,
+.rates .slds-select {
+    border: 1px solid #D1D5DB;
+    background-color: white !important;
+    color: #3f3f3f;
+    font-size: .9rem;
+    min-height: 56px;
+    padding: 8px 15px;
+}
+
+c-request-payment-plan-l-w-c
+.input-box.single .slds-input {
+    border: 1px solid #D1D5DB;
+    background-color: white !important;
+    color: #3f3f3f;
+    font-size: .9rem;
+    min-height: 56px;
+    padding: 8px 15px;
+    width: 380px;
+    max-width: 100%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-input,
+cfsuite1-payment-planor-extension-l-w-c .slds-select,
+.cfsuite1RefundCredit .slds-form-element .slds-input {
+    border: 1px solid #D1D5DB;
+    color: #696969;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-input,
+cfsuite1-make-property-payment-l-w-c .slds-select,
+.setupDirectDebit .slds-input {
+    height: 46px;
+}
+
+.cfsuite1setupDirectDebit .slds-input,
+cfsuite1-payment-planor-extension-l-w-c .slds-input {
+    padding: 10px;
+}
+
+/* END */
+
+/* Containers */
+
+.rates .details {
+    background-color: #fff;
+}
+
+@media (min-width: 480px) {
+    .rates .details {
+        padding: 30px 40px 36px;
+    }
+}
+
+/* END */
+
+/* Payment options buttons */
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group,
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button__label {
+    border: none;
+    border-radius: 0;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-button {
+    color: #4a4a4a;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_faux i {
+    display: block;
+    color: #b5b5b5;
+    font-size: 1.5rem;
+}
+
+/* END */
+
+/* ADDRESS TITLE */
+
+
+cfsuite1-make-property-payment-l-w-c .details .refund-title {
+    border-bottom: 1px solid #b4b4b4;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .refund-title h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .refund-title .refund-line {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .refund-title i {
+    color: #006fbe;
+    font-size: 1rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .refund-title .name {
+    font-size: 1.15em;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .refund-selected {
+    background-color: red;
+}
+
+c-property-payment-history-l-w-c .slds-select {
+    min-height: auto;
+    padding: 3px 10px;
+}
+
+/* END */
+
+/* THANKYOU */
+
+/* END */
+
+/* START MyProperties styles */
+
+.cfsuite1MyProperties h2 {
+    padding: 15px 0px;
+    font-size: 1.4rem;
+    color: #0055A4;
+    font-weight: bold;
+}
+
+.cfsuite1MyProperties h3.none {
+    padding: 15px 25px;
+    border-right: 1px solid #d7d6d6;
+    border-left: 1px solid #d7d6d6;
+    border-top: 1px solid #d7d6d6;
+}
+
+.cfsuite1MyProperties .properties {
+    border: 1px solid #d7d6d6;
+    padding: 15px 25px 40px;
+}
+
+.cfsuite1MyProperties .no-records .title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.cfsuite1MyProperties .no-records p {
+    margin-bottom: 1em;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.cfsuite1MyProperties .btn-add {
+    border-radius: 0px;
+}
+
+.cfsuite1MyProperties .btn-add i {
+    margin-right: 10px;
+}
+
+.cfsuite1MyProperties .no-records span {
+    text-decoration: none !important;
+    margin-right: 5px;
+    color: #1B8B67 !important;
+}
+
+.cfsuite1MyProperties .btn-add {
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 9px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.cfsuite1MyProperties .btn-add i {
+    margin-right: 10px;
+}
+
+@media (min-width: 500px) {
+    .cfsuite1MyProperties .btn-add {
+        width: 200px;
+    }
+}
+
+/* END */
+
+
+/* START LinkedPropertiesDetails styles */
+
+
+c-linked-properties-detail-l-w-c {
+    margin-bottom: 30px;
+}
+
+c-linked-properties-detail-l-w-c h2 .anum {
+    float: left;
+    font-weight: normal;
+    font-size: 0.8125em;
+    margin-top: 4px;
+}
+
+c-linked-properties-detail-l-w-c .status-sm {
+    text-align: right;
+    font-size: .9rem;
+}
+
+c-linked-properties-detail-l-w-c .status-sm i {
+    color: #F0AE00;
+    text-shadow: 0 0 6px #F0AE00;
+}
+
+.cDashboardLayoutCS c-linked-properties-detail-l-w-c .address .slds-medium-size_2-of-3 {
+    width: 100%;
+}
+
+c-linked-properties-detail-l-w-c .address {
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d7d6d6;
+    border-bottom: 1px solid #eee;
+}
+
+c-linked-properties-detail-l-w-c .separator5 {
+    margin-top: 5px;
+    display: flex;
+}
+
+c-linked-properties-detail-l-w-c .separator30 {
+    margin-top: 3.6em;
+    display: flex;
+}
+
+c-linked-properties-detail-l-w-c .download {
+    text-align: center;
+    font-weight: bold;
+}
+
+c-linked-properties-detail-l-w-c .download-link>span {
+    margin-left: 10px;
+    text-decoration: underline;
+    font-size: .95rem;
+    font-weight: normal;
+}
+
+c-linked-properties-detail-l-w-c .download-link span:hover {
+    text-decoration: none;
+}
+
+c-linked-properties-detail-l-w-c h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #fff;
+    font-family: 'Lato';
+    color: #565656;
+    margin-bottom: 0px;
+}
+
+c-linked-properties-detail-l-w-c .actions .slds-button_brand {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #f6f6f6;
+    font-family: 'Lato';
+    color: #565656;
+}
+
+c-linked-properties-detail-l-w-c .actions .btn-block {
+    color: #f6f6f6;
+    border: 1px solid #0055a4;
+    background-color: #0055a4;
+}
+
+c-linked-properties-detail-l-w-c .anum {
+    font-size: .9rem;
+}
+
+c-linked-properties-detail-l-w-c .property-content {
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #d7d6d6;
+    border-top: none;
+    display: flex;
+    align-items: inherit;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+c-linked-properties-detail-l-w-c .fullyear {
+    display: flex;
+    align-items: inherit;
+    padding-top: 14px;
+}
+
+c-linked-properties-detail-l-w-c .fullyear>div {
+    align-items: inherit;
+}
+
+c-linked-properties-detail-l-w-c .slds-size_1-of-1.fullyear .slds-container_right {
+    margin: 0 auto;
+}
+
+c-linked-properties-detail-l-w-c .paid {
+    padding: .7rem 0 0 .3rem;
+}
+
+c-linked-properties-detail-l-w-c .paid-message {
+    font-size: 1.4rem;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    color: #002a3a;
+}
+
+c-linked-properties-detail-l-w-c .paid-message p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+c-linked-properties-detail-l-w-c .paid-icon {
+    display: inline-block;
+    width: 24px;
+    margin-right: 1.8em;
+    vertical-align: top;
+}
+
+c-linked-properties-detail-l-w-c .paid .fal {
+    font-size: 2.3rem;
+    color: #1b806d;
+    padding-top: 3px;
+}
+
+c-linked-properties-detail-l-w-c .paid-message i.slds-hide_small {
+    font-size: 1em;
+    margin-right: 5px;
+    color: #009b77;
+}
+
+c-linked-properties-detail-l-w-c .actions,
+c-linked-properties-detail-l-w-c .requests {
+    align-self: flex-end;
+}
+
+c-linked-properties-detail-l-w-c .actions {
+    display: flex;
+}
+
+c-linked-properties-detail-l-w-c .requests {
+    position: relative;
+    bottom: 14px;
+}
+
+c-linked-properties-detail-l-w-c .requests p,
+c-linked-properties-detail-l-w-c .requests a {
+    font-size: .96rem;
+}
+
+c-linked-properties-detail-l-w-c .download {
+    padding-top: 38px;
+}
+
+c-linked-properties-detail-l-w-c .p-footer {
+    padding: 0px 30px 15px;
+    border: 1px solid #d7d6d6;
+    border-top: none;
+    font-size: 14px;
+}
+
+c-linked-properties-detail-l-w-c .p-footer .slds-col {
+    padding-top: 15px;
+}
+
+c-linked-properties-detail-l-w-c h4 {
+    font-size: 1rem;
+    margin-bottom: .5em;
+}
+
+c-linked-properties-detail-l-w-c .arrears,
+c-linked-properties-detail-l-w-c .quarterly {
+    display: flex;
+    align-items: inherit;
+}
+
+c-linked-properties-detail-l-w-c .quarterly {
+    margin-bottom: 17px;
+}
+
+c-linked-properties-detail-l-w-c .quarterly>div {
+    display: flex;
+}
+
+c-linked-properties-detail-l-w-c .text-red {
+    color: #D73632;
+}
+
+c-linked-properties-detail-l-w-c .title {
+    padding-top: 14px;
+}
+
+c-linked-properties-detail-l-w-c .amount *,
+c-linked-properties-detail-l-w-c .amount {
+    font-size: 1.55em;
+    font-weight: bold;
+    margin-bottom: .2em;
+    display: inline;
+    color: #000;
+}
+
+c-linked-properties-detail-l-w-c .colored-label {
+    text-align: left;
+    font-weight: bold;
+    font-size: .78rem;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    padding: .2em 1.2em .2em 1.2em;
+    -webkit-font-smoothing: antialiased;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.red {
+    border: 1px solid #b5231d;
+    width: 163px;
+    text-align: center;
+    border-radius: 6px;
+    color: #b5231d;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.orange {
+    background-color: #F78222;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.yellow {
+    background-color: #fab029;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.green {
+    background-color: #028061;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.grey {
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+c-linked-properties-detail-l-w-c .colored-label.grey lightning-formatted-date-time {
+    margin-left: 5px;
+}
+
+c-linked-properties-detail-l-w-c .due-date {
+    font-weight: 600;
+    font-size: 1.15em;
+    color: #686868;
+}
+
+c-linked-properties-detail-l-w-c .fy-balance {
+    width: 100%;
+    padding: 20px 20px 12px 20px;
+    background-color: #f6f6f6;
+    text-align: center;
+    font-weight: 600;
+}
+
+c-linked-properties-detail-l-w-c .fy-balance>div {
+    margin-bottom: .3em;
+    color: #565656;
+    font-size: .90rem;
+}
+
+c-linked-properties-detail-l-w-c .fy-balance lightning-formatted-number {
+    font-weight: 600;
+    font-size: 1.75em;
+    margin-bottom: .2em;
+}
+
+c-linked-properties-detail-l-w-c .requests-links a {
+    color: #157bc6;
+}
+
+c-linked-properties-detail-l-w-c .requests button {
+    line-height: initial;
+    padding: 5px 5px;
+    font-weight: bold;
+    font-size: .72rem;
+    min-height: 42px;
+}
+
+c-linked-properties-detail-l-w-c .payable {
+    margin-bottom: 20px;
+}
+
+c-linked-properties-detail-l-w-c .slds-border_bottom {
+    border-bottom: 2px solid #e8e8e8;
+}
+
+c-linked-properties-detail-l-w-c .slds-border_top {
+    border-top: 2px solid #e8e8e8;
+}
+
+c-linked-properties-detail-l-w-c .ddmodal .slds-modal__header {
+    border: none;
+    padding-top: 3em;
+}
+
+c-linked-properties-detail-l-w-c .ddmodal .slds-modal__header h1 {
+    color: #252525;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+c-linked-properties-detail-l-w-c .slds-modal__content b {
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+c-linked-properties-detail-l-w-c .slds-modal__container .slds-button {
+    font-weight: 600;
+    width: 8em;
+    font-size: 1.1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2px;
+}
+
+c-linked-properties-detail-l-w-c .ddmodal .slds-modal__footer .slds-button_neutral {
+    background-color: #e3e3e3;
+    border: 1px solid #d9d9d9;
+    color: #292929;
+}
+
+c-linked-properties-detail-l-w-c .ddmodal .slds-modal__footer .slds-button_neutral:hover {
+    background-color: #cfcfcf;
+}
+
+@media (min-width: 768px) {
+    c-linked-properties-detail-l-w-c .anum {
+        float: right;
+    }
+
+    c-linked-properties-detail-l-w-c .property-content {
+        padding: 20px 30px 23px 25px;
+    }
+
+    c-linked-properties-detail-l-w-c .address {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    c-linked-properties-detail-l-w-c .payable {
+        margin-bottom: 0px;
+    }
+
+    c-linked-properties-detail-l-w-c .slds-size_1-of-1.fullyear .slds-container_right {
+        margin: 0 0 0 auto;
+    }
+
+    c-linked-properties-detail-l-w-c .fy-balance {
+        width: 220px;
+    }
+
+    c-linked-properties-detail-l-w-c .download,
+    c-linked-properties-detail-l-w-c .requests>div {
+        text-align: right;
+    }
+
+    c-linked-properties-detail-l-w-c .download>a {
+        margin-right: 10px;
+    }
+
+    c-linked-properties-detail-l-w-c .quarterly {
+        justify-content: center;
+    }
+
+    c-linked-properties-detail-l-w-c .paid {
+        padding-bottom: 1.7rem;
+    }
+
+    c-linked-properties-detail-l-w-c .colored-label {
+        text-align: center;
+    }
+
+    c-linked-properties-detail-l-w-c .quarterly,
+    c-linked-properties-detail-l-w-c .fullyear,
+    c-linked-properties-detail-l-w-c .arrears {
+        border: none;
+    }
+
+    c-linked-properties-detail-l-w-c .arrears,
+    c-linked-properties-detail-l-w-c .quarterly {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    c-linked-properties-detail-l-w-c .actions button {
+        width: 207px;
+    }
+
+    c-linked-properties-detail-l-w-c .property-content .content-cont {
+        max-width: 248px;
+    }
+
+    c-linked-properties-detail-l-w-c .title,
+    c-linked-properties-detail-l-w-c .amount,
+    c-linked-properties-detail-l-w-c .due-date {
+        max-width: 206px;
+    }
+}
+
+@media (max-width: 767px) {
+    c-linked-properties-detail-l-w-c .colored-label {
+        max-width: 200px;
+    }
+
+    c-linked-properties-detail-l-w-c .separator30 {
+        margin-top: 1.5em;
+    }
+
+    c-linked-properties-detail-l-w-c .paid {
+        padding: 1.8rem 0 0;
+    }
+
+    c-linked-properties-detail-l-w-c .fy-balance {
+        padding: 14px 10px 10px 10px;
+    }
+
+    c-linked-properties-detail-l-w-c .fy-link {
+        padding-top: 6px;
+        font-size: 1rem;
+    }
+
+    c-linked-properties-detail-l-w-c .status-sm {
+        float: left;
+        padding-top: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    c-linked-properties-detail-l-w-c .download {
+        padding-top: 20px;
+    }
+
+    c-linked-properties-detail-l-w-c .requests p {
+        padding-top: 20px;
+    }
+
+    c-linked-properties-detail-l-w-c .requests-links {
+        text-align: center;
+    }
+}
+
+@media (max-width: 499px) {
+    c-linked-properties-detail-l-w-c .fullyear {
+        padding-top: 14px;
+    }
+
+    c-linked-properties-detail-l-w-c .actions button.btn-manage {
+        margin-top: .8em;
+    }
+
+    c-linked-properties-detail-l-w-c .amount {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    c-linked-properties-detail-l-w-c .fy-balance {
+        width: 87%;
+        padding: 20px 10px 12px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 872px) {
+    c-linked-properties-detail-l-w-c .status-sm {
+        font-size: .83rem;
+    }
+}
+
+@media (min-width: 64em) {
+    c-linked-properties-detail-l-w-c .slds-large-size_7-of-12 {
+        width: calc(58.3333% - 1em);
+    }
+
+    c-linked-properties-detail-l-w-c .slds-large-size_5-of-12 {
+        width: calc(41.6667% + 1em);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 791px) {
+
+    c-linked-properties-detail-l-w-c .requests p,
+    c-linked-properties-detail-l-w-c .requests a {
+        font-size: .78rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 830px) {
+    c-linked-properties-detail-l-w-c .actions {
+        width: 100%;
+    }
+}
+
+@media (min-width: 814px) {
+    c-linked-properties-detail-l-w-c .status-sm {
+        position: relative;
+        top: -6px;
+    }
+}
+
+
+/* END */
+
+
+/* START cfsuite1PropertyLink styles */
+
+cfsuite1-property-link-l-w-c h1 {
+    margin: 44px auto 44px;
+    width: calc(100% - 186px);
+    padding-top: 1rem;
+    font-family: 'Imprima';
+    text-align: center;
+}
+
+cfsuite1-property-link-l-w-c .top-header h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+cfsuite1-property-link-l-w-c.slds-card {
+    border: none !important;
+}
+
+cfsuite1-property-link-l-w-c.slds-card header {
+    text-align: center;
+}
+
+cfsuite1-property-link-l-w-c.slds-card header h2 span {
+    font-size: 2.3em;
+}
+
+cfsuite1-property-link-l-w-c.slds-card header h2 {
+    margin-bottom: 20px;
+}
+
+cfsuite1-property-link-l-w-c .noticehelp {
+    margin-top: 15px;
+    display: block;
+}
+
+cfsuite1-property-link-l-w-c p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+cfsuite1-property-link-l-w-c lightning-input label,
+cfsuite1-property-link-l-w-c .slds-form-element__label[lwc-4eeu5m3ocg9] {
+    font-size: 1.125rem !important;
+    font-weight: 600;
+    color: #333 !important;
+}
+
+cfsuite1-property-link-l-w-c .error {
+    color: #ea001e;
+}
+
+cfsuite1-property-link-l-w-c .cont-body {
+    padding: 40px 40px 35px 40px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+cfsuite1-property-link-l-w-c lightning-input label {
+    margin-top: 5px;
+}
+
+cfsuite1-property-link-l-w-c lightning-input input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid 1px #dadada;
+    margin-bottom: 7px;
+    height: 52px;
+}
+
+cfsuite1-property-link-l-w-c .slds-checkbox_faux {
+    border: 1px solid #8A8A8A;
+    margin-right: 1em !important;
+}
+
+cfsuite1-property-link-l-w-c lightning-radio-group .slds-radio {
+    margin-bottom: 1rem;
+}
+
+cfsuite1-property-link-l-w-c .slds-checkbox__label .slds-form-element__label {
+    display: block;
+}
+
+cfsuite1-property-link-l-w-c button.slds-button,
+cfsuite1-property-link-l-w-c .slds-button * {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-weight: bold;
+}
+
+cfsuite1-property-link-l-w-c button.cancel {
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+cfsuite1-property-link-l-w-c button.cancel:hover {
+    text-decoration: none;
+}
+
+cfsuite1-property-link-l-w-c .hruler {
+    border-top: solid 1px #d4d4d4;
+    margin: 26px 0;
+}
+
+cfsuite1-property-link-l-w-c .help {
+    text-decoration: underline !important;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+cfsuite1-property-link-l-w-c .help>span {
+    margin-right: 6px;
+    font-size: 1.15em !important;
+}
+
+cfsuite1-property-link-l-w-c .tacurl:hover {
+    text-decoration: none !important;
+}
+
+cfsuite1-property-link-l-w-c .input-agent .slds-checkbox_faux {
+    display: none;
+}
+
+cfsuite1-property-link-l-w-c .input-agent .slds-form-element__label {
+    cursor: pointer;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox {
+    border: solid 1px #b2b2b2;
+    display: block;
+    height: 28px;
+    width: 62px;
+    border-radius: 13px;
+    cursor: pointer;
+    position: relative;
+    background-color: #ffffff;
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 3px;
+    background-color: #008857;
+    border-radius: 13px;
+    -webkit-transition: left 500ms linear background-color 500ms linear;
+    -moz-transition: left 500ms linear background-color 500ms linear;
+    -ms-transition: left 500ms linear background-color 500ms linear;
+    -o-transition: left 500ms linear background-color 500ms linear;
+    transition: left 500ms linear background-color 500ms linear;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox div:after {
+    content: 'No';
+    left: 27px;
+    top: .5px;
+    color: #252525;
+    position: absolute;
+    font-weight: normal;
+    -webkit-transition: content 500ms linear left 500ms linear color 500ms linear;
+    -moz-transition: content 500ms linear left 500ms linear color 500ms linear;
+    -ms-transition: content 500ms linear left 500ms linear color 500ms linear;
+    -o-transition: content 500ms linear left 500ms linear color 500ms linear;
+    transition: content 500ms linear left 500ms linear color 500ms linear;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox.active {
+    background-color: #008857;
+    border: 1px solid #008857;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox.active div {
+    left: 37px;
+    background-color: #fff;
+}
+
+cfsuite1-property-link-l-w-c .fancy-checkbox.active div:after {
+    content: 'Yes';
+    left: -26px;
+    color: #fff;
+}
+
+cfsuite1-property-link-l-w-c.slds-backdrop {
+    max-width: 100%;
+}
+
+cfsuite1-property-link-l-w-c.slds-modal {
+    max-width: 980px;
+    outline: none;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__container {
+    max-width: 860px;
+    margin: 0px auto;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content {
+    padding: 35px;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__header {
+    justify-content: center;
+    padding: 35px;
+    padding-bottom: 12px;
+    border: none;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__header h1 {
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 0px;
+    text-align: left;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content h2 {
+    font-size: 1.5em;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content p {
+    margin-bottom: 0px;
+    color: #565656;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__header .slds-button__icon {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content ul {
+    list-style: lower-alpha;
+    font-size: .9rem;
+    color: #292929;
+    margin-left: 20px;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content ul.roman {
+    list-style: lower-roman;
+    margin-left: 40px;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content ul li {
+    margin-top: 9px;
+    padding-left: 10px;
+}
+
+cfsuite1-property-link-l-w-c .slds-m-top_small {
+    margin-top: 0px !important;
+}
+
+cfsuite1-property-link-l-w-c .slds-modal__content .panel {
+    background-color: #F7F7F7;
+}
+
+cfsuite1-property-link-l-w-c .work-phone-modal {
+    margin-top: auto;
+    margin-left: 0;
+}
+
+cfsuite1-property-link-l-w-c .input-field .slds-input {
+    display: none;
+}
+
+cfsuite1-property-link-l-w-c .input-field_label {
+    font-size: 1rem !important;
+    font-weight: 600;
+    color: #565656;
+
+}
+
+cfsuite1-property-link-l-w-c .slds-button:focus {
+    background-color: #fff !important;
+    color: #292929 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+cfsuite1-property-link-l-w-c span.slds-checkbox_faux {
+    height: 19px;
+    width: 19px;
+    border: 1px solid #707070;
+}
+
+cfsuite1-property-link-l-w-c #tac span.slds-checkbox_faux {
+    margin-top: 1px;
+}
+
+cfsuite1-property-link-l-w-c .tac-label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    transition: text-shadow 500ms linear;
+    display: inline-block;
+    -webkit-transition: text-shadow 500ms linear;
+    -moz-transition: text-shadow 500ms linear;
+    -ms-transition: text-shadow 500ms linear;
+    -o-transition: text-shadow 500ms linear;
+    transition: text-shadow 500ms linear;
+}
+
+cfsuite1-property-link-l-w-c .tac-label.glow {
+    text-shadow: 0 0 10px red
+}
+
+cfsuite1-property-link-l-w-c #tac {
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+cfsuite1-property-link-l-w-c #tac span.slds-form-element__label,
+.THIS #accept span.slds-form-element__label {
+    display: none;
+}
+
+cfsuite1-property-link-l-w-c #accept {
+    position: relative;
+    top: -11px;
+}
+
+cfsuite1-property-link-l-w-c .flexme {
+    display: flex;
+    align-items: center;
+}
+
+cfsuite1-property-link-l-w-c .enter label {
+    display: block;
+}
+
+cfsuite1-property-link-l-w-c .input-field_label,
+cfsuite1-property-link-l-w-c .slds-required {
+    position: relative;
+    top: -8px;
+}
+
+cfsuite1-property-link-l-w-c h2.slds-card__header-title span.slds-text-heading_small {
+    margin: auto;
+}
+
+@media (max-width: 1164px) {
+    cfsuite1-property-link-l-w-c .slds-modal__container {
+        max-width: 70% !important;
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 48em) {
+    cfsuite1-property-link-l-w-c .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-property-link-l-w-c .slds-card__body {
+        padding: 40px 30px 35px 30px;
+    }
+
+    cfsuite1-property-link-l-w-c #tac span.slds-checkbox_faux {
+        margin-top: 5px;
+    }
+
+    cfsuite1-property-link-l-w-c #accept span.slds-checkbox_faux {
+        margin-top: 15px;
+    }
+
+    cfsuite1-property-link-l-w-c .flexme {
+        align-items: flex-start;
+    }
+
+    cfsuite1-property-link-l-w-c .slds-modal__container {
+        max-width: 95% !important;
+        width: 95% !important;
+    }
+}
+
+/* END */
+
+/* START FAQHelp styles */
+
+.cfsuite1FAQHelp .help {
+    padding: 30px 25px;
+    vertical-align: middle;
+    justify-content: center;
+    border: 1px solid rgb(217, 219, 221);
+    transition: border .15s linear;
+    background-color: #008857;
+    border-color: #008857;
+    color: #ffffff;
+    float: right;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1FAQHelp h2 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.cfsuite1FAQHelp span {
+    font-weight: normal;
+}
+
+.cfsuite1FAQHelp .faq {
+    color: #ffffff;
+}
+
+.cfsuite1FAQHelp hr {
+    margin-top: 0px;
+}
+
+.cfsuite1FAQHelp .line-2 {
+    padding: 13px 0px 0px;
+    font-family: 'LATO';
+    font-size: 1rem;
+}
+
+.cfsuite1FAQHelp .line-2 span {
+    font-weight: normal;
+    padding-top: 4px;
+}
+
+@media (min-width: 831px) {
+    .cfsuite1FAQHelp .help {
+        width: calc(100% - 2rem);
+    }
+
+    .cfsuite1FAQHelp .help-width {
+        width: calc(100% - 2rem);
+        float: right;
+    }
+
+    .cfsuite1FAQHelp hr {
+        display: none;
+    }
+}
+
+@media (max-width: 830px) {
+    .cfsuite1FAQHelp .help {
+        margin-top: 0px !important;
+    }
+
+    .cfsuite1FAQHelp .help-width {
+        margin-top: 50px !important;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 831px) and (max-width: 960px) {
+    .cfsuite1FAQHelp span {
+        font-size: .88rem;
+    }
+
+    .cfsuite1FAQHelp .help {
+        padding: 30px 18px;
+    }
+}
+
+/* END */
+
+/* START Subbanner styles */
+
+
+.cfsuite1Subbanner {
+    font-family: "Open Sans", Arial, sans-serif;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.cfsuite1Subbanner .sub-cont {
+    height: 210px;
+    background-position: top center;
+    background-image: url('/resource/Subbanner') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: .6rem;
+}
+
+.cfsuite1Subbanner .alin {
+    z-index: 1;
+}
+
+.cfsuite1Subbanner .bantitle {
+    color: white;
+    margin-top: 50px;
+    font-size: 2.42rem;
+}
+
+.cfsuite1Subbanner ul {
+    font-weight: bold;
+}
+
+.cfsuite1Subbanner .links li {
+    display: inline-block;
+}
+
+.cfsuite1Subbanner .links a {
+    color: #292929;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.cfsuite1Subbanner .current-title-color {
+    color: #008858;
+}
+
+.cfsuite1Subbanner .links a:hover {
+    text-decoration: underline;
+}
+
+.cfsuite1Subbanner .links a>i {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 799px) {
+    .cfsuite1Subbanner .sub-cont {
+        top: -19px;
+    }
+}
+
+@media (min-width: 800px) {
+    .cfsuite1Subbanner {
+        top: 116px;
+    }
+
+    .cfsuite1Subbanner .alin {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .cfsuite1Subbanner .sub-cont {
+        background-image: none !important;
+        background-color: #008857;
+        height: auto;
+        padding: 1rem 0px;
+    }
+
+    .cfsuite1Subbanner .bantitle {
+        margin-top: 0px;
+        font-size: 1.7rem;
+    }
+
+    .cfsuite1Subbanner .bancont {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1430px) {
+    .cfsuite1Subbanner .sub-cont {
+        background-size: 100% !important;
+    }
+}
+
+/* END */
+
+
+/* START MakePropertyPayment styles */
+
+cfsuite1-make-property-payment-l-w-c .slds-select {
+    padding-left: 11px;
+}
+
+cfsuite1-make-property-payment-l-w-c ::placeholder,
+cfsuite1-make-property-payment-l-w-c .slds-select {
+    opacity: 1;
+    font-weight: normal;
+}
+
+cfsuite1-make-property-payment-l-w-c h3,
+cfsuite1-make-property-payment-l-w-c h4 {
+    font-family: 'Lato';
+}
+
+cfsuite1-make-property-payment-l-w-c h1 {
+    margin: 44px auto 44px;
+    width: calc(100% - 186px);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+cfsuite1-make-property-payment-l-w-c h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+cfsuite1-make-property-payment-l-w-c p {
+    font-size: 1rem;
+    color: #595959;
+}
+
+.cTop_2_1_ColumnLayout cfsuite1-make-property-payment-l-w-c .container,
+.cTop_2_1_ColumnLayout .cfsuite1ManageDirectDebit .container {
+    width: 640px;
+    margin: auto;
+    max-width: 100%;
+}
+
+cfsuite1-make-property-payment-l-w-c .back {
+    padding: 18px 23px;
+}
+
+@media (min-width: 480px) {
+    cfsuite1-make-property-payment-l-w-c .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+}
+
+cfsuite1-make-property-payment-l-w-c .cIntegraPayForm .title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+cfsuite1-make-property-payment-l-w-c .limit {
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+cfsuite1-make-property-payment-l-w-c .limit p {
+    color: white;
+    background-color: rgb(194, 57, 52);
+    padding: 6px 14px;
+    border-radius: 3px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type {
+    position: relative;
+    padding: 10px 0 10px 38px;
+    font-size: 1rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type .select-circle {
+    background-color: white;
+    border: 1px solid #505050;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    width: 22px;
+    margin-top: 4px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type .select-circle.active {
+    border: 1px solid #167055;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type .last {
+    margin-top: 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type .select-circle.active:after {
+    border: 2px solid white;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    background: #157bc6;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
+    position: relative;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-type .amount {
+    font-size: 14px;
+}
+
+cfsuite1-make-property-payment-l-w-c .amount.active {
+    color: #157bc6;
+    font-weight: 600;
+}
+
+cfsuite1-make-property-payment-l-w-c input[type="checkbox"] {
+    height: 50px;
+}
+
+cfsuite1-make-property-payment-l-w-c .method {
+    border-bottom: 1px solid #b4b4b4;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+
+cfsuite1-make-property-payment-l-w-c .method h3 {
+    margin-top: 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c .flexme {
+    display: flex;
+    align-items: center;
+}
+
+cfsuite1-make-property-payment-l-w-c .notification {
+    border-top: 1px solid #b4b4b4;
+    padding: 30px 10px;
+    margin: 30px 0 10px;
+}
+
+cfsuite1-make-property-payment-l-w-c .notification label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+cfsuite1-make-property-payment-l-w-c #chkNotify {
+    margin-right: 16px;
+}
+
+cfsuite1-make-property-payment-l-w-c .summary .amount {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-pay {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 7px 0 !important;
+    font-weight: 600;
+    color: t(brandPrimary);
+    border-color: t(brandPrimary);
+    border-width: 2px;
+    border-style: solid;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-cancel {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 18px;
+    color: #006fbe;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-cancel:hover {
+    text-decoration: none;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-pay i {
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+cfsuite1-make-property-payment-l-w-c .green {
+    color: #187C5D;
+}
+
+cfsuite1-make-property-payment-l-w-c .thank-you h2 {
+    font-size: 1.2rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .thank-you .details .pay-title .line1 {
+    font-weight: normal;
+}
+
+cfsuite1-make-property-payment-l-w-c .thank-you .balance {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-summary {
+    padding-bottom: 20px;
+    font-size: 15px;
+    padding: 5px 25px 12px 0;
+    border-radius: 3px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-summary .line {
+    margin-bottom: 10px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-summary .line .label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment-summary .slds-button_brand {
+    border-radius: 3px;
+    font-size: .9rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .thank-you .actions {
+    padding-top: 30px;
+}
+
+cfsuite1-make-property-payment-l-w-c .card-number .slds-m-bottom_small,
+cfsuite1-make-property-payment-l-w-c .card-other .slds-m-bottom_small {
+    margin-bottom: 6px;
+}
+
+cfsuite1-make-property-payment-l-w-c .info {
+    background-color: #fff;
+    border-left: 7px solid #008857;
+    padding: 10px 10px 10px 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #373737;
+    margin-top: .9rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .info a {
+    text-decoration: underline;
+}
+
+cfsuite1-make-property-payment-l-w-c .actions .btn-green {
+    font-size: 1rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-cancel:focus {
+    background-color: #fff !important;
+    color: #292929 !important;
+}
+
+cfsuite1-make-property-payment-l-w-c #chkNotify .slds-checkbox_faux {
+    height: 22px;
+    width: 22px;
+    border: 1px solid #707070;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-radio_button-group .slds-radio_button__label {
+    line-height: 1.875rem;
+    width: 100%;
+    text-align: center;
+    color: #1b1b1b;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+/* spinner styling */
+cfsuite1-make-property-payment-l-w-c .spins {
+    background-color: #fff;
+}
+
+cfsuite1-make-property-payment-l-w-c .spins::after {
+    position: absolute;
+    content: 'Your payment is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 48em) {
+    cfsuite1-make-property-payment-l-w-c .spins::after {
+        padding: 0px 20%;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-make-property-payment-l-w-c .spins::after {
+        padding: 0px 10%;
+    }
+}
+
+/* end spinner styling */
+@media (min-width: 480px) {
+    cfsuite1-make-property-payment-l-w-c .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+
+    cfsuite1-make-property-payment-l-w-c #chkNotify {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 479px) {
+    cfsuite1-make-property-payment-l-w-c .details .limit {
+        max-width: 100%;
+    }
+
+    cfsuite1-make-property-payment-l-w-c h1 {
+        text-align: left;
+        padding-top: .5rem;
+        width: 100%;
+        font-size: 2.05em;
+    }
+}
+
+@media (max-width: 534px) {
+    cfsuite1-make-property-payment-l-w-c .notification {
+        align-items: flex-start;
+    }
+
+    cfsuite1-make-property-payment-l-w-c span.slds-checkbox {
+        padding-top: 2px;
+    }
+}
+
+/* Credit Card Button Sections */
+cfsuite1-make-property-payment-l-w-c .date label.slds-form-element__label {
+    display: none;
+}
+
+cfsuite1-make-property-payment-l-w-c #bank .slds-form-element label {
+    display: none;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-radio_button-group {
+    border-color: #858585;
+    width: 100%;
+    border-radius: 5px;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-radio_button-group .slds-radio_button {
+    width: 33.333333%;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-radio_button+.slds-radio_button {
+    border-left: 1px solid #858585;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button+.slds-radio_button {
+    border-left: none;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button:hover {
+    outline: 5px solid #d6ebe3;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    cfsuite1-make-property-payment-l-w-c .debit-type .option {
+        padding-left: 38px;
+    }
+
+    cfsuite1-make-property-payment-l-w-c .debit-type {
+        padding-left: 0px;
+    }
+
+    cfsuite1-make-property-payment-l-w-c #chooseown {
+        margin-left: 0px;
+    }
+
+    cfsuite1-make-property-payment-l-w-c .slds-radio_button .slds-radio_faux {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: .9rem;
+    }
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-radio_button [type="radio"]:checked+.slds-radio_button__label:hover {
+    background-color: #573f8c;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button__label:hover {
+    background-color: #fff;
+}
+
+cfsuite1-make-property-payment-l-w-c .btn-cancel:hover {
+    text-decoration: none;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button__label {
+    line-height: 3.3rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button {
+    width: 50%;
+    border: none;
+    padding-bottom: 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button+.slds-radio_button {
+    border-left: none;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button [type="radio"]:checked+.slds-radio_button__label {
+    background-color: #fff;
+    color: #565656;
+    outline: 1px solid #008857;
+    font-weight: 600;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button [type="radio"]:checked+.slds-radio_button__label i {
+    color: #008857;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button__label:hover i {
+    color: #008857;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button__label:hover {
+    background-color: #fff;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment .slds-radio_button-group .slds-radio_button__label {
+    border-radius: 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 36px 0 14px 0;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .debit-title h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+cfsuite1-make-property-payment-l-w-c .payment h2 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+cfsuite1-make-property-payment-l-w-c .slds-modal__content h2 {
+    color: #292929;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+cfsuite1-make-property-payment-l-w-c .note span {
+    font-weight: 600;
+}
+
+cfsuite1-make-property-payment-l-w-c #bank img {
+    width: 60%;
+}
+
+cfsuite1-make-property-payment-l-w-c #bank h4 {
+    margin-top: 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c .bpay {
+    background-color: #fff;
+    padding: 1rem 0px 1rem 1.3rem;
+    height: 80%;
+    margin: auto 0px;
+}
+
+cfsuite1-make-property-payment-l-w-c .bpay p {
+    font-size: 1.1rem;
+}
+
+cfsuite1-make-property-payment-l-w-c .details .slds-button {
+    display: inherit;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+/* END */
+
+
+
+/* START PaymentPlanorExtension styles */
+
+cfsuite1-payment-planor-extension-l-w-c .slds-input,
+cfsuite1-payment-planor-extension-l-w-c .slds-select {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.page-title {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.line.inactive-line,
+.line.completed-line {
+    margin-bottom: 20px;
+    background-color: #D1D5DB;
+}
+
+.line.completed-line {
+    background-color: var(--secondaryColor);
+}
+
+cfsuite1-payment-planor-extension-l-w-c .page-title .slds-grid_vertical-align-center {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .page-title .back {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .page-title span.single {
+    font-size: 1.7rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .wrap .refund-title .name {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .wrap .slds-form-element__label,
+cfsuite1-payment-planor-extension-l-w-c .reason-info .slds-form-element__label,
+cfsuite1-payment-planor-extension-l-w-c .exten-info .slds-form-element__label {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c p {
+    font-size: 1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c b {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.buttonspan .responseBlock {
+    padding: 20px 30px;
+    line-height: 40px;
+    margin-bottom: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    text-align: left;
+    border-radius: 0;
+    font-family: 'Lato';
+}
+
+.buttonspan .responseBlock i {
+    font-size: 28px;
+}
+
+.buttonspan .responseBlock .slds-m-right_medium {
+    width: 40px;
+    justify-content: center;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .reason-info {
+    margin-top: 0px;
+    padding-bottom: 25px;
+    background-color: #fff;
+}
+
+cfsuite1-payment-planor-extension-l-w-c button.slds-button.slds-button_brand.slds-p-vertical_small.slds-p-horizontal_x-large.slds-m-top_x-large {
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .wrap,
+cfsuite1-payment-planor-extension-l-w-c .reason-info {
+    background-color: #fff;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .exten-info {
+    background-color: #fff;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 50px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .exten-info h4 {
+    padding-top: 30px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .exten-info table th:first-child {
+    width: auto;
+}
+
+cfsuite1-payment-planor-extension-l-w-c label[for=chkNotify] {
+    font-size: 1rem;
+    color: #4a4a4a !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-select-arrow {
+    width: 529px;
+    height: 56px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c textarea {
+    height: 150px;
+    border: 1px solid #D1D5DB;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details {
+    background-color: #fff;
+    padding: 40px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .refund-selected {
+    background-color: red;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .rates h4 {
+    color: #262626;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .info-wraper h3 {
+    margin: 10px 0 20px 0;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .infoLi {
+    position: relative;
+    top: -22px;
+    left: 19px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .date-icon {
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -34px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .single-button .slds-radio_button-group .slds-radio_button {
+    width: 100%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group .slds-radio_button__label {
+    line-height: 1.875rem;
+    width: 100%;
+    text-align: center;
+    color: #1b1b1b;
+    font-size: 1rem;
+    /* padding: .5rem 0; */
+    display: block;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group .slds-radio_button__label:hover {
+    background-color: #eee;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .newbtn {
+    background-color: white;
+    width: 50%;
+    padding: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .newbtn.active {
+    border: solid #167055;
+    background-color: #167055;
+    color: white;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .btninfo {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 32px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .info i {
+    color: #028162;
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .refund-summary {
+    font-size: 15px;
+    padding: 5px 25px 20px 0;
+    border-radius: 3px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .heading i.Success {
+    color: #008857;
+    font-size: 1.8rem;
+    position: relative;
+    top: 2px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .refund-summary .line {
+    margin-bottom: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .exten-info .slds-form-element label {
+    display: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .note {
+    color: #525252;
+    display: flex;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #E8F2FE;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .note-txt i {
+    padding-right: 10px;
+    color: #006fbe;
+    font-size: 1.1rem;
+    padding-top: 4px;
+    padding-left: 1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details a {
+    font-size: 1.1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details hr.sm {
+    margin: 1rem 0;
+}
+
+/* progress bar */
+
+.cfsuite1ProgressIndicator {
+    padding-top: 3.8rem;
+}
+
+.steps-container {
+    text-align: left;
+}
+
+.step {
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: not-allowed;
+    transition: all 0.3s;
+}
+
+.step.active,
+.step.completed {
+    border: none !important;
+    font-size: 32px !important;
+    color: var(--secondaryColor) !important;
+}
+
+.step.inactive {
+    width: 24px;
+    height: 24px;
+    cursor: not-allowed;
+    color: #D1D5DB !important;
+    border-color: #D1D5DB !important;
+    background-color: #D1D5DB !important;
+}
+
+.rogress-container .line {
+    height: 3px !important;
+}
+
+/* end progress bar */
+
+cfsuite1-payment-planor-extension-l-w-c .comments label {
+    display: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c table {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #636363;
+}
+
+/* cfsuite1-payment-planor-extension-l-w-c table td {
+    text-align: right;
+} */
+
+cfsuite1-payment-planor-extension-l-w-c table th {
+    font-weight: normal;
+}
+
+cfsuite1-payment-planor-extension-l-w-c table th,
+cfsuite1-payment-planor-extension-l-w-c table td {
+    padding-top: 10px;
+    color: var(--primaryFontColor);
+}
+
+cfsuite1-payment-planor-extension-l-w-c table.summary tr th:first-child {
+    font-weight: 600;
+    color: var(--primaryFontColor);
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you h1 {
+    margin: 0 auto 11px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you p {
+    font-size: .94rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you .details {
+    margin-top: 1px;
+    padding: 40px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you .details .line {
+    font-size: 1rem;
+    /* font-weight: 600; */
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you h3 {
+    margin-top: 0px;
+    color: #262626;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .thank-you h4 {
+    margin-bottom: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .ref {
+    font-size: 1.1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c ul {
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 18px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c li {
+    margin-bottom: 8px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .notice {
+    font-size: 15px;
+    background: #f9f9f9;
+    padding: .5rem;
+    margin-top: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .notice i {
+    color: #008857;
+}
+
+@media (min-width: 30em) {
+
+    /* cfsuite1-payment-planor-extension-l-w-c .back {
+        padding: 19px 28px;
+        font-size: 1.6rem;
+    } */
+    cfsuite1-payment-planor-extension-l-w-c .wrap {
+        padding: 36px 46px 20px 46px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .reason-info {
+        padding: 0px 46px 36px 46px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c h1 {
+        font-size: 1.7rem;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .exten-info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+/* spinner styling*/
+cfsuite1-payment-planor-extension-l-w-c .spins {
+    background-color: #fff;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .spins::after {
+    position: absolute;
+    content: 'Your request is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 48em) {
+    cfsuite1-payment-planor-extension-l-w-c .spins::after {
+        padding: 0px 20%;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-payment-planor-extension-l-w-c .spins::after {
+        padding: 0px 10%;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .refund-summary .line .slds-col:nth-child(2) {
+        margin-top: 6px;
+    }
+}
+
+/* end spinner styling*/
+
+@media (max-width: 388px) {
+    cfsuite1-payment-planor-extension-l-w-c h1 {
+        margin-top: 0;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c h1 .single {
+        position: relative;
+        top: 10px;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-payment-planor-extension-l-w-c .cProgressIndicator {
+        padding-top: 3rem;
+        margin-bottom: 25px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .cProgressIndicator .step-label {
+        font-size: 13px;
+    }
+
+    .buttonspan .responseBlock {
+        font-size: 1.2rem;
+        line-height: 32px;
+        padding: 20px 20px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .request-plan-summary .refund-summary .line .slds-col:nth-child(1),
+    cfsuite1-payment-planor-extension-l-w-c .refund-summary .line .slds-col:nth-child(1) {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 48em) {
+
+    .buttonspan .responseBlock:nth-child(1),
+    .buttonspan .responseBlock {
+        padding: 29px 30px 24px 30px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .responseBlock p {
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    cfsuite1-payment-planor-extension-l-w-c .details {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 431px) {
+    cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group .slds-radio_button__label {
+        font-size: .86rem;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group label {
+        padding: 10px 0px;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .slds-radio_button .slds-radio_faux {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 831px) {
+    cfsuite1-payment-planor-extension-l-w-c {
+        width: calc(100% + 2rem);
+    }
+}
+
+/* END */
+
+
+/* START IntegraPayForm styles */
+
+.cfsuite1IntegraPayForm .slds-select {
+    padding: 0 2px 0 12px;
+}
+
+.cfsuite1IntegraPayForm .title-container {
+    margin: 25px 0 10px;
+}
+
+
+.cfsuite1IntegraPayForm .payment-img {
+    height: 30px;
+}
+
+
+.cfsuite1IntegraPayForm .payment-type .details input {
+    margin-top: 10px;
+}
+
+
+.cfsuite1IntegraPayForm .title-container h3 {
+    margin: 0px !important;
+}
+
+
+.cfsuite1IntegraPayForm .slds-checkbox_faux {
+    border: 1px solid #8A8A8A;
+}
+
+
+.cfsuite1IntegraPayForm .card-number .slds-m-bottom_small,
+.cfsuite1IntegraPayForm .card-other .slds-m-bottom_small {
+    margin-bottom: 6px;
+}
+
+
+/* validation error labels */
+.cfsuite1IntegraPayForm .slds-form-element__label {
+    display: none;
+}
+
+
+.cfsuite1IntegraPayForm .slds-select-arrow {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+}
+
+
+
+
+/* END */
+
+
+
+/* START PaymentTransferorRefund styles */
+
+.cfsuite1PaymentTransferorRefund .slds-form-element .slds-input {
+    margin-top: 8px;
+}
+
+.cfsuite1PaymentTransferorRefund h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0px 0px;
+}
+
+.cfsuite1PaymentTransferorRefund h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px 0px;
+    padding: 1rem 0px;
+}
+
+.cfsuite1PaymentTransferorRefund b {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.cfsuite1PaymentTransferorRefund ul {
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 18px;
+}
+
+.cfsuite1PaymentTransferorRefund li {
+    margin-bottom: 8px;
+}
+
+.cfsuite1PaymentTransferorRefund .details {
+    background-color: #fff;
+    padding: 50px;
+    font-size: 1rem;
+}
+
+.cfsuite1PaymentTransferorRefund .transfer-type .box-option {
+    background-color: #fff;
+    border: solid #505050;
+}
+
+.cfsuite1PaymentTransferorRefund .transfer-type .box-option.active {
+    border: solid #167055;
+    background-color: #167055;
+}
+
+.cfsuite1PaymentTransferorRefund .wrapper .box-option {
+    border: solid 1px #9a9a9a;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-box {
+    background-color: white;
+    border: solid 1px #1a8fce;
+    margin-bottom: 12px;
+}
+
+.cfsuite1PaymentTransferorRefund .wrapper .box-option.active i {
+    color: #1a8fce;
+}
+
+.cfsuite1PaymentTransferorRefund .wrapper .box-option.active {
+    border: solid 1px #1a8fce;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-box i,
+.cfsuite1PaymentTransferorRefund .box-option i {
+    color: #9b9b9b;
+    margin-right: 14px;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-text-color_error {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 1px;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-text-color_error i {
+    font-size: .9rem;
+    font-weight: 600;
+    position: relative;
+    top: 1px;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-text-color_error span {
+    background-color: none;
+    color: rgb(194, 57, 52);
+    border-radius: 2px;
+    padding: 4px 8px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.cfsuite1PaymentTransferorRefund img.icon {
+    width: 36px;
+}
+
+.cfsuite1PaymentTransferorRefund hr {
+    margin: 1rem 0px;
+}
+
+.cfsuite1PaymentTransferorRefund b {
+    font-weight: 600;
+}
+
+.cfsuite1PaymentTransferorRefund .details .ref {
+    font-size: 1.1rem;
+}
+
+.cfsuite1PaymentTransferorRefund .details .ref b {
+    color: #000;
+}
+
+.cfsuite1PaymentTransferorRefund .details .ref span {
+    font-size: 1.2rem;
+}
+
+.cfsuite1PaymentTransferorRefund #refund .details p:nth-child(1) {
+    font-size: 1.1rem;
+}
+
+.cfsuite1PaymentTransferorRefund .details span.green {
+    line-height: 37px;
+    color: #008857;
+}
+
+.cfsuite1PaymentTransferorRefund .info-wraper h3 {
+    margin: 10px 0 20px 0;
+}
+
+.cfsuite1PaymentTransferorRefund .btninfo {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.cfsuite1PaymentTransferorRefund .info {
+    background-color: #fbfbfb;
+    border-left: 6px solid #028162;
+    padding: 18px 18px 18px 30px;
+    font-size: 0.94rem;
+    line-height: 1.5rem;
+    color: #252525;
+}
+
+.cfsuite1PaymentTransferorRefund .info i {
+    color: #028162;
+    font-size: 1.4rem;
+    padding-top: 5px;
+    font-size: 0.85rem;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-button_brand {
+    padding: .5rem 2rem;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+.cfsuite1PaymentTransferorRefund .slds-button_brand i {
+    padding-left: 12px;
+    padding-top: 2px;
+}
+
+.cfsuite1PaymentTransferorRefund .info a {
+    text-decoration: underline;
+}
+
+.cfsuite1PaymentTransferorRefund .refund-summary {
+    font-size: 15px;
+    padding: 5px 0px 28px 0;
+    border-radius: 3px;
+}
+
+.cfsuite1PaymentTransferorRefund .heading i.Success {
+    color: #028162;
+    font-size: 1.8rem;
+}
+
+.cfsuite1PaymentTransferorRefund .refund-summary .line {
+    margin-bottom: 10px;
+}
+
+.cfsuite1PaymentTransferorRefund .ccInfo {
+    padding: 15px 25px 15px 15px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+}
+
+.cfsuite1PaymentTransferorRefund .ccInfo i {
+    color: #b5231d;
+    margin-right: 11px;
+    padding-top: 3px;
+}
+
+.cfsuite1PaymentTransferorRefund .thank-you .details {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 1px;
+}
+
+.cfsuite1PaymentTransferorRefund .thank-you h1 {
+    margin: 0px auto 15px;
+}
+
+.cfsuite1PaymentTransferorRefund .thank-you .refund-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cfsuite1PaymentTransferorRefund .inline {
+    display: inline-block;
+    line-height: 1.4rem;
+}
+
+.cfsuite1PaymentTransferorRefund .refund-summary .line .label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cfsuite1PaymentTransferorRefund .spins {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.cfsuite1PaymentTransferorRefund .spins::after {
+    position: absolute;
+    content: 'Your request is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.responseBlock i {
+    font-size: 1.1rem;
+}
+
+.buttonspan .responseBlock i {
+    color: #B4B4B4;
+    position: relative;
+    top: 4px;
+    left: 3px;
+    margin-right: 30px;
+}
+
+/* progress bar */
+
+.cfsuite1PaymentTransferorRefund .cProgressIndicator {
+    padding-top: 3.8rem;
+}
+
+
+.steps-container {
+    text-align: left;
+}
+
+.step {
+    width: 66%;
+}
+
+.circled i {
+    font-size: 17px
+}
+
+/* end progress bar */
+
+/* Large button end */
+/* Steps */
+.cfsuite1PaymentTransferorRefund .container {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Steps end*/
+
+
+/* spinner styling*/
+.cfsuite1PaymentTransferorRefund .spins {
+    background-color: #fff;
+}
+
+.cfsuite1PaymentTransferorRefund .spins::after {
+    position: absolute;
+    content: 'Your request is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 48em) {
+    .cfsuite1PaymentTransferorRefund .spins::after {
+        padding: 0px 20%;
+    }
+}
+
+@media (max-width: 30em) {
+    .cfsuite1PaymentTransferorRefund .spins::after {
+        padding: 0px 10%;
+    }
+}
+
+/* end spinner styling*/
+
+
+@media (max-width: 30em) {
+    .buttonspan .responseBlock {
+        font-size: 1rem;
+        line-height: 32px;
+        padding: 20px 20px;
+    }
+
+    .cfsuite1PaymentTransferorRefund .refund-summary .line .slds-col:nth-child(2) {
+        margin-top: 6px;
+    }
+
+    .cfsuite1PaymentTransferorRefund .refund-summary .line .slds-col:nth-child(1) {
+        font-weight: 600;
+    }
+
+    .cfsuite1PaymentTransferorRefund .cProgressIndicator {
+        padding-top: 3rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 831px) {
+    .cfsuite1PaymentTransferorRefund {
+        width: calc(100% + 2rem);
+    }
+}
+
+@media (min-width: 30em) {
+    .cfsuite1PaymentTransferorRefund .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+
+    .cfsuite1PaymentTransferorRefund h1 {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media (max-width: 387px) {
+    .cfsuite1PaymentTransferorRefund h1 {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cfsuite1PaymentTransferorRefund .details {
+        padding: 36px;
+    }
+}
+
+/* END */
+
+
+
+/* START RequestPaymentPlan styles */
+
+cfsuite1-payment-planor-extension-l-w-c .progressbarCtr {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-right: 290px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c h1 {
+    margin: 14px auto 20px;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 30em) {
+    cfsuite1-payment-planor-extension-l-w-c h1 {
+        font-size: 1.4rem;
+        margin: 0 auto 0;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .rates .back {
+        margin-top: 5px;
+    }
+}
+
+cfsuite1-payment-planor-extension-l-w-c h2 {
+    font-size: 1.4rem;
+    /* margin-bottom: 5px; */
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment h3 {
+    margin: 0px 0 20px 0;
+    padding: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .terms p {
+    font-size: .95rem;
+    color: #525252;
+    line-height: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .terms a {
+    font-size: 1rem !important;
+}
+
+/* @media (min-width: 30em) {
+  cfsuite1-payment-planor-extension-l-w-c .back {
+    padding: 22px 28px;
+    font-size: 1.6rem;
+  }
+} */
+
+cfsuite1-payment-planor-extension-l-w-c .transfer-type {
+    margin-top: 60px;
+}
+
+.type .buttonspan .responseBlock {
+    padding: 39px 40px 34px 30px;
+}
+
+.type .buttonspan .responseBlock:nth-child(2) {
+    padding: 36px 40px 37px 30px;
+}
+
+.type .buttonspan .responseBlock:nth-child(2) i {
+    font-size: 39px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .ui-state-highlight,
+cfsuite1-payment-planor-extension-l-w-c .ui-widget-content .ui-state-highlight,
+cfsuite1-payment-planor-extension-l-w-c .ui-state-active,
+cfsuite1-payment-planor-extension-l-w-c .ui-widget-content .ui-state-active {
+    border: 1px solid #027055 !important;
+    background: #f1fbf9 !important;
+    color: #027055 !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-table_striped tbody tr:nth-of-type(even)>th,
+cfsuite1-payment-planor-extension-l-w-c .slds-table_striped tbody tr:nth-of-type(even)>td {
+    background-color: #fff !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .transfer-type .box-option.active {
+    background-color: #1B6B50;
+    color: white;
+
+}
+
+cfsuite1-payment-planor-extension-l-w-c .transfer-type .box-option:hover,
+cfsuite1-payment-planor-extension-l-w-c .transfer-type .box-option:hover i {
+    background-color: #1B6B50;
+    color: white;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details {
+    font-size: 1rem;
+    margin-top: 49px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .detail-line {
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .name {
+    padding-top: 10px;
+    font-weight: 200;
+    font-size: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .amount {
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .input-box {
+    width: auto;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .authorize {
+    color: #525252;
+    margin-top: 1rem;
+    display: flex;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .review-info {
+    background-color: white;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    border: 1px solid lightgrey;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .review-details {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details table {
+    margin-top: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details table i {
+    font-size: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details table a {
+    outline: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .details .ref {
+    font-size: 1.1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .heading {
+    font-size: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .btnPlus {
+    margin-left: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .btnMinus {
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-table {
+    font-size: .9rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-table thead th {
+    background-color: #fff;
+    font-weight: 600;
+    color: #454545;
+}
+
+cfsuite1-payment-planor-extension-l-w-c table th:first-child {
+    width: 12%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c table.summary th:first-child {
+    width: 200px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c table th:nth-child(2) {
+    width: 61%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.enableRow th {
+    border-top: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.enableRow th:first-child {
+    border-left: 1px solid #bcbcbc;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.enableRow th:last-child {
+    border-right: 1px solid #bcbcbc;
+    text-align: right;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.disableRow {
+    background-color: #f2f2f2;
+    color: #9e9e9e;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.disableRow th:first-child {
+    border: 1px solid #c8c9ca;
+    border-right: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.disableRow th:last-child {
+    border: 1px solid #c8c9ca;
+    border-left: none;
+    text-align: right;
+}
+
+cfsuite1-payment-planor-extension-l-w-c tr.disableRow th {
+    border-top: 1px solid #c8c9ca;
+    border-bottom: 1px solid #c8c9ca;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .spn {
+    padding: 0px;
+    border: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .spn i {
+    border-radius: 3px;
+    color: white;
+    background-color: #008857;
+    padding: 4px 5px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .spnAmount {
+    padding: 10px;
+    padding-right: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+cfsuite1-payment-planor-extension-l-w-c hr.vr-btm {
+    margin-bottom: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c hr.vr-top {
+    margin-top: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .notice {
+    background-color: #fbfbfb;
+    border-left: 6px solid #ec0000;
+    padding: 20px;
+    color: #373737;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .notice i {
+    color: #ec0000 !important;
+    font-size: 1.1rem;
+    padding-top: 5px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-button+.slds-button {
+    border: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group {
+    width: 100%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group label {
+    width: 100%;
+    padding: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button-group span {
+    width: 50%;
+    border: none;
+    padding-bottom: 0;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .frequency .slds-radio_button-group span {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-float_left i {
+    color: rgb(21, 107, 79);
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .btnClose {
+    width: 3.5rem;
+    height: 3.7rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background-color: transparent;
+    border: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .amount-input {
+    border: none !important;
+    width: 68px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .amount-input:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .ui-widget-head {
+    background-color: white;
+    border: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .sWrapTest {
+    max-height: 530px;
+    overflow-x: hidden;
+    padding-right: 2px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .success-subheading {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .success-heading {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin: 13px auto 8px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .enableRow .skip {
+    position: absolute;
+    color: #1B6B50;
+    display: none;
+    padding-top: 3px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .enableRow:hover {
+    background-color: #f7f7f7;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .enableRow:hover th {
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .enableRow:hover .skip {
+    display: inline-block;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .date-icon {
+    color: #5e6063;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -25px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .review-details .slds-table_bordered:not(.slds-no-row-hover) tbody tr:hover>th:not(.slds-has-focus) {
+    box-shadow: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .review-details .slds-table:not(.slds-no-row-hover) tbody tr:hover>th {
+    background-color: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment label {
+    font-size: .94rem;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group,
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button__label {
+    border: none;
+    border-radius: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button__label {
+    line-height: 3.3rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button {
+    width: 50%;
+    border: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button+.slds-radio_button {
+    border-left: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button {
+    padding-bottom: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button:hover {
+    outline: 5px solid #d6ebe3;
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button [type="radio"]:checked+.slds-radio_button__label,
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button__label.active {
+    background-color: #fff;
+    color: #252525;
+    outline: 1px solid #008857;
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button [type="radio"]:checked+.slds-radio_button__label i,
+cfsuite1-payment-planor-extension-l-w-c .slds-radio_button__label.active i {
+    color: #008857;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button__label:hover i {
+    color: #008857;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button__label:hover {
+    background-color: #fff;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_button-group .slds-radio_button__label {
+    border-radius: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .terms label {
+    color: #252525;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment li {
+    margin-top: 6px;
+    padding-left: 6px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_faux i {
+    display: block;
+    color: #b5b5b5;
+    font-size: 1.5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-radio_faux i.fa-university {
+    font-size: 1.65rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-text-color_error p {
+    line-height: .9rem !important;
+    margin-bottom: 10px;
+    font-size: 13px;
+    position: relative;
+    top: -4px;
+    padding-left: 1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-text-color_error i {
+    margin-top: 2px;
+    position: relative;
+    top: 1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .authorise {
+    color: #525252;
+    display: flex;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .authorise-txt {
+    display: inline-block;
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .authorise-txt i {
+    padding-right: 10px;
+    color: #156b4f;
+    font-size: 1.1rem;
+    padding-top: 4px;
+    padding-left: 1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .authorise-txt span {
+    font-weight: 600;
+}
+
+cfsuite1-payment-planor-extension-l-w-c #bank .slds-form-element label {
+    display: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c #chkNotify {
+    margin-right: 22px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .exten-info #chkNotify {
+    position: relative;
+    top: -7px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c #chkNotify span.slds-checkbox_faux {
+    height: 22px;
+    width: 22px;
+    border: 1px solid #707070;
+    position: relative;
+    top: -1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c input[type="checkbox"] {
+    height: 50px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .flexme {
+    display: flex;
+    align-items: center;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .btn-continue {
+    margin-top: 2.2rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .notification {
+    border-top: 1px solid #b4b4b4;
+    padding: 30px 0 0px;
+    margin: 30px 0 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .wrapp {
+    background-color: #fff;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c ul.slds-list_dotted {
+    margin-left: 18px;
+}
+
+/* cfsuite1-payment-planor-extension-l-w-c .fiveStep .step {
+    width: 24% ;
+} */
+
+/* cfsuite1-payment-planor-extension-l-w-c .fiveStep .step:last-of-type,
+cfsuite1-payment-planor-extension-l-w-c .fiveStep .step:first-of-type {
+    width: 14%;
+} */
+
+cfsuite1-payment-planor-extension-l-w-c .seperator {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+cfsuite1-payment-planor-extension-l-w-c #bank h3,
+cfsuite1-payment-planor-extension-l-w-c .cIntegraPayForm .title-container {
+    margin-top: 0px !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c #bank h3 {
+    margin-bottom: 9px;
+    padding-bottom: 0px;
+    font-size: .95em !important;
+    font-weight: 600 !important;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-text-color_error i {
+    font-size: .85rem;
+    padding-right: 6px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .payment .slds-text-color_error i {
+    margin-top: 2px;
+    position: relative;
+    top: 1px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-text-color_error p {
+    color: #c23934;
+}
+
+cfsuite1-payment-planor-extension-l-w-c a span {
+    font-size: 1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__header {
+    border: none;
+    text-align: left;
+    padding-left: 35px;
+    padding-top: 35px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #157Bc6;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content h2 {
+    margin-top: 1.8rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c h2.debit-title {
+    text-decoration: underline;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content .res {
+    margin-top: .3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 6px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content p {
+    font-size: .95rem;
+    line-height: 1.7;
+    padding: 0;
+    font-family: inherit;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    color: #292929;
+    width: 100%;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content ul {
+    list-style: disc;
+    font-size: .9rem;
+    color: #292929;
+    margin-left: 20px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__content ul li {
+    margin-top: 9px;
+    padding-left: 10px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-modal__footer .slds-button_brand {
+    margin-top: 0px;
+    padding: .3rem 2rem;
+    border-radius: 2px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .slds-checkbox .slds-form-element__label {
+    display: none;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .refund-summary h3 {
+    padding-bottom: 9px;
+    margin-bottom: 0px;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .refund-summary .line .label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .alerttxt {
+    background: #fdf5f5;
+    border: 1px solid #e6b3b3;
+    border-radius: 3px;
+    padding: .5rem;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .alerttxt i {
+    padding-right: 1rem;
+    display: inline-block;
+    color: #cf3125;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .alerttxt p {
+    display: inline-block;
+}
+
+cfsuite1-payment-planor-extension-l-w-c .important {
+    color: #da312d;
+}
+
+@media (min-width: 48em) {
+    cfsuite1-payment-planor-extension-l-w-c .slds-modal__container {
+        width: 60%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 767px) {
+    cfsuite1-payment-planor-extension-l-w-c .plan-amt {
+        text-align: left;
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .type .buttonspan .responseBlock:nth-child(2) {
+        padding: 29px 30px 22px 30px;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-payment-planor-extension-l-w-c .refund-summary .line .slds-col:nth-child(2) {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 520px) {
+    cfsuite1-payment-planor-extension-l-w-c .notification #chkNotify span.slds-checkbox_faux {
+        height: 22px;
+        width: 22px;
+        border: 1px solid #707070;
+        position: relative;
+        top: -9px;
+    }
+}
+
+@media (max-width: 360px) {
+    cfsuite1-payment-planor-extension-l-w-c .details {
+        padding: 30px 16px !important;
+    }
+
+    cfsuite1-payment-planor-extension-l-w-c .slds-table {
+        font-size: .8rem;
+    }
+}
+
+/* END */
+
+
+/* START setupDirectDebit styles */
+
+.cfsuite1SetupDirectDebit {
+    margin-top: 4rem;
+}
+
+.cfsuite1SetupDirectDebit .container {
+    max-width: 640px;
+    margin: auto;
+}
+
+.cfsuite1SetupDirectDebit h1 {
+    margin: 36px auto 30px;
+    width: calc(100% - 186px);
+    width: -moz-calc(100% - 136px);
+    padding-top: 1rem;
+}
+
+.cfsuite1SetupDirectDebit .details .limit {
+    background-color: rgb(194, 57, 52);
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    max-width: 96%;
+    margin-top: 6px;
+}
+
+.cfsuite1SetupDirectDebit .details .limit p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .details .limit i {
+    color: white;
+    font-size: 1.1rem;
+    padding-right: 12px;
+    padding-top: 5px;
+}
+
+.cfsuite1SetupDirectDebit .cIntegraPayForm .title {
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1SetupDirectDebit .debit-type {
+    position: relative;
+    padding: 10px 0 5px 38px;
+    font-size: 1.05rem;
+    font-family: 'Lato';
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .debit-type p {
+    font-size: 1rem;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .select-circle {
+    background-color: white;
+    border: 1px solid #505050;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    width: 22px;
+    margin-top: 4px;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .select-circle.active {
+    border: 1px solid #167055;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .select-circle.active:after {
+    border: 2px solid white;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    background: #008857;
+    width: 18px;
+    height: 18px;
+    top: 0px;
+    left: 1px;
+    position: relative;
+}
+
+.cfsuite1SetupDirectDebit input[type="checkbox"] {
+    height: 50px;
+}
+
+.cfsuite1SetupDirectDebit .flexme {
+    display: flex;
+    align-items: center;
+}
+
+.cfsuite1SetupDirectDebit .notification {
+    border-top: 1px solid #b4b4b4;
+    padding: 30px 0px;
+    margin: 30px 0;
+}
+
+.cfsuite1SetupDirectDebit .payment label {
+    font-size: .94rem;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5rem;
+}
+
+.cfsuite1SetupDirectDebit #chkNotify {
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.cfsuite1SetupDirectDebit #chkNotify span.slds-checkbox_faux {
+    height: 22px;
+    width: 22px;
+    border: 1px solid #707070;
+}
+
+.cfsuite1SetupDirectDebit .checkbox label {
+    font-size: 1rem;
+    color: #525252;
+}
+
+.cfsuite1SetupDirectDebit .direct-debit-summary {
+    padding-bottom: 20px;
+    font-size: .935rem;
+    padding: 5px 25px 12px 0;
+    border-radius: 3px;
+}
+
+.cfsuite1SetupDirectDebit .direct-debit-summary .line {
+    margin-bottom: 6px;
+}
+
+.cfsuite1SetupDirectDebit .direct-debit-summary .line .label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cfsuite1SetupDirectDebit .thank-you .actions {
+    padding-top: 30px;
+}
+
+.cfsuite1SetupDirectDebit .actions .btn-green {
+    width: auto;
+    max-width: 100%;
+    padding: 8px 20px;
+}
+
+.cfsuite1SetupDirectDebit .info {
+    background-color: #fff;
+    border-left: 6px solid #008857;
+    padding: 15px 26px 15px 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #373737;
+}
+
+.cfsuite1SetupDirectDebit .info i {
+    color: #008857;
+    font-size: 1.3rem;
+    padding-top: 5px;
+}
+
+.cfsuite1SetupDirectDebit .info a {
+    text-decoration: underline;
+}
+
+.cfsuite1SetupDirectDebit .heading i {
+    color: #028162;
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+.cfsuite1SetupDirectDebit .slds-button_brand {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 7px 0;
+    font-weight: 600;
+    font-family: 'Lato';
+    margin-top: 0px;
+}
+
+.cfsuite1SetupDirectDebit .download {
+    font-size: 1rem;
+}
+
+.cfsuite1SetupDirectDebit .download i {
+    padding-right: 10px;
+}
+
+.cfsuite1SetupDirectDebit .info b {
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .summary h3 {
+    font-size: 1.1rem;
+    margin-top: 28px;
+}
+
+.cfsuite1SetupDirectDebit .summary .actions {
+    margin-top: 1.9rem;
+    border-top: 1px solid #cfcfcf;
+    padding-top: 1.9rem;
+}
+
+.cfsuite1SetupDirectDebit .slds-notify {
+    border-radius: 3px;
+    background-color: #18846D;
+    background-image: none;
+    margin-bottom: 1rem;
+}
+
+.cfsuite1SetupDirectDebit .slds-notify p {
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .closePdf {
+    background-color: #16325c;
+    padding: 12px;
+}
+
+.cfsuite1SetupDirectDebit .btnClose {
+    width: 3.5rem;
+    height: 3.7rem;
+    position: absolute;
+    top: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .slds-table {
+    border-top: none;
+    margin-top: .8rem;
+    font-size: .88rem;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .slds-table tr.top {
+    border-bottom: 1px solid #939393;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .slds-table tr.top th {
+    background-color: #f3f3f3;
+    color: #171717;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .slds-table tr.slds-hint-parent:nth-child(1),
+.cfsuite1SetupDirectDebit .debit-type .slds-table tr.slds-hint-parent:nth-child(3) {
+    background-color: #f3f3f3;
+    border-top: .5px solid #d4d4d4;
+    border-bottom: .5px solid #d4d4d4;
+}
+
+.cfsuite1SetupDirectDebit .debit-type .slds-table tr.slds-hint-parent:nth-child(4) {
+    border-bottom: .5px solid #d4d4d4;
+}
+
+.cfsuite1SetupDirectDebit .note {
+    font-size: .95rem;
+    line-height: 1.5rem;
+    background-color: #fcfcfc;
+}
+
+.cfsuite1SetupDirectDebit .note span {
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit hr.last {
+    margin-top: 22px;
+}
+
+.cfsuite1SetupDirectDebit .inputamount {
+    background-color: #fff;
+    padding: .8rem;
+    width: 208px;
+    height: 45px;
+    border-radius: 4px;
+    border: 1px solid #858585;
+    min-height: 30px;
+    font-size: 1rem;
+}
+
+.cfsuite1SetupDirectDebit #chooseown .slds-radio_button-group .slds-radio_button {
+    width: 33.333333%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-weight: normal;
+}
+
+.cfsuite1SetupDirectDebit .slds-radio_button+.slds-radio_button {
+    border-left: 1px solid #858585;
+}
+
+/*payment type*/
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group,
+.cfsuite1SetupDirectDebit .payment .slds-radio_button__label {
+    border: none;
+    border-radius: 0px;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group .slds-radio_button__label {
+    line-height: 3.3rem;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group .slds-radio_button {
+    width: 50%;
+    border: none;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button+.slds-radio_button {
+    border-left: none;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group .slds-radio_button:hover {
+    outline: 5px solid #deede9;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button [type="radio"]:checked+.slds-radio_button__label {
+    background-color: #fff;
+    color: #252525;
+    outline: 1px solid #008857;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group .slds-radio_button__label:hover {
+    background-color: #fff;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_button-group .slds-radio_button__label {
+    border-radius: 0px;
+}
+
+/*payment type end*/
+
+.cfsuite1SetupDirectDebit #bank .slds-form-element label {
+    display: none;
+}
+
+.cfsuite1SetupDirectDebit .amount {
+    background-color: #fff;
+    padding: .8rem;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #858585;
+    min-height: 50px;
+    font-size: 1rem;
+    background-color: #eee;
+}
+
+.cfsuite1SetupDirectDebit #chooseown {
+    margin-left: 37px;
+}
+
+.cfsuite1SetupDirectDebit #chooseown h4 span {
+    text-transform: lowercase;
+}
+
+.cfsuite1SetupDirectDebit #chooseown .info p:first-child {
+    padding-top: 6px;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .date label.slds-form-element__label {
+    display: none;
+}
+
+.cfsuite1SetupDirectDebit .frequency h4:first-child {
+    margin-top: 0;
+    padding-top: 12px;
+}
+
+.cfsuite1SetupDirectDebit .authorise {
+    color: #525252;
+    display: flex;
+}
+
+.cfsuite1SetupDirectDebit .authorise-txt {
+    display: inline-block;
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+
+.cfsuite1SetupDirectDebit .authorise-txt i {
+    padding-right: 10px;
+    color: #156b4f;
+    font-size: 1.1rem;
+    padding-top: 4px;
+    padding-left: 1px;
+}
+
+.cfsuite1SetupDirectDebit .authorise-txt span {
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .seperator {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.cfsuite1SetupDirectDebit .cIntegraPayForm {
+    padding-bottom: .5rem;
+}
+
+.cfsuite1SetupDirectDebit .payment h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cfsuite1SetupDirectDebit .payment h3 {
+    margin: 27px 0 20px 0;
+}
+
+.cfsuite1SetupDirectDebit .payment p {
+    color: #565656;
+}
+
+.cfsuite1SetupDirectDebit .payment li {
+    margin-top: 6px;
+    padding-left: 6px;
+}
+
+.cfsuite1SetupDirectDebit ul.slds-list_dotted {
+    margin-left: 18px;
+}
+
+.cfsuite1SetupDirectDebit .single label {
+    display: none;
+}
+
+.cfsuite1SetupDirectDebit .freqamount label {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .cfsuite1SetupDirectDebit .details {
+        padding: 30px 46px 35px;
+    }
+}
+
+/* modal pop up styling*/
+
+.cfsuite1SetupDirectDebit .slds-modal__header {
+    border-bottom: none;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__header h1 {
+    font-weight: 600;
+    font-size: 1.8em;
+    margin: 1rem 1.5rem;
+    text-align: left;
+    width: auto;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content {
+    padding: 0px 2.5rem;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content h2 {
+    color: #292929;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content li {
+    margin-top: 9px;
+    padding-left: 10px;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content p {
+    font-size: .9rem;
+    line-height: 1.7;
+    padding: 0;
+    font-family: inherit;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    color: #292929;
+    width: 100%;
+}
+
+/* end modal pop up styling*/
+
+/* progress bar styling*/
+
+.cfsuite1SetupDirectDebit .progressbar {
+    margin: 0;
+    padding: 0;
+    counter-reset: step;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li:before {
+    width: 30px;
+    height: 30px;
+    content: '';
+    /*counter(step)*/
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li:first-child:after {
+    content: none;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li.active {
+    color: green;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li.active:before {
+    border-color: #55b776;
+}
+
+.cfsuite1SetupDirectDebit .progressbar li.active+li:after {
+    background-color: #55b776;
+}
+
+.cfsuite1SetupDirectDebit .cProgressIndicator .step-bullet .circled i {
+    font-size: 18px;
+}
+
+/*new one*/
+.cfsuite1SetupDirectDebit .step-indicator-container {
+    width: 600px;
+    margin: 100px auto;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li {
+    list-style-type: none;
+    width: 33.33%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li:before {
+    content: "$";
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li:after {
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li:not(.active)::before {
+    content: "";
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li:first-child:after {
+    content: none;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li.active {
+    color: #0052e7;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li.active:before {
+    border-color: #0052e7;
+}
+
+.cfsuite1SetupDirectDebit .step-indicator li.active+li:after {
+    background-color: #0052e7;
+}
+
+.cfsuite1SetupDirectDebit .thank-you h1 {
+    text-align: center !important;
+}
+
+.cfsuite1SetupDirectDebit .thank-you .details {
+    background-color: #fff;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_faux i {
+    display: block;
+    color: #b5b5b5;
+    font-size: 1.5rem;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-radio_faux i.fa-university {
+    font-size: 1.65rem;
+}
+
+.cfsuite1SetupDirectDebit #bank h3,
+.cfsuite1SetupDirectDebit .cIntegraPayForm .title-container {
+    margin-top: 0px !important;
+}
+
+.cfsuite1SetupDirectDebit .spins {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.cfsuite1SetupDirectDebit .spins::after {
+    position: absolute;
+    content: 'Your direct debit setup is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* error message styling*/
+.cfsuite1SetupDirectDebit .slds-text-color_error {
+    display: flex;
+}
+
+.cfsuite1SetupDirectDebit .slds-text-color_error p {
+    color: #c23934;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-text-color_error p {
+    line-height: .9rem !important;
+    margin-bottom: 10px;
+    font-size: 13px;
+    position: relative;
+    top: -4px;
+    padding-left: 1px;
+
+}
+
+.cfsuite1SetupDirectDebit .slds-text-color_error i {
+    font-size: .85rem;
+    padding-right: 6px;
+}
+
+.cfsuite1SetupDirectDebit .payment .slds-text-color_error i {
+    margin-top: 2px;
+    position: relative;
+    top: 1px;
+}
+
+.cfsuite1SetupDirectDebit .steps .cProgressIndicator .steps-wrapper {
+    display: inline-block;
+}
+
+/* end error message styling*/
+
+
+/* spinner styling*/
+.cfsuite1SetupDirectDebit .spins {
+    background-color: #fff;
+}
+
+.cfsuite1SetupDirectDebit .spins::after {
+    position: absolute;
+    content: 'Your direct debit setup is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #008857;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content p {
+    font-size: .95rem;
+    line-height: 1.7;
+    padding: 0;
+    font-family: inherit;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    color: #292929;
+    width: 100%;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content ul {
+    list-style: disc;
+    font-size: .9rem;
+    color: #292929;
+    margin-left: 20px;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__content ul li {
+    margin-top: 9px;
+    padding-left: 10px;
+}
+
+.cfsuite1SetupDirectDebit .slds-modal__footer .slds-button_brand {
+    margin-top: 0px;
+    padding: .3rem 2rem;
+    border-radius: 2px;
+    width: 25%;
+    float: right;
+}
+
+@media (max-width: 48em) {
+    .cfsuite1SetupDirectDebit .spins::after {
+        padding: 0px 20%;
+    }
+}
+
+@media (max-width: 30em) {
+    .cfsuite1SetupDirectDebit .spins::after {
+        padding: 0px 10%;
+    }
+}
+
+/* end spinner styling*/
+
+@media (max-width: 30em) {
+    .cfsuite1SetupDirectDebit h1 {
+        width: 100%;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .cfsuite1SetupDirectDebit .slds-modal__header h1 {
+        margin: 1rem .9rem;
+        font-size: 1.5rem;
+    }
+
+    .cfsuite1SetupDirectDebit .slds-modal__content {
+        padding: 0px 1.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cfsuite1SetupDirectDebit .debit-type .option {
+        padding-left: 38px;
+    }
+
+    .cfsuite1SetupDirectDebit .debit-type {
+        padding-left: 0px;
+    }
+
+    .cfsuite1SetupDirectDebit #chooseown {
+        margin-left: 0px;
+    }
+
+    .cfsuite1SetupDirectDebit .slds-radio_button .slds-radio_faux {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .cfsuite1SetupDirectDebit .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 48em) {
+    .cfsuite1SetupDirectDebit .slds-modal__container {
+        width: 80%;
+    }
+
+    .cfsuite1SetupDirectDebit .slds-modal__content {
+        padding: 0 3rem 1.2em 3rem;
+    }
+}
+
+@media (min-width: 64em) {
+    .cfsuite1SetupDirectDebit .slds-modal__container {
+        width: 50%;
+    }
+}
+
+/* Below CSS Code from RequestPaymentPlan for New jquery Calendar */
+
+.cfsuite1SetupDirectDebit .date-icon {
+    color: #5e6063;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: -25px;
+}
+
+.cfsuite1SetupDirectDebit .input-box {
+    width: auto;
+}
+
+/* END */
+
+
+/* START RefundCredit styles */
+
+.cfsuite1RefundCredit h4 {
+    padding: 1rem 0;
+}
+
+.cfsuite1RefundCredit .details {
+    background-color: #fff;
+    padding: 30px 50px;
+}
+
+.cfsuite1RefundCredit .details .limit {
+    color: white;
+    background-color: rgb(194, 57, 52);
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-top: -5px;
+    margin-bottom: 16px;
+    max-width: 96%;
+}
+
+.cfsuite1RefundCredit .details .ref {
+    font-size: 1.1rem;
+}
+
+.cfsuite1RefundCredit .refund-type {
+    position: relative;
+    padding: 10px 0 5px 38px;
+    font-size: 1.05rem;
+    font-family: 'Lato';
+    font-weight: 600;
+}
+
+.cfsuite1RefundCredit .refund-type .select-circle {
+    background-color: white;
+    border: 1px solid #505050;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    width: 22px;
+    margin-top: 4px;
+}
+
+.cfsuite1RefundCredit .submit-request i {
+    margin-left: 15px;
+}
+
+.cfsuite1RefundCredit .refund-type .select-circle.active {
+    border: 1px solid #B5231d;
+}
+
+.cfsuite1RefundCredit .refund-type .select-circle.active:after {
+    border: 2px solid white;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    background: #B5231d;
+    width: 18px;
+    height: 18px;
+    top: 0px;
+    left: 1px;
+    position: relative;
+}
+
+.cfsuite1RefundCredit .thank-you h1 {
+    margin: 53px auto 11px;
+}
+
+.cfsuite1RefundCredit .thank-you h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0;
+}
+
+.cfsuite1RefundCredit .thank-you .refund-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cfsuite1RefundCredit .thank-you .heading i {
+    color: #1b806d;
+    font-size: 1.8rem;
+}
+
+.cfsuite1RefundCredit .thank-you hr {
+    margin: 1rem 0;
+}
+
+.cfsuite1RefundCredit .thank-you .details {
+    margin-top: 7px;
+}
+
+.cfsuite1RefundCredit .heading i {
+    color: #028162;
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+.cfsuite1RefundCredit .heading .flexme {
+    display: flex;
+    align-items: center;
+}
+
+.cfsuite1RefundCredit .refund-summary {
+    font-size: 15px;
+    padding: 5px 25px 20px 0;
+    border-radius: 3px;
+}
+
+.cfsuite1RefundCredit .refund-summary .line {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.cfsuite1RefundCredit .refund-summary .line .label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cfsuite1RefundCredit .refund-summary a {
+    color: #B5231d;
+}
+
+.cfsuite1RefundCredit .btninfo {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.cfsuite1RefundCredit .info-wraper h3 {
+    margin: 10px 0 20px 0;
+}
+
+.cfsuite1RefundCredit .info {
+    background-color: #fbfbfb;
+    border-left: 6px solid #1b806d;
+    padding: 18px 18px 18px 30px;
+    font-size: 0.94rem;
+    line-height: 1.5rem;
+    color: #252525;
+}
+
+.cfsuite1RefundCredit .info i {
+    color: #028162;
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+.cfsuite1RefundCredit .info a {
+    text-decoration: underline;
+}
+
+.cfsuite1RefundCredit .page-title {
+    padding-top: 56px;
+}
+
+.cfsuite1RefundCredit .option {
+    line-height: 30px;
+    margin-bottom: 13px;
+}
+
+.cfsuite1RefundCredit .slds-form-element label {
+    display: none;
+}
+
+.cfsuite1RefundCredit .payment label {
+    font-size: .94rem;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5rem;
+}
+
+.cfsuite1RefundCredit .slds-button_brand {
+    padding: .5rem 2rem;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+.cfsuite1RefundCredit ul {
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 18px;
+}
+
+.cfsuite1RefundCredit li {
+    margin-bottom: 8px;
+}
+
+/* error message styling*/
+.cfsuite1RefundCredit .slds-text-color_error {
+    display: flex;
+    position: relative;
+    top: -3px;
+}
+
+.cfsuite1RefundCredit .slds-text-color_error p {
+    color: #c23934;
+    margin-bottom: 10px;
+    font-size: 13px;
+    padding-left: 1px;
+    line-height: 1rem;
+}
+
+.cfsuite1RefundCredit .slds-text-color_error i {
+    font-size: .85rem;
+    margin-top: 2px;
+    padding-right: 4px;
+}
+
+.cfsuite1RefundCredit .spins {
+    background-color: #fff;
+}
+
+.cfsuite1RefundCredit .spins::after {
+    position: absolute;
+    content: 'Your request is processing, please do not click on the screen until processing has finished.';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 4em);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* end error message styling*/
+
+
+@media (max-width: 600px) {
+    .cfsuite1RefundCredit .details {
+        padding: 36px;
+    }
+}
+
+@media (min-width: 831px) {
+    .cfsuite1RefundCredit {
+        width: calc(100% + 2rem);
+    }
+}
+
+@media (max-width: 30em) {
+    .cfsuite1RefundCredit .refund-summary .line .slds-col:nth-child(2) {
+        margin-top: 6px;
+    }
+
+    .cfsuite1RefundCredit .refund-summary .line .slds-col:nth-child(1) {
+        font-weight: 600;
+    }
+
+    .cfsuite1RefundCredit .spins::after {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 48em) {
+    .cfsuite1RefundCredit .spins::after {
+        padding: 0px 20%;
+    }
+}
+
+
+
+/* END */
+
+
+/* START MyLinkedProperties styles */
+
+/* cfsuite1-my-linked-properties-l-w-c>.title-cont>i {
+    color: #fff;
+    background-color: #f79223;
+    padding: 21px 20px;
+    font-weight: normal;
+    margin-right: 20px;
+    cursor: pointer;
+} */
+
+cfsuite1-my-linked-properties-l-w-c .title-cont {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+cfsuite1-my-linked-properties-l-w-c .page-title .back {
+    background-color: #0055a4;
+}
+
+cfsuite1-my-linked-properties-l-w-c .properties h2,
+cfsuite1-my-linked-properties-l-w-c .no-properties {
+    display: inline-block;
+    width: 100%;
+}
+
+cfsuite1-my-linked-properties-l-w-c .no-properties {
+    padding: 30px;
+    border-bottom: 1px solid #d7d6d6;
+    border-top: 1px solid #eeeded;
+}
+
+cfsuite1-my-linked-properties-l-w-c .properties h1 {
+    display: inline;
+    margin: 10px auto 10px 0;
+}
+
+cfsuite1-my-linked-properties-l-w-c .header-top .slds-size_1-of-2,
+cfsuite1-my-linked-properties-l-w-c .header-top .slds-size--1-of-2 {
+    width: auto;
+}
+
+cfsuite1-my-linked-properties-l-w-c .properties .title-cont a {
+    display: block;
+    float: right;
+    max-width: 190px;
+    min-width: 50px;
+    font-size: 1rem;
+    text-align: center;
+    background: #eeeeee;
+    color: #333;
+    padding: 10px 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+cfsuite1-my-linked-properties-l-w-c .properties .title-cont a .slds-small-show {
+    margin: 0 10px;
+}
+
+cfsuite1-my-linked-properties-l-w-c .properties .title-cont>a>i {
+    color: #198264;
+    margin-right: 10px;
+}
+
+cfsuite1-my-linked-properties-l-w-c h2 {
+    background-color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* cfsuite1-my-linked-properties-l-w-c .properties {
+    padding: 35px 0px 40px;
+} */
+
+cfsuite1-my-linked-properties-l-w-c .link-green {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+cfsuite1-my-linked-properties-l-w-c .no-records .title {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+cfsuite1-my-linked-properties-l-w-c .no-records p {
+    margin-bottom: 1em;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+cfsuite1-my-linked-properties-l-w-c .btn-add {
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 3px 21px 5px 20px;
+    text-decoration: none;
+}
+
+cfsuite1-my-linked-properties-l-w-c .no-records span {
+    text-decoration: none !important;
+    margin-right: 5px;
+    color: #1B8B67 !important;
+}
+
+cfsuite1-my-linked-properties-l-w-c .btn-add i {
+    margin-right: 10px;
+}
+
+cfsuite1-my-linked-properties-l-w-c .slds-x-small-show-only i.add-sml {
+    font-size: 13px;
+    position: relative;
+    /* top: -10px; */
+}
+
+/* cfsuite1-my-linked-properties-l-w-c .slds-x-small-show-only i.fal {
+    color: #028162;
+} */
+
+cfsuite1-my-linked-properties-l-w-c .slds-small-show i {
+    padding-right: 7px;
+}
+
+@media (max-width: 499px) {
+    cfsuite1-my-linked-properties-l-w-c .properties h1 {
+        font-size: 1.4rem;
+    }
+
+    cfsuite1-my-linked-properties-l-w-c .properties .title-cont>a {
+        width: 50px;
+        height: 50px;
+        background: none;
+        font-size: 2em;
+        margin-top: -10px;
+    }
+
+    cfsuite1-my-linked-properties-l-w-c .properties .title-cont {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    cfsuite1-my-linked-properties-l-w-c .properties .title-cont a .slds-x-small-show-only {
+        display: block;
+    }
+
+    cfsuite1-my-linked-properties-l-w-c .properties h1 {
+        margin: 0 auto 10px 0;
+    }
+}
+
+/* END */
+
+
+
+/* START PayArrearsAndPaymentPlan styles */
+
+.cfsuite1PayArrearsAndPaymentPlan h2 {
+    margin: 36px auto 30px;
+    font-size: 1.5em;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1PayArrearsAndPaymentPlan p {
+    font-size: 1rem;
+}
+
+.cfsuite1PayArrearsAndPaymentPlan .page-title {
+    margin-top: 1rem;
+}
+
+.cfsuite1PayArrearsAndPaymentPlan .page-title a i {
+    color: #027055;
+    padding-right: 7px;
+}
+
+.cfsuite1PayArrearsAndPaymentPlan .slds-button_brand,
+.cfsuite1PayArrearsAndPaymentPlan .slds-button_neutral {
+    margin-top: 30px;
+}
+
+.cfsuite1PayArrearsAndPaymentPlan .slds-button_brand,
+.cfsuite1PayArrearsAndPaymentPlan .slds-button_neutral {
+    padding: .5rem 2rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 520px) {
+
+    .cfsuite1PayArrearsAndPaymentPlan .slds-button_brand,
+    .cfsuite1PayArrearsAndPaymentPlan .slds-button_neutral {
+        width: 100%;
+        margin: 10px 0px 0px;
+    }
+}
+
+
+
+
+
+/* END */
+
+
+/* START PreviousProperties styles */
+
+.cfsuite1PreviousProperties h2 {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d6d6;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px 25px;
+}
+
+.cfsuite1PreviousProperties h2 span.anum {
+    float: right;
+    font-weight: normal;
+    font-size: 0.8125em;
+    margin-top: 4px;
+}
+
+.cfsuite1PreviousProperties,
+.cfsuite1PreviousProperties h1,
+.cfsuite1PreviousProperties h2,
+.cfsuite1PreviousProperties h3 .cfsuite1PreviousProperties p {
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #252525;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1PreviousProperties .prevProperties {
+    border: 1px solid #d7d6d6;
+}
+
+.cfsuite1PreviousProperties .prevProperties .cPreviousProperty {
+    padding: 30px;
+    border-bottom: 1px solid #d7d6d6;
+}
+
+.cfsuite1PreviousProperties .prevProperties .cPreviousProperty:last-child {
+    border-bottom: none;
+}
+
+
+/* END */
+
+
+/* START PreviousProperty styles */
+
+.cfsuite1PreviousProperty span.anum {
+    float: right;
+    font-weight: normal;
+}
+
+.cfsuite1PreviousProperty .lbl-prev {
+    background-color: #444444;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    font-size: 10px;
+    margin-bottom: 10px;
+    padding: 4px 15px;
+}
+
+.cfsuite1PreviousProperty .prop-name {
+    color: #252525;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cfsuite1PreviousProperty .btn-history {
+    background-color: #F3F3F3;
+    border-radius: 4px;
+    color: #252525;
+    line-height: 1;
+    padding: 12px 30px;
+}
+
+
+/* END */
+
+/* START PropertyNotices styles */
+
+@media (max-width: 600px) {
+    c-property-notices-l-w-c .floatl {
+        float: left;
+    }
+}
+
+.fyselect {
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 0;
+    min-width: 170px;
+    border: 1px solid #D4D4D4;
+}
+
+.fyselect>label {
+    display: none;
+}
+
+.fyselectlabel p {
+    font-size: .98rem;
+}
+
+c-property-notices-l-w-c .notices-grid>div {
+    padding: 15px 20px;
+    border: solid 1px #d7d6d6;
+}
+
+c-property-notices-l-w-c .notices-grid>div:not(.last) {
+    border-right: none;
+}
+
+c-property-notices-l-w-c .notices-grid .col-data {
+    border-top: none;
+}
+
+c-property-notices-l-w-c .notices-grid .last {
+    padding-right: 20px;
+    padding-left: 0px;
+}
+
+c-property-notices-l-w-c .notices-grid .filter,
+c-property-notices-l-w-c .notices-grid .totalpay {
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+
+c-property-notices-l-w-c .notices-grid>thead.header {
+    background-color: #eee;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+c-property-notices-l-w-c .notices-grid .last {
+    padding-right: 20px;
+    padding-left: 0px;
+}
+
+c-property-notices-l-w-c .notices-grid .filter {
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+
+c-property-notices-l-w-c .notices-grid>div.header {
+    background-color: #eee;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+c-property-notices-l-w-c .slds-truncate {
+    color: #565656;
+    font-size: .95rem;
+}
+
+c-property-notices-l-w-c .outerBox {
+    position: relative;
+    height: 70px;
+    border: 0px solid #666;
+    overflow: auto;
+    background-color: #FFFFFF
+}
+
+c-property-notices-l-w-c .spinner {
+    position: absolute;
+}
+
+c-property-notices-l-w-c tr th:last-child {
+    text-align: right;
+}
+
+@media (max-width: 30em) {
+    c-property-notices-l-w-c {
+        margin: 26px 16px 26px 16px !important;
+    }
+}
+
+/* END */
+
+/* START PropertyNoticeLWC styles */
+
+c-property-requests .fyselectlabel p::before {
+    font-size: .98rem;
+    line-height: 1.5;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 6px;
+}
+
+/* END */
+
+/* START PropertyPaymentHistory styles */
+
+c-property-payment-history-l-w-c .fyselect>label {
+    display: none;
+}
+
+c-property-payment-history-l-w-c .notices-grid .col-data {
+    border-top: none;
+}
+
+c-property-payment-history-l-w-c .notices-grid .last {
+    padding-right: 20px;
+    padding-left: 0px;
+}
+
+c-property-payment-history-l-w-c .notices-grid .filter,
+c-property-payment-history-l-w-c .notices-grid .totalpay {
+    border: none;
+    padding: 1rem 0;
+    float: right;
+}
+
+c-property-payment-history-l-w-c .notices-grid .totalpay {
+    padding-left: 2rem;
+}
+
+c-property-payment-history-l-w-c .notices-grid .filter {
+    border: none;
+    padding: 1rem 0;
+    float: right;
+}
+
+c-property-payment-history-l-w-c .fyselectlabel {
+    padding-top: 23px !important;
+    padding-right: 16px !important;
+}
+
+c-property-payment-history-l-w-c .notices-grid>div.header {
+    background-color: #eee;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+c-property-payment-history-l-w-c .slds-truncate {
+    color: #565656;
+    font-size: .95rem;
+}
+
+c-property-payment-history-l-w-c .slds-table thead th {
+    font-weight: 600;
+}
+
+c-property-payment-history-l-w-c .slds-notify {
+    border-radius: 6px;
+    background-image: none;
+    background-color: #f9f9f9;
+    color: #565656;
+    justify-content: left;
+    width: 100%;
+    margin: 0 2rem 1rem;
+    padding: .5rem 2rem;
+    justify-content: center;
+}
+
+c-property-payment-history-l-w-c .slds-notify .icon-info {
+    font-size: 1.1rem;
+    color: #b5231d;
+}
+
+c-property-payment-history-l-w-c .slds-notify p {
+    font-weight: 600;
+    font-size: .98rem;
+}
+
+@media (max-width: 767px) {
+    c-property-payment-history-l-w-c .totalfy {
+        float: left;
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    c-property-payment-history-l-w-c .outer-div {
+        position: relative;
+    }
+
+    c-property-payment-history-l-w-c .spinner {
+        position: absolute;
+    }
+}
+
+c-property-payment-history-l-w-c .slds-dropdown_small,
+c-property-payment-history-l-w-c .slds-dropdown--small {
+    min-width: 10rem !important;
+}
+
+c-property-payment-history-l-w-c .slds-button {
+    border-radius: 2px !important;
+}
+
+c-property-payment-history-l-w-c .slds-button {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    margin-top: 0px;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    font-size: .95rem;
+}
+
+c-property-payment-history-l-w-c .button-container button a {
+    color: #006fbe;
+}
+
+c-property-payment-history-l-w-c .button-container i {
+    margin-left: 10px;
+    display: inline;
+}
+
+c-property-payment-history-l-w-c th {
+    width: 14rem !important;
+}
+
+c-property-payment-history-l-w-c .outerBox {
+    position: relative;
+    height: 70px;
+    border: 0px solid #666;
+    overflow: auto;
+    background-color: #FFFFFF
+}
+
+c-property-payment-history-l-w-c .spinner {
+    position: absolute;
+}
+
+/* Model */
+c-property-payment-history-l-w-c .slds-modal__header {
+    border: none;
+    padding-top: 3em;
+}
+
+c-property-payment-history-l-w-c .slds-modal__container {
+    width: 95%;
+    margin: 0px auto;
+}
+
+c-property-payment-history-l-w-c .slds-modal__container h1 {
+    color: #252525;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    display: inline;
+}
+
+c-property-payment-history-l-w-c .slds-modal__content {
+    padding: 0 2.5rem 1.2em 2.5rem !important;
+}
+
+c-property-payment-history-l-w-c .slds-modal__container b {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+c-property-payment-history-l-w-c .slds-modal__footer {
+    border: none;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+c-property-payment-history-l-w-c .slds-modal__container .slds-button {
+    font-weight: 600;
+    font-size: 1.1em;
+    width: 8em;
+}
+
+c-property-payment-history-l-w-c th {
+    width: 22%;
+}
+
+c-property-payment-history-l-w-c th:nth-child(3) {
+    width: 24%;
+}
+
+c-property-payment-history-l-w-c .amount {
+    padding-top: 6px;
+}
+
+c-property-payment-history-l-w-c .slds-button:focus {
+    background-color: #fff !important;
+    color: #156B4F !important;
+    font-weight: 600;
+}
+
+@media (min-width: 48em) {
+    c-property-payment-history-l-w-c .slds-modal__container {
+        width: 80%;
+    }
+
+    c-property-payment-history-l-w-c .slds-modal__content {
+        padding: 0 3rem 1.2em 3rem;
+    }
+}
+
+@media (min-width: 64em) {
+    c-property-payment-history-l-w-c .slds-modal__container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    c-property-payment-history-l-w-c .filter {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 30em) {
+    c-property-payment-history-l-w-c {
+        margin: 26px 16px 26px 16px !important;
+    }
+}
+
+/* END */
+
+
+/* START MyLinkedProperty styles */
+
+cfsuite1-my-linked-property-l-w-c .page-title {
+    padding-top: 40px;
+}
+
+cfsuite1-my-linked-property-l-w-c .page-title h1 {
+    font-size: 1.4rem;
+    display: inline;
+    position: relative;
+    top: 10px;
+}
+
+
+@media (min-width: 30em) {
+    cfsuite1-my-linked-property-l-w-c .page-title h1 {
+        font-size: 1.7rem;
+        position: relative;
+        /* top: 10px; */
+    }
+
+    cfsuite1-my-linked-property-l-w-c .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+}
+
+cfsuite1-my-linked-property-l-w-c h1 a {
+    display: block;
+    float: right;
+    width: 190px;
+    font-size: .85rem;
+    text-align: center;
+    background: #eeeeee;
+    color: #333;
+    padding: 10px 0;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+cfsuite1-my-linked-property-l-w-c h1 a>i {
+    color: #198264;
+    margin-right: 10px;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion {
+    display: inline-block;
+    width: 100%;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-head {
+    margin-top: 0px;
+    background-color: #f6f6f6;
+    color: #000;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: lato;
+    position: relative;
+    font-weight: 700;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-head i {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 20px 26px 20px;
+    border: none;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-panel.active {
+    border-bottom: 1px solid #d7d6d6;
+    border-top: none;
+    max-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: max-height 200ms;
+    -moz-transition: max-height 200ms;
+    transition: max-height 200ms;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-head:nth-child(1) {
+    border-top: 1px solid #d7d6d6;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-head.active {
+    border-top: 1px solid #565656;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .accordion>div.active {
+    max-height: 2000px;
+    -webkit-transition: max-height 1300ms;
+    -moz-transition: max-height 1300ms;
+    transition: max-height 1300ms;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion>div.active span,
+cfsuite1-my-linked-property-l-w-c .accordion>div.active i {
+    color: #008857;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion>div.active th span {
+    color: #565656;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion>div.active th a span {
+    color: #006fbe;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion>div.active a.redlink i {
+    color: #006fbe;
+}
+
+cfsuite1-my-linked-property-l-w-c .accordion .acc-panel.active {
+    border-bottom: 1px solid #565656;
+    border-right: none;
+    border-left: none;
+}
+
+cfsuite1-my-linked-property-l-w-c .acc-panel>div {
+    margin: 6px 30px 26px 30px;
+}
+
+cfsuite1-my-linked-property-l-w-c .acc-panel .hruler {
+    margin: 20px 0;
+    border-top: solid 1px #e9e9e9;
+}
+
+cfsuite1-my-linked-property-l-w-c .property-details {
+    font-size: 1rem;
+}
+
+cfsuite1-my-linked-property-l-w-c .property-details .strong {
+    font-weight: 600;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .property-details * {}
+
+cfsuite1-my-linked-property-l-w-c .property-details a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+cfsuite1-my-linked-property-l-w-c .last {
+    text-align: right;
+}
+
+/* c-property-payment-history-l-w-c .totalfy {
+    background: #f2f2f2;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: .98rem;
+    margin-bottom: 1.2em;
+    border-left: 5px solid #006fbe;
+} */
+
+c-property-payment-history-l-w-c .totalfy {
+    padding-top: 12px;
+    font-size: 1rem;
+}
+
+c-property-payment-history-l-w-c .totalfy span {
+    font-weight: 600;
+}
+
+cfsuite1-my-linked-property-l-w-c .fyhcurrency {
+    color: #000 !important;
+}
+
+cfsuite1-my-linked-property-l-w-c .redlink {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+cfsuite1-my-linked-property-l-w-c .redlink>i {
+    margin-right: 10px;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container h1 {
+    color: #252525;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container b {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container .slds-button {
+    font-weight: 600;
+    font-size: 1.1em;
+    width: 8em;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container .slds-button_neutral {
+    border: 1px solid #c7c7c7;
+}
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container .slds-button_neutral:hover,
+cfsuite1-my-linked-property-l-w-c .slds-modal__container .slds-button_brand:hover {
+    font-weight: 600;
+}
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__container .slds-button_neutral:hover {
+    background-color: #e8e8e8;
+    color: #252525;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__header {
+    border: none;
+    padding-top: 3em;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__content {
+    padding: 0px 3rem 1.2em 3rem;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .slds-modal__footer {
+    border: none;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+
+
+
+cfsuite1-my-linked-property-l-w-c .page-title a i {
+    color: #565656;
+    padding-right: 7px;
+}
+
+cfsuite1-my-linked-property-l-w-c .page-title a {
+    display: block;
+    float: right;
+    width: 190px;
+    font-size: .9rem;
+    text-align: center;
+    background: #eeeeee;
+    color: #000;
+    padding: 10px 0;
+    font-weight: 600;
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .page-title a:hover {
+    text-decoration: underline;
+    background: #e8e8e8;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .unlink-sm {
+    width: 100%;
+    font-size: .85rem;
+    text-align: center;
+    background: #eeeeee;
+    padding: 14px 0;
+    font-weight: 600;
+    margin-top: 1em;
+    border: 1px solid #e8e8e8;
+}
+
+
+cfsuite1-my-linked-property-l-w-c .unlink-sm a {
+    color: #333;
+    text-decoration: none;
+}
+
+cfsuite1-my-linked-property-l-w-c .unlink-sm i {
+    padding-right: 7px;
+    color: #027055;
+}
+
+
+@media (min-width: 64em) {
+    cfsuite1-my-linked-property-l-w-c .totalfy {
+        padding-right: 2em;
+    }
+}
+
+@media (max-width: 48em) {
+    cfsuite1-my-linked-property-l-w-c .page-title {
+        padding-top: 16px;
+    }
+
+    cfsuite1-my-linked-property-l-w-c .accordion .acc-head i {
+        padding: 19px 26px 19px;
+    }
+}
+
+@media (max-width: 30em) {
+    cfsuite1-my-linked-property-l-w-c .result {
+        padding-top: .7em;
+        text-align: left;
+    }
+}
+
+@media (max-width: 499px) {
+    cfsuite1-my-linked-property-l-w-c .page-title>a {
+        background: none;
+        text-align: right;
+        text-decoration: underline;
+        margin-top: 2em;
+        font-weight: 600;
+    }
+}
+
+
+/* END */
+
+
+/* START RatesFAQ styles */
+
+.cfsuite1RatesFAQ h1 {
+    font-size: 1.3rem;
+    display: inline;
+    position: relative;
+    top: 14px;
+}
+
+.cfsuite1RatesFAQ h2 {
+    padding-right: 53px;
+    padding: 20px 83px 20px 30px;
+    color: #565656;
+    font-family: 'LATO';
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cfsuite1RatesFAQ p {
+    font-size: 1rem;
+}
+
+.cfsuite1RatesFAQ .page-title {
+    padding-top: 40px;
+}
+
+.cfsuite1RatesFAQ .ul-content {
+    display: block;
+    height: auto;
+}
+
+.cfsuite1RatesFAQ button.title {
+    background-color: #f2f2f2;
+    color: #252525;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    padding: 0px;
+}
+
+.cfsuite1RatesFAQ button.title i {
+    color: #a3a3a3;
+    border: none;
+    text-align: center;
+    position: absolute;
+    right: 32px;
+    top: calc(50% - 8px);
+}
+
+.cfsuite1RatesFAQ .icon-cont {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 76px;
+    background-color: #f2f2f2;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.cfsuite1RatesFAQ li button {
+    color: #AEB6BF;
+    font-size: 1em;
+    display: block;
+    text-decoration: none;
+}
+
+.cfsuite1RatesFAQ .itemlist:hover {
+    color: #252525;
+    background-color: #dedede;
+}
+
+.cfsuite1RatesFAQ .fa-minus:before,
+.cfsuite1RatesFAQ .fa-plus:before {
+    position: relative;
+    top: 35%;
+}
+
+.cfsuite1RatesFAQ ul li:nth-child(10) {
+    display: none;
+}
+
+.cfsuite1RatesFAQ button:focus {
+    background-color: #dedede !important;
+    color: #252525 !important;
+}
+
+.cfsuite1RatesFAQ .icon-cont:focus {
+    background-color: #dedede !important;
+    outline: none;
+}
+
+.cfsuite1RatesFAQ .answer {
+    background-color: #f8f8f8;
+    border-top: 2px solid #fff;
+    padding: 35px 25px;
+}
+
+@media (min-width: 30em) {
+    .cfsuite1RatesFAQ .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+    }
+
+    .cfsuite1RatesFAQ .page-title h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 831px) {
+    .cfsuite1RatesFAQ {
+        width: calc(100% + 2rem);
+    }
+}
+
+/* END */
+
+
+/* START ManageDirectDebit styles */
+
+.cfsuite1ManageDirectDebit h1 {
+    margin: 44px auto 44px;
+    width: calc(100% - 186px);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.cfsuite1ManageDirectDebit h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0px 0px;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.cfsuite1ManageDirectDebit .details .limit {
+    color: white;
+    background-color: rgb(194, 57, 52);
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-top: -5px;
+    margin-bottom: 16px;
+    max-width: 96%;
+}
+
+.cfsuite1ManageDirectDebit .cIntegraPayForm .title {
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1ManageDirectDebit .direct-debit-summary {
+    font-size: 1rem;
+}
+
+.cfsuite1ManageDirectDebit .direct-debit-summary .line .label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cfsuite1ManageDirectDebit .closePdf {
+    background-color: #16325c;
+
+}
+
+.cfsuite1ManageDirectDebit .btnClose {
+    width: 3.5rem;
+    height: 3.7rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background-color: rgb(13, 64, 47);
+}
+
+.cfsuite1ManageDirectDebit .slds-button_icon-border {
+    border: none;
+}
+
+.cfsuite1ManageDirectDebit .download {
+    font-size: 1rem;
+}
+
+.cfsuite1ManageDirectDebit .download i {
+    padding-right: 10px;
+}
+
+.cfsuite1ManageDirectDebit .actions {
+    margin-top: 1.9rem;
+    border-top: 1px solid #cfcfcf;
+    padding-top: 1.9rem;
+}
+
+.cfsuite1ManageDirectDebit .btn-cancel {
+    color: #565656;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 3px;
+    width: auto;
+    margin-top: 1.3rem;
+}
+
+.cfsuite1ManageDirectDebit .btn-cancel i {
+    padding-right: 5px;
+}
+
+.cfsuite1ManageDirectDebit .btn-cancel span {
+    text-decoration: underline;
+}
+
+.cfsuite1ManageDirectDebit .slds-modal__header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.3rem;
+}
+
+.cfsuite1ManageDirectDebit .slds-modal__header h1 {
+    text-align: center !important;
+}
+
+.cfsuite1ManageDirectDebit .slds-modal__container h3 {
+    padding-top: 0rem !important;
+}
+
+.cfsuite1ManageDirectDebit .slds-modal__container .title-container {
+    margin-top: 0px;
+}
+
+.cfsuite1ManageDirectDebit .custom .slds-modal__header,
+.cfsuite1ManageDirectDebit .custom .slds-modal__footer {
+    border: none;
+    text-align: center;
+}
+
+.cfsuite1ManageDirectDebit .custom .slds-modal__footer {
+    padding-bottom: 3em;
+}
+
+.cfsuite1ManageDirectDebit .custom .slds-modal__footer {
+    padding-bottom: 3em;
+}
+
+.cfsuite1ManageDirectDebit .slds-modal__header h1 {
+    width: 100%;
+    margin: 0px;
+}
+
+.cfsuite1ManageDirectDebit .slds-form-element label {
+    display: none;
+}
+
+.cfsuite1ManageDirectDebit .slds-text-color_error p {
+    line-height: .9rem !important;
+    margin-bottom: 10px;
+    font-size: 13px;
+    padding-left: 3px;
+}
+
+.cfsuite1ManageDirectDebit .slds-text-color_error i {
+    font-size: .85rem;
+    padding-right: 6px;
+}
+
+@media (max-width: 479px) {
+    .cfsuite1ManageDirectDebit h1 {
+        width: 100%;
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .cfsuite1ManageDirectDebit .details {
+        padding: 30px;
+    }
+
+    .cfsuite1ManageDirectDebit .actions .slds-button_brand {
+        width: 100%;
+        position: relative;
+        bottom: 32px;
+    }
+
+    .cfsuite1ManageDirectDebit .btn-cancel {
+        position: relative;
+        top: 46px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cfsuite1ManageDirectDebit .btn-cancel span {
+        width: 100%;
+    }
+
+    .cfsuite1ManageDirectDebit .direct-debit-summary .line .label {
+        margin-top: 6px;
+    }
+
+    .cfsuite1ManageDirectDebit a.download-link {
+        float: left;
+        margin-top: 10px;
+    }
+
+    .cfsuite1ManageDirectDebit .confirm .slds-button_neutral,
+    .cfsuite1ManageDirectDebit .confirm .slds-button_brand {
+        margin: 10px 0px 0px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 30em) {
+    .cfsuite1ManageDirectDebit .back {
+        padding: 22px 28px;
+        font-size: 1.6rem;
+        margin-right: 0px;
+    }
+}
+
+@media (min-width: 48em) {
+    .cfsuite1ManageDirectDebit .slds-modal__container {
+        width: 65%;
+    }
+}
+
+/* END */
+
+
+/* START NeedHelp styles */
+
+.cfsuite1NeedHelp .help {
+    padding: 1.2rem 1.6rem 2.2rem;
+    vertical-align: middle;
+    justify-content: center;
+    border: 1px solid rgb(217, 219, 221);
+    transition: border .15s linear;
+    color: #ffffff;
+    float: right;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.cfsuite1NeedHelp h2 {
+    color: #4a4a4a;
+    padding: 16px 0px 13px 0px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.cfsuite1NeedHelp .faq {
+    color: #0055a4;
+}
+
+.cfsuite1NeedHelp hr {
+    margin-top: 0px;
+}
+
+.cfsuite1NeedHelp .line-2 {
+    padding: 13px 0 16px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cfsuite1NeedHelp .line-2 span {
+    font-weight: normal;
+    padding-top: 4px;
+}
+
+@media (min-width: 831px) {
+    .cfsuite1NeedHelp .help {
+        width: calc(100% - 2rem);
+    }
+
+    .cfsuite1NeedHelp .help-width {
+        width: calc(100% - 2rem);
+        float: right;
+    }
+
+    .cfsuite1NeedHelp hr {
+        display: none;
+    }
+}
+
+@media (max-width: 830px) {
+    .cfsuite1NeedHelp .help {
+        margin-top: 0px !important;
+    }
+
+    .cfsuite1NeedHelp .help-width {
+        margin-top: 50px !important;
+        max-width: 400px;
+    }
+}
+
+
+/* END */
+
+/* START New Manage Property/Property Summary styles */
+
+/* headers */
+
+cfsuite1-property-summary .section-heading {
+    padding-top: 2.5rem;
+    /* 56px */
+    padding-bottom: 1rem;
+    /* 16px */
+    align-items: center;
+}
+
+cfsuite1-property-summary h1 {
+    font-size: 2rem;
+    /* 32px */
+    font-weight: 600;
+    margin: 0;
+    color: var(--primaryFontColor);
+}
+
+cfsuite1-property-summary c-property-requests h1,
+cfsuite1-property-summary c-property-notices-l-w-c h1,
+cfsuite1-property-summary c-property-payment-history-l-w-c h1 {
+    font-size: 1.8rem;
+}
+
+cfsuite1-property-summary h2 {
+    color: var(--primaryFontColor);
+    font-size: 1.5rem;
+    /* 24px */
+    font-weight: 600;
+}
+
+cfsuite1-property-summary a {
+    text-underline-offset: 4px;
+}
+
+cfsuite1-property-summary .slds-tabs_default {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* icons */
+.icon-home-circle {
+    background-color: #DBEAFE;
+    border-radius: 50%;
+    /* modified from here */
+    padding: 22px 18px 27px 19px !important;
+    height: 56px;
+    width: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 28px;
+    /* modification end */
+}
+
+.icon-home-circle i {
+    color: var(--primaryColor);
+}
+
+
+@media (min-width: 48em) {
+    .icon-home-circle {
+        height: 73px;
+        width: 73px; 
+    }
+}
+/* icons */
+
+/* base card styling */
+
+.custom-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.custom-card hr {
+    border-color: #EDEDED;
+    margin: 1.5rem 0;
+}
+
+.card-title {
+    margin-bottom: 2.5rem;
+    /* 32px */
+}
+
+@media (max-width: 48em) {
+.custom-card {
+    margin-bottom: 1rem;
+}
+}
+
+/* base card styling */
+
+/* custom card styling */
+
+.custom-card.custom-card--fixed {
+    height: 440px;
+}
+
+/* custom card styling */
+
+cfsuite1-property-summary .status-text {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+    /* 32px */
+    color: #0b0d17;
+    font-size: 1.2rem;
+}
+
+cfsuite1-property-summary .meta-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6e6e6e;
+    margin-top: 1rem;
+    /* 16px */
+    font-style: italic;
+}
+
+cfsuite1-property-summary .key-value {
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+cfsuite1-property-summary .key-label {
+    font-size: 1rem;
+    color: var(--secondaryFontColor);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    /* 8px */
+}
+
+cfsuite1-property-summary .key-value-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primaryFontColor);
+}
+
+cfsuite1-property-summary .key-subtext {
+    font-size: 0.875rem;
+    color: #6e6e6e;
+    margin-top: 0.5rem;
+    /* 8px */
+}
+
+cfsuite1-property-summary .section-meta {
+    font-size: .9rem;
+    color: #666666;
+}
+
+.key-message {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.key-message .slds-text-body_regular {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+} 
+
+/* custom card styling */
+
+/* badges */
+
+/* badge base */
+
+.status-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    /* 4px 8px */
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+    /* 8px */
+    vertical-align: middle;
+}
+
+.badge-due {
+    background-color: #e0e7ff;
+    color: #1e40af;
+}
+
+.badge-overdue {
+    background-color: #fdecea;
+    color: #b91c1c;
+}
+
+/* badge base */
+
+/* badge custom */
+
+/* badge custom */
+
+
+cfsuite1-property-summary .slds-text-heading_small {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primaryFontColor);
+}
+
+@media (min-width: 48em) {
+    cfsuite1-property-summary .slds-text-heading_small {
+        font-size: 24px;
+    }
+}
+
+/* tabs */
+
+cfsuite1-property-summary .slds-tabs_default {
+    padding-top: 1rem;
+}
+
+cfsuite1-property-summary .slds-tabs_default__item.slds-is-active .slds-tabs_default__link {
+    font-weight: 700;
+}
+
+cfsuite1-property-summary .slds-button.slds-button_brand.slds-m-top_large.slds-size_full {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+cfsuite1-property-summary .slds-tabs_default__item {
+    font-size: 14px;
+    font-weight: 500 !important;
+    color: var(--secondaryFontColor);
+    margin-right: 2rem;
+    /* 4 units of 8px */
+    padding: 0;
+}
+
+cfsuite1-property-summary .slds-tabs_default__link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--primaryFontColor);
+}
+
+cfsuite1-property-summary .slds-tabs_default__link:hover {
+    color: var(--primaryText-color);
+}
+
+cfsuite1-property-summary .slds-tabs_default__item:hover:after {
+    height: 3px;
+    background-color: var(--secondaryColor);
+}
+
+/* tabs */
+
+/* Your patment details section */
+c-your-payment-details .slds-box {
+    display: flex;
+    padding: 2rem !important;
+    align-items: flex-start;
+    border-radius: 1rem !important;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0 auto 0;
+    border: none;
+}
+
+c-your-payment-details .slds-gutters .slds-col {
+    padding: 0;
+}
+
+c-your-payment-details .slds-text-title {
+    color: var(--primaryFontColor);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+c-your-payment-details p {
+    color: var(--secondaryFontColor);
+    font-weight: 400;
+}
+
+c-your-payment-details lightning-helptext .slds-button_icon {
+    width: auto;
+    top: -4px;
+    left: 2px;
+}
+
+c-your-payment-details .slds-text-title lightning-helptext {
+        position: absolute;
+}
+
+@media (max-width: 48em) {
+    c-your-payment-details .slds-col {
+        width: 100%;
+    }
+    
+    c-your-payment-details .slds-medium-size_1-of-4 {
+        margin-bottom: 1.2rem;
+        padding-left: 0;
+    }
+}
+
+/* Rates Notices styles */
+/* c-property-notices-l-w-c */
+
+/* ProgressBar circle */
+
+
+.progress-bar-circle {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.background-circle {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 10;
+}
+
+.progress-circle {
+    fill: none;
+    stroke-width: 10;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    /* stroke-linecap: round; */
+}
+
+text tspan:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'lato';
+}
+
+text tspan:last-child {
+    fill: #6e6e6e;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* END */
+
+
+/* Banner Styling Start */
+
+
+.cfsuite-banner {
+    position: relative;
+    /*background: linear-gradient(135deg, #0055A4 0%, #0A61AF 100%);*/
+    background-image: url("/resource/1750258379000/cfsuiteBannerImage");
+    padding-bottom: 107px;
+    background-position: 100% 32%;
+    background-size: cover;
+    background-position: left top;
+    z-index: 1;
+}
+
+.cfsuite-banner .cfsuite-profile_wrapper {
+    padding-top: 50px;
+}
+
+.cfsuite-banner .cfsuite-profile_wrapper .cfsuite-profile_icon {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--primary);
+    border-radius: 100px;
+    width: 94px;
+    height: 94px;
+    background: #fff;
+}
+
+.cfsuite-banner h1 {
+    font-size: clamp(1.4rem, 2.3vw, 2.4rem);
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.36);
+    font-weight: bold;
+}
+
+.cfsuite-banner .cfsuite-banner__title p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.cfsuite-banner .cfsuite-banner__title p span {
+    font-style: italic;
+}
+
+.cfsuite-banner .back-button {
+    padding-top: 5rem;
+    font-size: 1rem;
+}
+
+.cfsuite-banner .back-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media(max-width:767px) {
+
+    .cfsuite-banner {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .cfsuite-banner .back-button {
+        padding-top: 0rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .cfsuite-banner .cfsuite-profile_wrapper {
+        padding: 0;
+    }
+
+    .cfsuite-banner .cfsuite-profile_wrapper .cfsuite-profile_icon {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 30em) {
+    .cfsuite-banner .cfsuite-profile_wrapper .cfsuite-profile_icon {
+        display: none;
+    }
+}
+
+/* Banner Styling end */
+
+/* New CSS code for Rates */
+
+.cCustomRatesLayout {
+    border-top: 16px solid #0055a4;
+}
+
+.cCustomRatesLayout .slds-col.slds-size_1-of-1.content {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #F4F5F7;
+    z-index: 9;
+    padding: 0;
+    position: relative;
+    margin: auto;
+    margin-top: -2rem;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+@media (min-width: 48em) {
+.cCustomRatesLayout .slds-col.slds-size_1-of-1.content {
+    margin-top: -6rem;
+    padding: 2rem;
+}
+}
+
+.cCustomRatesLayout .slds-col--padded.contentRegion.comm-layout-column {
+    padding: 0;
+}
+
+.cCustomRatesLayout cfsuite1-my-linked-properties-l-w-c .page-title {
+    padding-top: 0;
+}
+
+.cCustomRatesLayout cfsuite1-my-linked-properties-l-w-c .page-title h1,
+.cCustomRatesLayout cfsuite1-my-linked-properties-l-w-c .back.button {
+    display: none;
+}
+
+.cCustomRatesLayout cfsuite1-my-linked-properties-l-w-c .title-cont {
+    justify-content: end;
+    margin-bottom: 1.5rem;
+}
+
+
+/* To make rates cards active work */
+
+.box-option {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for all options */
+.box-option:hover {
+  border-color: var(--primaryColor); /* Blue border on hover */
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Active (selected) option */
+.box-option.active {
+  border-color: var(--primaryColor); /* Blue border when selected */
+  background-color: #e6f0ff; /* Slightly darker blue background */
+}
+
+/* Icon inside active (selected) option */
+.box-option.active i {
+  color: var(--primaryColor); /* Blue icon */
+}
+
+/* To make rates cards active work */
+
+
+/* To fix pdf icon not showing */
+
+.closePdf .slds-button {
+    width: 54px;
+    background-color: transparent;
+    height: 54px;
+}
+
+.closePdf .slds-button svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 48em) {
+.closePdf .slds-button {
+    background-color: #282B2E;
+}
+    }
+
+/* To fix pdf icon not showing */
+
+
+/* DELETE after 17 June release */
+
+.refund-title {
+    padding-bottom: 2rem;
+}
+
+.details {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.details .refund-title {
+    width: calc(100% + 4rem);
+    position: relative;
+    left: -32px;
+}
+
+.thank-you .heading .slds-col {
+    margin-bottom: 0px !important;
+    text-align: left !important;
+}
+
+/* To hide back and page title */
+
+cfsuite1-refund-credit-l-w-c .page-title {
+    display: none;
+}
+
+/* END */
+
+.cCustomRatesLayout cfsuite1-property-summary .container {
+    width: auto;
+}
+
+cfsuite1-refund-credit-l-w-c .details {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.refund-title i {
+    background-color: #DBEAFE;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563EB;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin-right: 1rem;
+}
+
+.details h3, .info-wraper h4 {
+    color: var(--primaryFontColor);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.thank-you .heading .refund-summary h3, .info-wraper h4 {
+    padding-top: 0;
+}
+
+.refund-summary {
+    font-size: 1rem; 
+}
+
+.refund-summary .line {
+    margin-bottom: .5rem;
+}
+
+.refund-summary .line .slds-col:first-child {
+    width: auto;
+    font-weight: 600;
+    padding-right: 0;
+}
+
+cfsuite1-refund-credit-l-w-c a {
+    font-size: 1rem;
+}
+
+/* Thank you screen */
+
+.thank-you .details {
+    padding: 2rem;  
+}
+
+.thank-you .heading i {
+    color: var(--secondaryColor); 
+}
+
+.thank-you .info {
+    padding-top: 2rem;
+}
+
+.thank-you .heading h1 {
+   color: var(--primaryFontColor);
+    font-weight: bold;
+}
+
+.thank-you .heading h2 {
+    color: var(--primaryFontColor);
+    font-weight: normal;
+}
+
+.thank-you ul {
+    font-size: 1rem;
+    list-style: disc;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.thank-you ul li {
+    padding-bottom: .3rem;
+}
+
+
+/* END */
+
+/* Form height */
+
+.slds-form-element__control .slds-input {
+    height: 56px;
+    font-size: 1rem;
+}
+
+cfsuite1-refund-credit-l-w-c .slds-form-element__control .slds-input {
+    height: 56px;
+    width: 400px; 
+    max-width: 100%;
+}
+
+cfsuite1-refund-credit-l-w-c .refund-type .slds-form-element__control .slds-input {
+    width: 200px;
+}
+
+.slds-form-element__control .slds-input::placeholder {
+    font-size: 1rem;
+}
+
+/* END */
+
+/* Custom tables */
+
+.custom-table {
+    border-radius: 20px;
+    padding: 0;
+    background-color: #fff;
+}
+
+.custom-table .slds-scrollable_x {
+    overflow: auto;
+    overflow-x: auto;
+    border-radius: 0 0 20px 20px;
+    max-height: 402px !important;
+}
+
+.custom-table__filters {
+    padding: 1rem 2rem;
+}
+
+.custom-table table {
+    padding: 1rem 2rem;
+    border: none;
+    border-top: 1px solid #EAECF0;
+    border-radius: 0 0 20px 20px;
+}
+
+.custom-table table th {
+    border-left: none !important;
+    border-right: none !important;
+    border-color: #EAECF0 !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 14rem;
+    color: #565656;
+    font-size: .95rem;
+}
+
+.custom-table .fa-file-pdf {
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+
+.custom-table.property-details {
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+.custom-table.property-details .slds-col {
+    border-bottom: 1px solid #EAECF0;
+    padding: .5rem 0;
+}
+
+.custom-table.property-details .slds-col.strong,
+.custom-table.property-details .slds-col:nth-child(10) {
+    font-weight: 600;
+}
+
+.custom-table.property-details .slds-col:last-child {
+    border: none;
+    padding-top: 1rem;
+}
+
+.custom-table.property-details .hruler {
+    display: none;
+}
+
+@media (max-width: 48em) {
+    .custom-table.property-details .slds-col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1147px) {
+    .custom-table .fyselectlabel.slds-text-align_right {
+        text-align: left;
+        padding-bottom: 6px;
+    }
+    c-property-payment-history-l-w-c .slds-medium-size_4-of-6.totalpay {
+        width: 50%;
+    }
+    c-property-payment-history-l-w-c .slds-medium-size_1-of-6.filter
+    {
+        width: auto;
+    }
+}
+
+@media (max-width: 48em) {
+    c-property-payment-history-l-w-c .fyselectlabel.slds-text-align_right,
+    c-property-payment-history-l-w-c .notices-grid .filter {
+        padding-left: 2rem;
+        padding-top: 6px;
+    }
+}
+
+/* Button arrow padding */
+
+.slds-button_brand i {
+    padding-left: .5rem; 
+}
+
+/* END */
+
+/* Error message styling */
+
+.slds-text-color_error  {
+    display: inline-flex;
+}
+
+.slds-text-color_error i {
+    padding-right: .5rem;
+}
+
+/* END */
+
+/* To fix the refund progress bar container */
+
+cfsuite1-payment-transfer-or-refund-l-w-c .rates .page-title .container {
+       width: auto; 
+}
+
+
+/* To fix refund credit options to look like chips */
+
+.refund-type {
+  display: flex;
+  flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.refund-type > div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 12px;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 380px; /* Fixed width */
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+.refund-type .select-circle.active {
+  border: 1.5px solid var(--secondaryColor); /* green highlight */
+  background-color: #f6fef9;
+}
+
+.refund-type .select-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d0d5dd;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+
+.refund-type .select-circle.active::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondaryColor);
+  border-radius: 50%;
+}
+
+.refund-type .option {
+  font-weight: 600;
+  color: #344054;
+      flex-grow: 1;
+}
+
+.refund-type lightning-input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.refund-type br {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.refund-type .option strong {
+    padding-left: 6px;
+}
+

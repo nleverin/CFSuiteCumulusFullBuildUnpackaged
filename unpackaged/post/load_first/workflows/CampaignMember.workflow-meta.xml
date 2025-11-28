@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <outboundMessages>
+        <fullName>Outbound_Campaign_Email_SMS</fullName>
+        <apiVersion>62.0</apiVersion>
+        <endpointUrl>https://ffffffffffffff.com</endpointUrl>
+        <fields>Campaign_Message__c</fields>
+        <fields>Email</fields>
+        <fields>Id</fields>
+        <fields>MobilePhone</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>nathan@ennovative.com.au.pulsedemo</integrationUser>
+        <name>Outbound Campaign Email SMS</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+</Workflow>

@@ -1,0 +1,52 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsTwoCol66Layout",
+  "dataProviders" : [ ],
+  "id" : "2d874cb3-7514-49d4-91ba-54418bfb432b",
+  "label" : "Contact Support",
+  "regions" : [ {
+    "id" : "121c2550-0143-4721-abf0-c054db5d401a",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to access this page.</p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "ba0ceec8-b54f-4b7e-ae1c-54dab19d0eba",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d8f89b59-53b6-4d35-aad3-bdfc9de3c60b",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4d899834-588c-4a6e-9856-d4570a30c48c",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "29659add-3aea-436b-a682-eaec78d278e3",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Contact Support"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dfd88822-6954-499b-8fce-9000cc46919c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "07fc33ba-ac2b-46b0-bb45-5b237bd278d2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "contactsupport"
+}

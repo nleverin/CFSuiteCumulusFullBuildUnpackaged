@@ -1,0 +1,59 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "cfsuite1:Top_2_1_ColumnLayout",
+  "dataProviders" : [ ],
+  "id" : "3f15223c-2c45-4741-b82e-320413f69be9",
+  "label" : "Frequently asked questions",
+  "regions" : [ {
+    "id" : "ded00af5-1258-46c1-b2ae-6caf5d660c64",
+    "regionName" : "headerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "",
+        "link2Path" : ""
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "6969008d-d897-4e9f-b3cd-9a1a29476040",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d3123b5-5124-47d4-b9db-856204bccc4a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cece6377-eb5c-4e93-ab20-8b727fc40d98",
+    "regionName" : "content_col1",
+    "type" : "region"
+  }, {
+    "id" : "0bd0badb-7636-40e6-a024-a087f1dabdae",
+    "regionName" : "content_col2",
+    "type" : "region"
+  }, {
+    "id" : "3730675a-c5a6-4b05-abb6-0cb510bed4ad",
+    "regionName" : "footerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Frequently asked questions"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dff24ce7-91c8-49db-a005-2f6652ca083e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "20bd76a4-8a53-4cac-b129-910cf4ebbf4f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "custom-frequently-asked-questions"
+}

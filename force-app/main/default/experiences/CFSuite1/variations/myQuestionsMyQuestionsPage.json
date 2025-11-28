@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "162cbc0e-d970-427f-8472-f04e29929766",
+    "propertyOverrides" : {
+      "activeViewId" : "2f08120b-e77a-4a90-9703-d94351d3195d"
+    },
+    "targetId" : "545df638-e474-464e-a60f-c6313db5b507",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "My_Questions_My_Questions_Page",
+  "id" : "b4c614d9-cdbf-4a9d-a212-b44f394b46f1",
+  "type" : "experienceVariation"
+}

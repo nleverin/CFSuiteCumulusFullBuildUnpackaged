@@ -1,0 +1,233 @@
+.THIS .logoContainer {
+    background-image: t('url(' + brandLogoImage  + ')');	/*default file uploaded for theme*/
+}
+
+.THIS .back {
+    background-color: t(brandTextLink);
+}
+
+.THIS .back:hover { 
+    filter: brightness(85%);
+} 
+
+.THIS .slds-button_brand:hover {
+    filter: brightness(105%);
+}
+
+.THIS .cfsuite1QAProcess.buttonspan .responseBlock:hover { 
+    background-color: t(brandPrimary); 
+}
+
+.THIS .steps-container .line-wrapper .step-bullet {
+    color: t(brandTextLink); 
+}
+
+.THIS .steps-container .line-wrapper .line-left,
+.THIS .steps-container .line-wrapper .line-right { 
+    border-color: t(brandTextLink);
+}
+
+.THIS .cfsuite1PhoneNumbers span {
+    color: t(brandTextLink) !important; 
+}
+
+.THIS .cfsuite1PhoneNumbers h2 {
+    color: t(brandPrimary); 
+}
+
+.THIS .cfsuite1LoginRegister .btn-login {
+    background-color: t(brandPrimary); 
+}
+
+.THIS .cfsuite1QAProcess.login-modal .slds-modal__header .logo-container { 
+    background-image: t('url(' + brandLogoImage + ')'); 
+}
+
+.THIS .cfsuite1ThankYou .confirmation .successIcon svg {
+    fill: t(brandPrimary);
+}
+
+.THIS .slds-media__figure i {
+    background-color: t(brandTextLink); 
+}
+
+.THIS .MyAccount .selected {
+    background-color: t(brandTextLink); 
+}
+
+.THIS .slds-pill__remove svg {
+    fill: t(brandTextLink); 
+}
+
+.THIS .cfsuite1DetailComponent .attachments span.slds-pill button {
+    color: t(brandPrimary) !important;
+}
+
+/* focus */
+.THIS .slds-button:focus {
+    filter: brightness(85%);
+}
+
+.THIS .btn-login:focus {
+    filter: brightness(85%) !important;
+}
+
+.THIS .hamburger-wrapper button:focus {
+    filter: brightness(85%) !important;
+}
+
+.THIS .cfsuite1CommunityMap button#LocateButton {
+    background-color: t(brandPrimary) !important; 
+}
+ 
+
+
+
+
+
+
+
+
+.THIS .forceCommunitySearchBox .search-wrapper {
+	width: 400px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1023px) {
+    .THIS .footer-content .signOff__list {
+        text-align: left;
+    }
+}
+
+@media (min-width: 62em) {
+    .THIS .footer-content {
+        padding-bottom: 140px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .THIS .content {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .THIS .header-top {
+        margin: 0 auto;
+        padding: 0 16px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .THIS .header-top {
+        height: 90px;
+        padding: 10px 16px 10px 16px;
+    }
+    .THIS .uiMenuList--default.uiMenuList {
+        right: 0;
+    }
+    .THIS .header-top .logo-wrapper,
+    .THIS .header-top .login-wrapper {
+        margin: 0;
+    }
+    .THIS .logoContainer {
+        width: 175px;
+        height: 55px;
+    }
+    .THIS .template-footer .footer-content {
+        padding-bottom: 85px;
+    }
+    .THIS .cQAProcess.login-modal .slds-modal__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .THIS ~ .siteforcePanelsContainer .forceCommunityChangePassword .required {
+        position: static;
+        float: left;
+    }
+}
+
+/* force showing username on small screen */
+@media only screen and (max-width: 64.0625em) {
+    .THIS .selfServiceUserProfileMenu .profileName,
+    .THIS .selfServiceUserProfileMenu .down-arrow {
+        display: inline-block;
+    }
+    
+    .THIS .selfServiceUserProfileMenu .down-arrow {
+        border-top: 5px solid;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        display: inline-block;
+        margin-left: 4px;
+        margin-bottom: 3px;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 480px) {
+    .THIS .logoContainer {
+        width: 170px;
+        height: 50px;
+    }
+    .THIS .cQAProcess.login-modal .slds-modal__container {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .THIS .footer {
+        margin-top: 30px;
+    }
+}
+.THIS .forceCommunityUserProfileHeader {
+    position: absolute;
+    margin: 40px 0 0 20px;
+    padding:0;
+}
+.THIS .cCustomLayoutNoImage .forceCommunityUserProfileHeader img {
+    width: 160px;
+    height: auto;
+}
+@media (max-width: 479px) {
+    .THIS .forceCommunityUserProfileHeader {
+        left:0;
+        width:100%;
+        margin: 20px auto;
+    }    
+}
+@media (max-width: 690px) {
+    .THIS .forceCommunityUserProfileHeader img {
+        max-width:100px !important;
+        max-height:100px !important;
+    }
+}

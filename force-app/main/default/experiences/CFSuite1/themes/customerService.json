@@ -1,0 +1,849 @@
+{
+  "activeBrandingSetId" : "84a72fcd-8a80-4fa6-9992-f6db6fef4fc6",
+  "customCSS" : "/* nav menu */\n.comm-navigation.forceCommunityGlobalNavigation {\n    padding: 0 0 0 16px;\n}\n.forceCommunityGlobalNavigation .slds-is-fixed>.slds-list_vertical {\n    background-color: white;\n}\n.forceCommunityGlobalNavigation .comm-navigation__list.slds-list_vertical .slds-list__item {\n    border-bottom: 1px solid lightgray;\n    text-align: left;\n}\n.forceCommunityGlobalNavigation .comm-navigation__list.slds-list_vertical .slds-list__item a:hover span,\n.forceCommunityGlobalNavigation .comm-navigation__list.slds-list_vertical .slds-list__item a:focus span{\n    color: black;\n}\n.forceCommunityGlobalNavigation .slds-list__item a, \n.forceCommunityGlobalNavigation .slds-list__item button {\n    text-transform: none !important;\n}\n.forceCommunityGlobalNavigation .slds-list_horizontal>.slds-list__item>a:hover, \n.forceCommunityGlobalNavigation .slds-list_horizontal>.slds-list__item>a.slds-is-active:not([data-type=\"home\"]),\n.forceCommunityGlobalNavigation .slds-list_horizontal>.slds-list__item>button:hover, \n.forceCommunityGlobalNavigation .slds-list_horizontal>.slds-list__item>button.slds-is-active:not([data-type=\"home\"]) {\n    background-color: transparent !important;\n}\n.forceCommunityGlobalNavigation a:hover > span{\n    color: #036f54;\n}\n\n.forceCommunityGlobalNavigation .slds-list_horizontal>.slds-list__item>a.slds-is-active > span {\n    color: #036f54;\n    font-weight: bold;\n}\n\n@font-face {\n    font-family: 'FontAwesome';\n    src: url('/resource/FontAwesome/webfonts/fa-regular-400.woff?v=5.5.0');\n    font-weight: normal;\n    font-style: normal\n}\n\n.cCustomLayoutNoImage .searchRegion{\n    display: none;\n}\n\n.slds-grid_align-center{\n    padding-top: 3% !important;\n}\n\n.forceCommunityGlobalNavigation {\n    background-color: transparent !important;\n}\n\n.forceCommunityGlobalNavigation * {\n    color: black;\n}\n\n/* template footer */\n.template-footer .footer {\n    background-color: #1B1B1B;\n    font-family: \"Open Sans\", Arial, sans-serif;\n    line-height: 26px;\n}\n\n.template-footer .footer-content .semi-bold {\n    font-weight: 600;\n}\n\n.template-footer .footer-content .fLinks__item {\n    display: block;\n    margin-bottom: 16px;\n}\n\n.template-footer .footer a {\n    text-decoration: underline;\n}\n\n.template-footer .footer a:hover {\n    text-decoration: none !important;\n}\n\n.forceCommunityRichText .footer ul>li:before {\n    content: '';\n    display: none;\n}\n\n.icon-social-fb {\n    background-image: url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20enable-background%3D%22new%200%200%2024%2024%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%233B5998%22%20d%3D%22M22.7%2024C23.4%2024%2024%2023.4%2024%2022.7V1.3C24%200.6%2023.4%200%2022.7%200H1.3C0.6%200%200%200.6%200%201.3v21.4C0%2023.4%200.6%2024%201.3%2024H22.7z%22/%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M16.6%2024v-9.3h3.1l0.5-3.6H16.6V8.8c0-1%200.3-1.8%201.8-1.8l1.9%200v-3.2c-0.3%200-1.5-0.1-2.8-0.1%20-2.8%200-4.7%201.7-4.7%204.8v2.7H9.7v3.6h3.1V24H16.6z%22/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    position: relative;\n    display: inline-block;\n    height: 24px;\n    vertical-align: middle;\n    width: 70px;\n}\n\n.icon-social-tw {\n    background-image: url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2224px%22%20height%3D%2219.5px%22%20viewBox%3D%220%200%2024%2019.5%22%20enable-background%3D%22new%200%200%2024%2019.5%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%2362AADB%22%20d%3D%22M24%202.309c-0.883%200.392-1.832%200.656-2.828%200.775%201.017-0.609%201.798-1.574%202.165-2.724%20-0.951%200.564-2.005%200.974-3.127%201.195C19.312%200.598%2018.032%200%2016.616%200c-2.719%200-4.924%202.205-4.924%204.923%200%200.386%200.043%200.762%200.127%201.123C7.728%205.84%204.1%203.88%201.671%200.901%201.247%201.628%201.004%202.474%201.004%203.376c0%201.708%200.869%203.215%202.19%204.099C2.388%207.449%201.628%207.228%200.965%206.859%200.964%206.879%200.964%206.9%200.964%206.921c0%202.386%201.697%204.376%203.95%204.828%20-0.413%200.112-0.849%200.173-1.298%200.173%20-0.317%200-0.625-0.031-0.926-0.089%200.626%201.956%202.444%203.38%204.6%203.42%20-1.686%201.32-3.809%202.107-6.115%202.107%20-0.397%200-0.79-0.023-1.175-0.068%202.179%201.396%204.768%202.212%207.548%202.212%209.057%200%2014.01-7.503%2014.01-14.009%200-0.213-0.005-0.426-0.015-0.637C22.505%204.163%2023.34%203.296%2024%202.309z%22/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    position: relative;\n    display: inline-block;\n    height: 24px;\n    vertical-align: middle;\n    width: 70px;\n}\n\n.icon-social-yt {\n    background-image: url(\"data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2258.2%22%20height%3D%2224%22%20viewBox%3D%220%200%2058.2%2024%22%20enable-background%3D%22new%200%200%2058.2%2024%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23A62424%22%20d%3D%22M57.5%203.9c-0.4-1.8-1.9-3.2-3.7-3.4%20-4-0.4-8.1-0.5-12-0.5%20-0.3%200-0.5%200-0.8%200%20-0.3%200-0.5%200-0.8%200%20-4%200-8.1%200-12%200.5%20-1.8%200.2-3.3%201.6-3.7%203.4C24%206.5%2024%209.4%2024%2012v0.2c0%202.6%200%205.4%200.6%207.9%200.4%201.8%201.9%203.2%203.7%203.4%204%200.4%208.1%200.5%2012%200.5%200.3%200%200.5%200%200.8%200%200.3%200%200.5%200%200.8%200%204%200%208.1%200%2012-0.5%201.8-0.2%203.3-1.6%203.7-3.4%200.6-2.6%200.6-5.4%200.6-8V12C58.1%209.3%2058.1%206.5%2057.5%203.9z%22/%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M52.5%209.9c-0.7%200-1%200.5-1%201.6v1.1h2.1v-1.1C53.5%2010.5%2053.2%209.9%2052.5%209.9zM44.7%209.9c-0.3%200-0.7%200.2-1%200.5v7c0.3%200.3%200.7%200.5%201%200.5%200.6%200%200.9-0.5%200.9-1.5v-4.9C45.7%2010.5%2045.3%209.9%2044.7%209.9zM33.6%206.5h-2.5v13.1h-2.3V6.5h-2.4V4.3h7.3L33.6%206.5%2033.6%206.5zM39.9%2019.6h-2.1v-1.3c-0.8%200.9-1.6%201.4-2.4%201.4%20-0.7%200-1.1-0.3-1.3-0.9%20-0.1-0.3-0.2-0.9-0.2-1.7v-9H36v8.4c0%200.5%200%200.7%200%200.8%200.1%200.3%200.2%200.5%200.5%200.5%200.4%200%200.9-0.3%201.3-1V8.1h2.1L39.9%2019.6%2039.9%2019.6zM47.7%2016.1c0%201.1-0.1%201.8-0.2%202.3%20-0.3%200.9-0.8%201.3-1.7%201.3%20-0.7%200-1.5-0.4-2.1-1.3v1.1h-2.1V4.2h2.1v5C44.4%208.4%2045.1%208%2045.9%208s1.4%200.4%201.7%201.3c0.1%200.5%200.2%201.2%200.2%202.3L47.7%2016.1%2047.7%2016.1zM55.6%2014.2h-4.2v2c0%201.1%200.3%201.6%201.1%201.6%200.5%200%200.8-0.3%200.9-0.8%200-0.1%200-0.6%200-1.4h2.1v0.3c0%200.7%200%201.1%200%201.3%20-0.1%200.5-0.2%200.9-0.5%201.2%20-0.6%200.8-1.4%201.2-2.5%201.2s-1.9-0.4-2.5-1.2c-0.4-0.6-0.7-1.5-0.7-2.7v-4c0-1.2%200.2-2.1%200.6-2.7%200.6-0.8%201.4-1.2%202.5-1.2%201%200%201.9%200.4%202.5%201.2%200.4%200.6%200.6%201.5%200.6%202.7L55.6%2014.2%2055.6%2014.2z%22/%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M4.2%2010.2L2.5%204.1H0C0.5%205.5%201%207%201.5%208.4c0.7%202.2%201.2%203.8%201.4%204.9v6.3h2.3v-6.3L7.9%204H5.6L4.2%2010.2zM20%208.1v8.8c-0.5%200.7-0.9%201-1.3%201%20-0.3%200-0.4-0.2-0.5-0.5%200-0.1%200-0.3%200-0.8V8.2h-2.1v9.1c0%200.8%200.1%201.4%200.2%201.7%200.2%200.6%200.7%200.9%201.4%200.9%200.8%200%201.6-0.5%202.4-1.4v1.3h2.1V8.3H20V8.1zM11.2%207.9c-1%200-1.9%200.4-2.4%201.2%20-0.4%200.6-0.7%201.5-0.7%202.7v4.1c0%201.2%200.2%202.1%200.7%202.7%200.6%200.8%201.4%201.2%202.4%201.2%201.1%200%201.9-0.4%202.5-1.2%200.4-0.6%200.7-1.5%200.7-2.7v-4.1c0-1.2-0.2-2.1-0.7-2.7C13.1%208.3%2012.2%207.9%2011.2%207.9zM12.2%2016.2c0%201.1-0.3%201.6-1%201.6%20-0.7%200-1-0.5-1-1.6v-4.9c0-1.1%200.3-1.6%201-1.6%200.7%200%201%200.5%201%201.6V16.2L12.2%2016.2z%22/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    position: relative;\n    display: inline-block;\n    height: 24px;\n    vertical-align: middle;\n    width: 70px;\n}\n\n.template-footer .footer .link-social {\n    text-decoration: none;\n}\n\n.forceCommunityRichText .footer ul li,\n.forceCommunityRichText .footer ul {\n    padding-left: 0;\n}\n\n@media screen and (max-width: 980px) {\n    .template-footer .footer-content {\n        width: 100%;\n    }\n}\n\n.template-footer .footer p {\n    display: inline-block;\n    width: 100%;\n}\n\n.signOff__items {\n    display: inline-block;\n}\n.signOff__items:after {\n    content: \"|\";\n}\n.signOff__items:last-child:after {\n    content: \"\";\n}\n\n/* articles in sidebar */\n.phone-numbers {\n    padding: 0 15px;\n}\n\n.forceCommunityCaseDeflection h1 {\n    text-align: left;\n}\n\n.comm-topic-trending-articles>h2 {\n    text-transform: unset !important;\n}\n.comm-topic-trending-articles a > span:first-child {\n    color: #1E6247;\n    font-family: Lato;\n    font-size: 14px;\n    font-weight: 500;\n}\n.comm-topic-trending-articles a {\n\tborder: none;\n\tdisplay: inline-block;\n\tleft: -4px;\n    padding: 0;\n\tposition: relative;\n    vertical-align: text-top;\n}\n\n.comm-topic-trending-articles li {\n    list-style: inside;\n\tpadding: 8px 0;\n}\n\n.forceCommunityCaseDeflection .header-message,\n.comm-topic-trending-articles>h2,\n.selfServiceTopicRelatedArticle .headerLabel {\n    background-color: #1E6247;\n    color: white;\n    padding: 10px;\n}\n\n/* FAQs */\n.selfServiceTopicRelatedArticle {\n\tbackground-color: #EDEDED;\n    padding: 15px;\n}\n\n.selfServiceTopicRelatedArticle .headerLabel {\n\tcolor: white;\n    display: inline-block;\n\tfont-size: 1rem;\n    width: 100%;\n}\n\n.selfServiceTopicRelatedArticle h2 .headerLabel {\n\tcolor: white;\n\tfont-size: 1rem;\n}\n\n.selfServiceBaseArticleList .article-item.selfServiceArticleListItem {\n\tbackground-color: #EDEDED;\n}\n\n.selfServiceBaseArticleList ul.article-list {\n\tmargin: 0;\n}\n\n.selfServiceArticleListItem h3.article-head {\n    color: #1E6247;\n\tfont-family: Lato;\n\tfont-size: 14px;\n\tfont-weight: 500;\n}\n\n.selfServiceArticleListItem article.summary {\n    display: inline-block;\n    margin-left: -4px;\n    vertical-align: top;\n}\n\n.selfServiceBaseArticleList .article-item.selfServiceArticleListItem {\n    list-style: inside;\n    padding: 8px 0;\n}\n\n.ui-widget:nth-of-type(2) .selfServiceArticleListItem .view-count,\n.ui-widget:nth-of-type(3) .selfServiceArticleListItem .date,\n.selfServiceArticleListItem .dot,\n.selfServiceArticleListItem .article-type {\n    display: none;\n}\n\n.selfServiceArticleListItem .view-count:before {\n    content: \"\\1f441\";\n    font-size: 14px;\n    padding-right: 2px;\n    color: black;\n}\n\n\n.forceCommunityCaseDeflection, \n.ui-widget[data-component-label=\"Trending Articles by Topic\"] {\n    background-color: #EDEDED;\n    padding: 15px;\n}\n\n.forceCommunityRichText .footer a,\n.forceCommunityRichText .footer a:active,\n.forceCommunityRichText .footer a:hover,\n.forceCommunityRichText .footer a:visited{\n    color: white;\n}\n\n.rotate-left {\n    transform: rotate(-90deg);\n}\n.rotate-right {\n    transform: rotate(90deg);\n}\n\n.flip-v {\n    transform: scaleY(-1);\n    -moz-transform: scaleY(-1);\n    -webkit-transform: scaleY(-1);\n    -ms-transform: scaleY(-1);\n}\n\n.categories-accordion .slds-accordion__section li {\n    list-style: inside;\n    padding: 0 20px;\n}\n\n.categories-accordion li a {\n    color: #166C4F;\n    text-decoration: underline;\n}\n\n.categories-accordion .slds-is-open .slds-accordion__summary {\n    padding: 15px 0;\n}\n\n.step-link a,\n.step-link a:hover,\n.step-link a:active,\n.step-link a:visited {\n    background-color: #F0F0F0;\n    color: black !important;\n    display: block;\n    padding: 20px 0 20px 30px;\n    text-decoration: none;\n}\n\n.orange-link {\n    color: white !important;\n    display: inline-block;\n\tmargin-top: 20px;\n    text-align: center;\n    width: 200px;\n}\n\n.green-checkmark {\n    background-color: #247D5B;\n    border-radius: 50%;\n    color: white;\n    display: inline-block;\n    height: 25px;\n    margin-right: 10px;\n    width: 25px;\n}\n\n/* knowledge component */\n.selfServiceTopicRelatedArticle .headerLabel {\n    text-transform: unset !important;\n}\n\n/* profile widget broken on custom layout */\n.profileDetailView .slds-col,\n.selfServiceArticleLayout .slds-col {\n    flex-grow: 1;\n}\n.profile-name-button-container {\n    text-align: right;\n}\n\nbutton.green-button {\n    border: none;\n    color: white;\n    background-color: #156b4f;\n    margin-bottom: -10px;\n    padding: 6px 10px;\n    display: inline-block;\n}\n\n/* Knowledge article detail - hiding */\n.forcePageBlockSectionRow:nth-of-type(1), \n.forcePageBlockSectionRow:nth-of-type(3) {\n    display: none;\n}\n.selfServiceArticleLayout.zoom .test-id__field-label-container,\n.selfServiceArticleHeaderDetail,\n.selfServiceArticleLayout article.content .forcePageBlockSection:not(:first-of-type), /* FAQ below content */\narticle.voting.selfServiceArticleLayout /* voting for knowledge article */ {\n    display: none;\n}\n\n.selfServiceArticleLayout.zoom .article-summary, \n.selfServiceArticleLayout.zoom .forcePageBlockSectionView.full .test-id__field-value, \n.selfServiceArticleLayout.zoom .forcePageBlockSectionView.full .test-id__field-value span, \n.forcePageBlockSectionView .slds-rich-text-editor__output {\n    color: rgb(37, 37, 37);\n\tfont-family: \"Open Sans\", Arial, sans-serif !important;\n\tfont-size: 16px !important;\n    line-height: 27.2px;\n}\n\n.selfServiceArticleLayout.zoom .article-summary, \n.selfServiceArticleLayout.zoom .forcePageBlockSectionView.full .test-id__field-value a {\n\tcolor: rgb(106, 51, 37);\n}\n\n.selfServiceArticleLayout.zoom .article-head {\n    color: rgb(51, 51, 51);\n    display: inline-block;\n    font-family: \"Open Sans\",Arial,sans-serif;\n    font-size: 32px !important;\n\tfont-weight: 400;\n}\n.selfServiceArticleLayout.zoom.article-column {\n    padding: 0 !important;\n}\n\n.selfServiceArticleLayout .slds-grid.itemBody {\n    padding-bottom: 10px; /* push grey bottom border down*/\n}\n/* Hiding profile links */\n.uiMenu.selfServiceUserProfileMenu .myAccount.uiMenuItem {\n    display: none;\n}\n/* Hiding Profile sections */\n.forceCommunityUserSettings .row:first-of-type, \n.forceCommunityUserSettings .row.locationSection, \n.forceCommunityUserSettings .row.profileVisibilitySection, \n.forceCommunityUserSettings .row.emailNotificationsSection {\n\theight: 0;\n    margin: 0;\n\tvisibility: hidden;\n}\n\n.forceChatterUpdatePhoto .updatePhotoPanel .uiInputCheckbox /* checkbox when updating profile photo */{\n    display: none;\n}\n.forceCommunityUserProfileBody .cProfileViewBody {\n    background-color: #f0f0f0 !important;\n    border: none !important;\n}\n\n.slds-button, \n.slds-button-group .slds-button:only-child, \n.slds-button-group-list li:only-child .slds-button {\n    border-radius: 0;\n}\n\n.profileDetailView .userDetailHeader .branding-actions li.slds-button--neutral a {\n    color: white;\n    border: none;\n}\n\n.forceCommunityUserSettings .row.accountSection {\n\tborder-top: 1px double #d4d4d4!important;\n    padding-top: 15px;\n}\n.forceCommunityUserSettings .row.accountSection h2 {\n    display: none;\n}\n.profileDetailView .userDetailHeader .branding-actions li.slds-button--neutral {\n    background-color: #156b4f;\n}\n\n.forceCommunityUserSettings .savecancelbuttoncontainer {\n    padding-right: 44px;\n}\n\n.profileDetailView .forcePageBlockSectionRow .slds-form-element_readonly {\n\tborder-bottom: none;\n}\n\n@media (max-width: 480px) {\n    .slds-page-header__title .back.button {\n        height: 36px !important;\n        width: 36px !important;\n    }\n    .back-container svg.slds-icon {\n        width: 18px;\n        height: 22px;\n    }\n    .slds-page-header__title h2 .question {\n        font-size: 24px;\n        line-height: 43px;\n        margin-left: 18px;\n        padding-top: 0;\n        margin-top: -10px;\n    }\n    \n    .slds-page-header .slds-page-header__row .slds-media__figure i {\n        height: 36px !important;\n        width: 36px !important;\n        font-size: 18px !important;\n    }\n    \n    .user-profile.slds-page-header .slds-page-header__name-title h2 span,\n    .cMyRequestRecordListPage .slds-page-header .slds-page-header__title,\n    .cMyFollowedRequests .slds-page-header .slds-page-header__title {\n        font-size: 28px !important;\n        line-height: 43px !important;\n        padding-left: 0 !important;\n        margin-top: -10px !important;\n    }\n}",
+  "developerName" : "service",
+  "id" : "ccca24fa-2cd8-4a4e-af7a-708d5b92d020",
+  "label" : "Customer Service",
+  "layouts" : {
+    "3npau4hBnPJRTx1tOv0SkZPdk4OTCV" : "787cc328-1477-4452-93ae-6c7dc197544c",
+    "9qNzJxn60JOiKdGvkdl7OfvXDHj6EM" : "de6e4f6f-dca5-4c8d-94d3-7aae32448a60",
+    "GmaO63hLh8WZvq0wKd17GoRLxmPf60" : "70a0e7c6-9930-42a5-bfa1-3816f3aba7e2",
+    "GtbO0tr9w7N0LWO1i3gBgJYpujrogB" : "091df147-1e45-4d29-8c52-01d565b3f78b",
+    "Inner" : "91107b83-0dc4-4981-91c9-3ebed772959c",
+    "Login" : "3e4ca37c-867a-4400-a52c-36729ee8ffae",
+    "ServiceNotAvailable" : "7fdcbfa9-7787-4115-8085-3a95f45a6bd0",
+    "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c" : "a5e68b49-5299-4846-839b-45fbe88460e9"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "3e4ca37c-867a-4400-a52c-36729ee8ffae",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "4ffe92fc-eed4-4aef-baa6-8351ffa66f11",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "c3ecf078-79a5-40f7-a73f-07244e74fd78",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "c5d1f2f2-7080-401c-a836-29f6a85be855",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "IsDefaultHeaderHidden" : false,
+      "IsDefaultNotificationsHidden" : false
+    },
+    "componentName" : "siteforce:serviceBody",
+    "id" : "91107b83-0dc4-4981-91c9-3ebed772959c",
+    "label" : "Default",
+    "regions" : [ {
+      "id" : "f8fe8b55-c684-4f3d-9eee-da833643afce",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "e6cf7b94-e339-4ad1-be56-318c3ccbc0b0",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "23ec8463-9de3-4b5d-87d6-a86469389681",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "85f0f201-27a0-4519-8d2a-85f952f610ce",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "3a12cb95-9069-4408-8b49-b4b63123f384",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "e3cdb945-1808-4fa0-94fb-937dfe0449fc",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "222a7502-747b-4bcd-a16e-8be6242420d0",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "4953b468-b29a-4ace-a82c-69f5059b2d82",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "d7df7b24-6725-470e-ae2c-573d60615a4b",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "cfsuite1:CustomLayout1",
+    "id" : "70a0e7c6-9930-42a5-bfa1-3816f3aba7e2",
+    "label" : "Home",
+    "regions" : [ {
+      "id" : "9adb8b84-2aad-4a73-84dc-e3fb9fe1e106",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "210bdcc4-2f21-435d-97c7-b6063fb7559a",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "8ef73265-be96-4316-90a0-81c29ed19c30",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : false,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : false,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "f9637ce3-66bb-4d76-9d05-a146b7741f50",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "bed6d6d2-a685-49ef-aa10-a68e6f3ae270",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "ab8fb93f-1750-4a33-8c89-b64bdfde0231",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "2865f944-c528-4067-b13f-73867fbd4e71",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "60983607-1b2c-479c-966b-805e1e90d14e",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"footer\">\n    <div class=\"footer-content slds-grid slds-wrap slds-gutters-direct\">\n        <div class=\"slds-grid slds-wrap slds-col slds-medium-size_2-of-3 contact-details slds-m-bottom_medium\">\n            <h3 class=\"slds-col slds-size_1-of-1\">Contact Us</h3>\n            <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                <p></p>\n                <p>City of Tea Tree Gully</p>\n                <p>571 Montague Rd</p>\n                <p>Modbury SA 5092</p>\n                <p>Monday - Friday</p>\n                <p>8.45am - 5.00pm</p>\n                <p><a href=\"https://goo.gl/maps/1o8kr\">View on Map</a></p>\n                <p></p>\n                <p><a href=\"https://www.teatreegully.sa.gov.au/Contact_Council/Contact_details_for_Council\">Contact details for Council</a></p>\n            </div>\n\n            <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                <p></p>\n                <p>08 83977444</p>\n                <p></p>\n                <p>After hours emergency</p>\n                <p>1300 405 536</p>\n                <p></p>\n                <p><a href=\"mailto:customerservice@cttg.sa.gov.au\">customerservice@cttg.sa.gov.au</a></p>\n                <p></p>\n                <p></p>\n            </div>\n        </div>\n        <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-3 share-details slds-m-bottom_medium\">\n            <h3>Share and Connect</h3>\n            <p></p>\n            <p><a href=\"http://www.facebook.com/TeaTreeGullyCouncil\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-fb\"></i><span>Like us on Facebook</span></a></p>\n            <p></p>\n            <p><a href=\"https://twitter.com/TTGCouncil\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-tw\"></i><span>Follow us on Twitter</span></a></p>\n            <p></p>\n            <p><a href=\"https://www.youtube.com/TeaTreeGullyCouncil\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-yt\"></i><span>Watch us on YouTube</span></a></p>\n            <p></p>\n        </div>\n\n        <div class=\"slds-text-align_right slds-col slds-col-size-1_of_1\">\n            <ul class=\"signOff__list\">\n                <li class=\"signOff__items\">\n                    <a class=\"signOff__link\" target=\"_self\" href=\"https://www.teatreegully.sa.gov.au/System_Pages/Terms_and_conditions_of_use\">Terms and conditions of use</a>\n                </li>\n                <li class=\"signOff__items\">\n                    <a class=\"signOff__link\" target=\"_self\" href=\"#\">Sitemap</a>\n                </li>\n                <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Elected Members login</a>\n                </li>\n                <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Emergency Management login</a>\n                </li>\n            </ul>\n            <ul class=\"signOff__list\">\n                <li class=\"signOff__items\">©2015 City of Tea Tree Gully</li>\n                <li class=\"signOff__items\">Powered by <a class=\"signOff__link\" href=\"#\" target=\"_blank\">Seamless CMS</a></li>\n            </ul>\n\n        </div>\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "51312b12-520a-460a-8358-9a4fac932459",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c0c30684-f4ec-43d6-9951-a321a45e02b2",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "id" : "6c60db5d-4633-40ad-9e1f-3036ab9702cd",
+      "regionName" : "headerContent",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "numOfDays" : "30"
+        },
+        "componentName" : "cfsuite1:RecentRequests",
+        "id" : "203c9c75-0a0c-4fbb-be68-f0d2157b3b7d",
+        "renditionMap" : { },
+        "type" : "component"
+      }, {
+        "componentAttributes" : {
+          "richTextValue" : "<br><br>\n<div class=\"footer\">\n    <div>\n        <div class=\"footer-content slds-grid slds-wrap slds-gutters-direct\">\n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_2-of-3 contact-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Contact Us</h3>\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">\n                            Greeensbay Council<br>\n                            123 Fake Rd<br>\n                            Adelaide SA 5000<br>\n                            Monday - Friday<br>\n                            8.45am - 5.00pm<br>\n                            <a href=\"https://goo.gl/maps/1o8kr\" class=\"fLinks__item\" target=\"blank\"><strong>View on Map</strong></a>\n                        </li>\n                        <li class=\"fLinks__item\"><a class=\"fLinks__link\" href=\"https://google.com\">Contact details for Council</a></li>\n                    </ul>\n                </div>\n\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">08 8300 0000</li>\n                        <li class=\"fLinks__item\">After hours emergency<br>\n                            1300 000 000</li>\n                        <li class=\"fLinks__item\">Email us:\n                            <a class=\"fLinks__link\" href=\"mailto:customerservice@greensbay.com.au\">customerservice@greensbay.com.au</a></li>\n                    </ul>\n                </div>\n            </div>\n            \n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_1-of-3 share-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Share and Connect</h3>\n                <ul class=\"social-links\">\n                    <li>\n                        <a href=\"http://www.facebook.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-fb\"></i><span>Like us on Facebook</span></a>\n                    </li>\n                    <li>\n                        <a href=\"https://twitter.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-tw\"></i><span>Follow us on Twitter</span></a>\n                    </li>\n                \t<li>\n                        <a href=\"https://www.youtube.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-yt\"></i><span>Watch us on YouTube</span></a>\n                    </li>\n                </ul>\n            </div>\n\n            <div class=\"slds-col slds-col-size-1_of_1\">\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"https://google.com\">Terms and conditions of use</a>\n                    </li>\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"#\">Sitemap</a>\n                    </li>\n                    <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Emergency Management login</a>\n                    </li>\n                </ul>\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">©2023 Greensbay Council </li>                  \n                </ul>\n\n            </div>\n        </div>\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "f1376935-4518-4e31-9b95-65dc4f67a9cb",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "b09f2902-f167-44a5-8aab-5ecd4430da28",
+      "regionName" : "footerContent",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "cfsuite1:DashboardLayout",
+    "id" : "091df147-1e45-4d29-8c52-01d565b3f78b",
+    "label" : "Dashboard Layout",
+    "regions" : [ {
+      "id" : "79a1c257-2119-4f4a-8673-71a355685d35",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "6d5268ac-95ea-4326-b9a4-fa398efeffc9",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "4477f4d2-0aad-49aa-9d8a-3ef965469b08",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "8a59830b-f4a1-43c9-9e05-d9eb2c320c1b",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "ae4edfe5-e45b-40d5-9b2d-c62442b655fa",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "736fb9a2-c598-4b67-b825-a8431ca32d49",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "58648e3f-8d1a-4fdb-bd9d-ea6e6241fc63",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "9712bf2e-7ef5-43b0-9b0c-67edc8663da8",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "0b8ecfc5-ed1d-4b1a-ab48-657a7d33f900",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "Box1Color" : "#19614F",
+          "Box1Icon" : "<i class=\"fal fa-calendar\"></i>",
+          "Box1Link" : "/s/requests",
+          "Box1Order" : "1",
+          "Box1Title" : "Make a request",
+          "Box2Color" : "#18846D",
+          "Box2Icon" : "<i class=\"fal fa-map-marker-alt\"></i>",
+          "Box2Link" : "/s/my-requests",
+          "Box2Order" : "2",
+          "Box2Title" : "My requests",
+          "Box3Color" : "#DC3A2E",
+          "Box3Icon" : "<i class=\"fal fa-home\"></i>",
+          "Box3Link" : "/s/mylinkedproperties",
+          "Box3Order" : "3",
+          "Box3Title" : "My Property & Rates",
+          "Box4Color" : "#C44E1D",
+          "Box4Icon" : "<i class=\"fal fa-hotel\"></i>",
+          "Box4Link" : "https://google.com",
+          "Box4Order" : "4",
+          "Box4Title" : "Back to Council website",
+          "Box5Color" : "#19614F",
+          "Box5Icon" : "",
+          "Box5Link" : "",
+          "Box5Order" : "5",
+          "Box5Title" : "",
+          "Box6Color" : "#19614F",
+          "Box6Icon" : "",
+          "Box6Link" : "",
+          "Box6Order" : "6",
+          "Box6Title" : "",
+          "SiteName" : "Grrensbay Council"
+        },
+        "componentName" : "cfsuite1:Welcome",
+        "id" : "a78ecf49-2b9f-4f4c-8c78-6d1b25466eb4",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "fd4c1e0e-0b25-477c-ad45-85e186452b19",
+      "regionName" : "topContent",
+      "type" : "region"
+    }, {
+      "id" : "93fd1287-832d-46dd-abdb-403099b6bf3b",
+      "regionName" : "bottomContent",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<br><br>\n<div class=\"footer\">\n    <div>\n        <div class=\"footer-content slds-grid slds-wrap slds-gutters-direct\">\n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_2-of-3 contact-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Contact Us</h3>\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">\n                            Greeensbay Council<br>\n                            123 Fake Rd<br>\n                            Adelaide SA 5000<br>\n                            Monday - Friday<br>\n                            8.45am - 5.00pm<br>\n                            <a href=\"https://goo.gl/maps/1o8kr\" class=\"fLinks__item\" target=\"blank\"><strong>View on Map</strong></a>\n                        </li>\n                        <li class=\"fLinks__item\"><a class=\"fLinks__link\" href=\"https://google.com\">Contact details for Council</a></li>\n                    </ul>\n                </div>\n\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">08 8300 0000</li>\n                        <li class=\"fLinks__item\">After hours emergency<br>\n                            1300 000 000</li>\n                        <li class=\"fLinks__item\">Email us:\n                            <a class=\"fLinks__link\" href=\"mailto:customerservice@greensbay.com.au\">customerservice@greensbay.com.au</a></li>\n                    </ul>\n                </div>\n            </div>\n            \n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_1-of-3 share-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Share and Connect</h3>\n                <ul class=\"social-links\">\n                    <li>\n                        <a href=\"http://www.facebook.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-fb\"></i><span>Like us on Facebook</span></a>\n                    </li>\n                    <li>\n                        <a href=\"https://twitter.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-tw\"></i><span>Follow us on Twitter</span></a>\n                    </li>\n                \t<li>\n                        <a href=\"https://www.youtube.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-yt\"></i><span>Watch us on YouTube</span></a>\n                    </li>\n                </ul>\n            </div>\n\n            <div class=\"slds-col slds-col-size-1_of_1\">\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"https://google.com\">Terms and conditions of use</a>\n                    </li>\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"#\">Sitemap</a>\n                    </li>\n                    <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Emergency Management login</a>\n                    </li>\n                </ul>\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">©2023 Greensbay Council </li>                  \n                </ul>\n\n            </div>\n        </div>\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "6c339252-2933-43ba-b46f-4e98e45c2941",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "a917f32c-f040-496a-8fa7-1d8b64e37a53",
+      "regionName" : "footerContent",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "cfsuite1:CustomLayoutNoImage",
+    "id" : "a5e68b49-5299-4846-839b-45fbe88460e9",
+    "label" : "Custom Default",
+    "regions" : [ {
+      "id" : "b3b17652-dcc3-4be5-8b18-fb94a2ac42b5",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "bbd2430a-f977-4707-9d43-3332c711c44f",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "2bce01e4-70a0-4c18-9ada-eda83bb7b727",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "59169fae-5467-4928-bac8-974e7a04dc5e",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5a57da1d-aef3-4137-b6ae-83fdfc8409f6",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "776ae5f7-4506-4f02-ac72-4cdda738d409",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "274ef029-12ac-49e9-a2e2-b4887124aaf5",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "79dd86b4-6f18-4d40-8453-15859590b986",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "f68bc2ac-1412-4a60-b1c6-5dd6b9420189",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "id" : "e7d9c4a8-9a05-413a-8dd6-6b1b0c52c219",
+      "regionName" : "headerContent",
+      "type" : "region"
+    }, {
+      "id" : "8b57baf8-42ef-4337-8533-5c77850d2e36",
+      "regionName" : "topContent",
+      "type" : "region"
+    }, {
+      "id" : "adc37abe-930c-4604-8809-3c2085e1b8bc",
+      "regionName" : "bottomContent",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<br><br>\n<div class=\"footer\">\n    <div>\n        <div class=\"footer-content slds-grid slds-wrap slds-gutters-direct\">\n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_2-of-3 contact-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Contact Us</h3>\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">\n                            Greeensbay Council<br>\n                            123 Fake Rd<br>\n                            Adelaide SA 5000<br>\n                            Monday - Friday<br>\n                            8.45am - 5.00pm<br>\n                            <a href=\"https://goo.gl/maps/1o8kr\" class=\"fLinks__item\" target=\"blank\"><strong>View on Map</strong></a>\n                        </li>\n                        <li class=\"fLinks__item\"><a class=\"fLinks__link\" href=\"https://google.com\">Contact details for Council</a></li>\n                    </ul>\n                </div>\n\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">08 8300 0000</li>\n                        <li class=\"fLinks__item\">After hours emergency<br>\n                            1300 000 000</li>\n                        <li class=\"fLinks__item\">Email us:\n                            <a class=\"fLinks__link\" href=\"mailto:customerservice@greensbay.com.au\">customerservice@greensbay.com.au</a></li>\n                    </ul>\n                </div>\n            </div>\n            \n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_1-of-3 share-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Share and Connect</h3>\n                <ul class=\"social-links\">\n                    <li>\n                        <a href=\"http://www.facebook.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-fb\"></i><span>Like us on Facebook</span></a>\n                    </li>\n                    <li>\n                        <a href=\"https://twitter.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-tw\"></i><span>Follow us on Twitter</span></a>\n                    </li>\n                \t<li>\n                        <a href=\"https://www.youtube.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-yt\"></i><span>Watch us on YouTube</span></a>\n                    </li>\n                </ul>\n            </div>\n\n            <div class=\"slds-col slds-col-size-1_of_1\">\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"https://google.com\">Terms and conditions of use</a>\n                    </li>\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"#\">Sitemap</a>\n                    </li>\n                    <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Emergency Management login</a>\n                    </li>\n                </ul>\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">©2023 Greensbay Council </li>                  \n                </ul>\n\n            </div>\n        </div>\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "7c8af35e-4536-4105-972f-b5ce6fdb5e6b",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "4f1cf090-41ca-4f05-b86e-3f4741cc304d",
+      "regionName" : "footerContent",
+      "type" : "region"
+    }, {
+      "id" : "9bbee083-41f0-483c-b0a4-bf051f548475",
+      "regionName" : "breadcrumbs",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "7fdcbfa9-7787-4115-8085-3a95f45a6bd0",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "beadd553-a009-45a0-9f4a-05e65392d968",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "06f83f31-ee19-44fa-8917-d78c374fac9a",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "cfsuite1:CouncillorDashboardLayout",
+    "id" : "de6e4f6f-dca5-4c8d-94d3-7aae32448a60",
+    "label" : "Councillor Dashboard",
+    "regions" : [ {
+      "id" : "54540559-2c83-4c6c-bd85-952ecdd8909a",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "e42b1fe5-9275-41ba-bba4-c89974e60fd9",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "f12c238f-c6ed-40b2-b98c-e9a0699c5e5a",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "db96b812-b0cd-4620-8b17-a391e6047f3a",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "b7739450-9e2e-4ace-ae25-1a602ce9f97a",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "a4e19fea-f919-40bd-b28f-d8f7329678d5",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "01c34223-0003-4a29-9e7d-37ab5560b338",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "1af0ee63-da37-46ea-814e-525f8b460df7",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "384751b9-e352-4ace-b1f3-3bc180a0217d",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "id" : "58085b2f-01db-46fb-92cf-d10fc0ca8c28",
+      "regionName" : "headerContent",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "Box1Color" : "#19614F",
+          "Box1Icon" : "<i class=\"fal fa-calendar\"></i>",
+          "Box1Link" : "/s/requests",
+          "Box1Order" : "1",
+          "Box1Title" : "Make a request",
+          "Box2Color" : "#19614F",
+          "Box2Icon" : "<i class=\"fal fa-map-marker-alt\"></i>",
+          "Box2Link" : "/s/my-requests",
+          "Box2Order" : "2",
+          "Box2Title" : "My requests",
+          "Box3Color" : "#19614F",
+          "Box3Icon" : "<i class=\"fal fa-home\"></i>",
+          "Box3Link" : "/s/my-questions",
+          "Box3Order" : "3",
+          "Box3Title" : "My Questions",
+          "Box4Color" : "#19614F",
+          "Box4Icon" : "<i class=\"fal fa-hotel\"></i>",
+          "Box4Link" : "https://google.com",
+          "Box4Order" : "4",
+          "Box4Title" : "Back to Council website",
+          "Box5Color" : "#19614F",
+          "Box5Icon" : "<i class=\"fal fa-hotel\"></i>",
+          "Box5Link" : "https://google.com",
+          "Box5Order" : "5",
+          "Box5Title" : "Back to Council website",
+          "Box6Color" : "#19614F",
+          "Box6Icon" : "",
+          "Box6Link" : "",
+          "Box6Order" : "6",
+          "Box6Title" : "",
+          "SiteName" : "Greensbay Council"
+        },
+        "componentName" : "cfsuite1:Welcome",
+        "id" : "64489066-6aa5-445d-acaa-107599b53a9f",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "e905a57a-34e1-4678-9b6f-d44e65684636",
+      "regionName" : "topContent",
+      "type" : "region"
+    }, {
+      "id" : "35cd1c65-da4f-4d52-9b2e-ea2c22b645b3",
+      "regionName" : "bottomContent",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<br><br>\n<div class=\"footer\">\n    <div>\n        <div class=\"footer-content slds-grid slds-wrap slds-gutters-direct\">\n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_2-of-3 contact-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Contact Us</h3>\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">\n                            Greeensbay Council<br>\n                            123 Fake Rd<br>\n                            Adelaide SA 5000<br>\n                            Monday - Friday<br>\n                            8.45am - 5.00pm<br>\n                            <a href=\"https://goo.gl/maps/1o8kr\" class=\"fLinks__item\" target=\"blank\"><strong>View on Map</strong></a>\n                        </li>\n                        <li class=\"fLinks__item\"><a class=\"fLinks__link\" href=\"https://google.com\">Contact details for Council</a></li>\n                    </ul>\n                </div>\n\n                <div class=\"slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-m-bottom_medium\">\n                    <ul class=\"fLinks__list\">\n                        <li class=\"fLinks__item\">08 8300 0000</li>\n                        <li class=\"fLinks__item\">After hours emergency<br>\n                            1300 000 000</li>\n                        <li class=\"fLinks__item\">Email us:\n                            <a class=\"fLinks__link\" href=\"mailto:customerservice@greensbay.com.au\">customerservice@greensbay.com.au</a></li>\n                    </ul>\n                </div>\n            </div>\n            \n            <div class=\"slds-grid slds-wrap slds-col slds-size_1-of-1 slds-large-size_1-of-3 share-details slds-m-bottom_medium\">\n                <h3 class=\"slds-col slds-size_1-of-1 slds-p-bottom_small\">Share and Connect</h3>\n                <ul class=\"social-links\">\n                    <li>\n                        <a href=\"http://www.facebook.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-fb\"></i><span>Like us on Facebook</span></a>\n                    </li>\n                    <li>\n                        <a href=\"https://twitter.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-tw\"></i><span>Follow us on Twitter</span></a>\n                    </li>\n                \t<li>\n                        <a href=\"https://www.youtube.com\" class=\"link-social\" target=\"_blank\"><i class=\"icon-social-yt\"></i><span>Watch us on YouTube</span></a>\n                    </li>\n                </ul>\n            </div>\n\n            <div class=\"slds-col slds-col-size-1_of_1\">\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"https://google.com\">Terms and conditions of use</a>\n                    </li>\n                    <li class=\"signOff__items\">\n                        <a class=\"signOff__link\" target=\"_self\" href=\"#\">Sitemap</a>\n                    </li>\n                    <li class=\"signOff__items\"><a class=\"signOff__link\" target=\"_self\" href=\"#\">Emergency Management login</a>\n                    </li>\n                </ul>\n                <ul class=\"signOff__list\">\n                    <li class=\"signOff__items\">©2023 Greensbay Council </li>                  \n                </ul>\n\n            </div>\n        </div>\n    </div>\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "2cd5c218-3040-4e69-a555-4436b485cafc",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "bbac94a5-ac3b-446b-bbb7-4c9103e034d6",
+      "regionName" : "footerContent",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "cfsuite1:RatesLayout",
+    "id" : "787cc328-1477-4452-93ae-6c7dc197544c",
+    "label" : "Rates Layout",
+    "regions" : [ {
+      "id" : "ce507d6c-fb05-4bcc-bd74-0a5c9cd0b236",
+      "regionName" : "customHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contineActionLabel" : "Ask the community",
+          "continueLabel" : "Don’t see it?",
+          "crossObjectTypeaheadApiNames" : [ {
+            "isPublic" : true,
+            "name" : "KnowledgeArticleVersion"
+          }, {
+            "isPublic" : true,
+            "name" : "FeedItem"
+          }, {
+            "isPublic" : false,
+            "name" : "Case"
+          }, {
+            "isPublic" : true,
+            "name" : "CollaborationGroup"
+          } ],
+          "disableCrossObjectRelevance" : false,
+          "enableAutocomplete" : true,
+          "maxNumberOfResults" : 6,
+          "placeholder" : "Search...",
+          "questionResultsFirst" : false,
+          "showContinueAction" : true,
+          "showDetails" : false,
+          "showTopics" : true,
+          "signInActionLabel" : "Sign in to ask the community"
+        },
+        "componentName" : "forceCommunity:searchBox",
+        "id" : "37a1c7cf-c6b1-4152-907b-0976c00d86bf",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "0514790d-8900-45df-89c1-ca619777c50c",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Community Builder",
+          "communitySetupLabel" : "Community Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : false,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "3f3bca9a-182a-454d-afd2-0aaf266615c0",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "7568ce5e-7dad-4b3e-953f-3db83aa9a9b4",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : false,
+          "hideHomeText" : false
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "1d67f1b4-b0af-4548-9e85-2b438d79bb3d",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "0869a714-5882-4b3e-aa51-11c912cb6db9",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "id" : "08bb4526-b469-49be-99d0-1dcd0c44608e",
+      "regionName" : "customRegion",
+      "type" : "region"
+    }, {
+      "id" : "8a93418f-4203-45f0-b495-75506c0a47c5",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "id" : "d4339e58-5dcd-4a8c-b377-e5913e39fc60",
+      "regionName" : "headerContent",
+      "type" : "region"
+    }, {
+      "id" : "ddd96918-c358-4090-80d1-e3bb56783afb",
+      "regionName" : "topContent",
+      "type" : "region"
+    }, {
+      "id" : "97aa40dc-10ac-4454-b779-83bd8c4a1834",
+      "regionName" : "bottomContent",
+      "type" : "region"
+    }, {
+      "id" : "84ef56c2-3fa8-429c-830e-6bbc8b8d9879",
+      "regionName" : "footerContent",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

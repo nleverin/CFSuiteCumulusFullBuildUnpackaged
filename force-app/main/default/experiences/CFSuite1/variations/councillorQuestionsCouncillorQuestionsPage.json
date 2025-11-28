@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "03813a4f-0f86-40d9-8f27-9dde30a3ad2a",
+    "propertyOverrides" : {
+      "activeViewId" : "42b253da-da4f-43da-a149-360ac7a437f9"
+    },
+    "targetId" : "efcb8e5f-9380-4cf5-9356-e6120e9e532e",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Councillor_Questions_Councillor_Questions_Page",
+  "id" : "97faea82-e91d-4d51-978a-853607a53e7c",
+  "type" : "experienceVariation"
+}

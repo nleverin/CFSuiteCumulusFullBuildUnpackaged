@@ -1,0 +1,132 @@
+.THIS .logoContainer {
+    background-image: t('url(' + brandLogoImage  + ')');	/*default file uploaded for theme*/
+}
+
+.THIS .back {
+    background-color: t(brandTextLink);
+}
+
+.THIS .back:hover { 
+    filter: brightness(85%);
+} 
+
+
+
+.THIS .header-top .logo-wrapper,
+.THIS .header-top .login-wrapper {
+    margin: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1023px) {
+    .THIS .footer-content .signOff__list {
+        text-align: left;
+    }
+}
+
+@media (min-width: 62em) {
+    .THIS .footer-content {
+        padding-bottom: 140px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .THIS .content {
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .THIS .header-top {
+        margin: 0 auto;
+        /*width: 712px;*/
+        padding: 0 16px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .THIS .header-content {
+        width: 100%;
+    }
+}
+    
+@media (max-width: 767px) {
+    .THIS .header-top {
+        height: 90px;
+        padding: 10px 16px 10px 16px;
+    }
+    .THIS .uiMenuList--default.uiMenuList {
+        right: 0;
+    }
+    .THIS .header-top .logo-wrapper,
+    .THIS .header-top .login-wrapper {
+        margin: 0;
+    }
+    .THIS .logoContainer {
+        width: 175px;
+        height: 55px;
+    }
+    .THIS .template-footer .footer-content {
+        padding-bottom: 85px;
+    }
+    .THIS .cQAProcess.login-modal .slds-modal__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .THIS ~ .siteforcePanelsContainer .forceCommunityChangePassword .required {
+        position: static;
+        float: left;
+    }
+}
+
+/* force showing username on small screen */
+@media only screen and (max-width: 64.0625em) {
+    .THIS .selfServiceUserProfileMenu .profileName,
+    .THIS .selfServiceUserProfileMenu .down-arrow {
+        display: inline-block;
+    }
+    
+    .THIS .selfServiceUserProfileMenu .down-arrow {
+        border-top: 5px solid;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        display: inline-block;
+        margin-left: 4px;
+        margin-bottom: 3px;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 480px) {
+    .THIS .logoContainer {
+        width: 170px;
+        height: 50px;
+    }
+    .THIS .cQAProcess.login-modal .slds-modal__container {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .THIS .footer {
+        margin-top: 30px;
+    }
+}

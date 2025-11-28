@@ -1,0 +1,12 @@
+{
+  "activeViewId" : null,
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "My_Questions__c",
+  "id" : "545df638-e474-464e-a60f-c6313db5b507",
+  "label" : "My Questions",
+  "pageAccess" : "RequiresLogin",
+  "routeType" : "custom-my-questions",
+  "type" : "route",
+  "urlPrefix" : "my-questions"
+}

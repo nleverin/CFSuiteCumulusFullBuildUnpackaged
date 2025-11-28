@@ -1,0 +1,257 @@
+<!--
+  @description       : 
+  @author            : hugh Wheeler
+  @group             : 
+  @last modified on  : 05-15-2025
+  @last modified by  : hugh Wheeler
+-->
+<apex:page controller="PaymentPlanPDF" showHeader="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" renderAs="pdf">
+    <head>
+        <style>
+            @page:first {
+            margin-top: 10mm;            
+            }
+            @page {
+            margin-bottom: 4.9cm;
+            margin-top: 30mm;             
+            margin-left: 0mm;
+            margin-right: 0mm;
+background-color:#f8f9fa; 
+            
+            @top-center {
+            content: element(header);
+            }
+            @bottom-left {
+            content: element(footer);
+            }
+            }
+            
+            div.header {
+            padding: 10px;
+            position: running(header);
+            }
+            div.footer {
+            display: block;
+            padding: 0px;
+            position: running(footer);
+            }
+            .pagenumber:before {
+            content: counter(page);
+            }
+            .pagecount:before {
+            content: counter(pages);
+            }
+            div.content {
+            float: left;
+            width: 100%;
+            }
+            .header, .content {
+            background-color: #f8f9fa;
+            }
+            .tableHead {
+            background-color: #f0f0f0;
+            }  
+            .tableHeadCell {
+            padding: 15px 20px;
+            background-color: #f0f0f0;
+            margin: 0px;
+            margin-left:20px;
+            }
+            .tableHead th:first-child {
+            border-left: 1px solid #d7d6d6;
+            border-top: 1px solid #d7d6d6;
+            border-bottom: 1px solid #d7d6d6;
+            text-align: center;
+            } 
+            .tableHead th:nth-child(2) {
+            text-align: left;
+            padding-left: 30px;
+            } 
+            .tableHead th:nth-child(3) {
+            text-align: center;
+            } 
+            table {
+            width: 100%;
+            }
+            body {
+            margin: 0px;
+            padding: 0px;
+            top: 0mm;
+            left: 0mm;
+            font-family: sans-serif;
+            color: #252525;
+            }
+            @media print {
+            body {
+            margin: 0 !important;
+            padding:0 !important;
+            border:0 !important;
+            outline:0 !important;
+            }
+            }
+            .summary {
+            font-weight: 600;
+            width: 100%;
+            margin-top: 35px;
+            font-size: 16px;
+            margin-bottom: 25px;
+            }
+            .summary-label {
+            width: 20%;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            }
+            .summary-input {
+            width: 70%;
+            display: inline-block;
+            font-weight: normal;
+            }
+            .container {
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+            margin-left:45px; 
+            margin-right: 45px;
+            }
+            .notice {
+            background-color:white; 
+            margin-left:45px; 
+            margin-right:45px; 
+            border: 1px solid #eee;
+            font-family: Arial Unicode MS !important;
+            margin-top: 15px;
+            margin-bottom: 40px;
+            }
+            .notice p {
+            padding: 20px;
+            margin: 0px;
+            font-size: 15.5px;
+            line-height: 23px;
+            }
+            .footer td p {
+            font-size: 13px;
+            line-height: 21px;
+            }
+            
+        </style>
+    </head>
+    <div style="position: absolute; top: 0mm; left: 0px; height: 100%;">
+        
+        <body style="top: 0mm; left: 0px; height: 100%;">
+            
+            
+            <!-- HEADER -->
+            <div class="header" style="background-color:#f8f9fa;">
+               
+            </div>
+            
+            <!-- FOOTER -->
+            <div class="footer">
+                <table style="padding-left:50px;padding-right:35px;width:100%;">
+                    <tr>
+                        <td><!--<apex:image value="{!'/resource/' + CustomLogoBlack}" alt="Main homepage - City of xxxxxxxx" width="220px" />--></td>
+                        <td style="text-align:right;"><p><b>City of xxxxx</b>
+                            <br/> Address:  xxxxxxxx
+                            <br/> Email: xxxxx@xxxxxxx.sa.gov.au
+                            <br/> Phone: xxxx xxxxx </p></td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+            <!-- CONTENT -->
+            <div class="content">
+                <div style="width:100%;background-color:#008857;padding: 20px 0px; color:white">
+                    
+                    <table style="width:100%; margin-left:45px; margin-top: 20px; margin-bottom: 20px;">
+                        <tr>
+                            
+                            <td style="vertical-align:bottom; width:73%;">
+                                <!--{! issueDate}-->
+                                <br/><br/><br/>
+                                <h1 style="margin-bottom: 6px;"><span style="font-family: sans-serif; font-weight: 300; font-size: 40px;">
+                                    PAYMENT PLAN SCHEDULE
+                                    </span>
+                                </h1>
+                                <p style="margin-bottom: 0px; margin-top: 0px;">
+                                    
+                                </p></td>
+                            <td>
+                                <!--<apex:image value="{!'/resource/' + CustomLogoWhite}" alt="Main homepage - City of xxxxxxxx logo" width="120px" />--></td>
+                        </tr> </table> 
+                </div>
+                
+                <div class="container">
+                    <div class="summary">
+                        <div class="summary-label">   
+                            Start Date:
+                        </div>
+                        <div class="summary-input">{! startDate}</div>
+                        <div class="summary-label">
+                            Frequency:
+                        </div>
+                        <div class="summary-input">{! frequency}</div> 
+                              
+                    </div>
+
+
+                    
+                    <apex:variable var="rowIndex" value="{!1}" />
+                    <table style="border-spacing: 0px;">
+                        <thead class="tableHead" style="background-color: #f0f0f0;">
+                            <th scope="col" class="tableHeadCell" style="width: 12%;">
+                                <span>Payments</span>
+                            </th>
+                            <th scope="col" class="tableHeadCell" style="width: 68%; border: 1px solid #d7d6d6;">
+                                <span>Date</span>
+                            </th>
+                            <th scope="col" class="tableHeadCell" style="width: 20%; border-right: 1px solid #d7d6d6; border-top: 1px solid #d7d6d6; border-bottom: 1px solid #d7d6d6; text-align: center;">
+                                <span>Amount</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <apex:repeat value="{!ppDetails}" var="schedule" id="theRepeat">
+                                <tr>
+                                    <td class="leftCellBorder" style="margin: 0px;text-align: center;padding: 15px 20px;border: 1px solid #d7d6d6;border-right:none;border-top:none;background-color:white">
+                                        {! rowIndex}
+                                        <apex:variable value="{!rowIndex + 1}" var="rowIndex" />
+                                    </td>
+                                    <td style="margin: 0px;padding: 15px 20px;border: 1px solid #d7d6d6;border-top:none;background-color:white">
+                                        {! schedule.dueDate}
+                                    </td>
+                                    <td style="margin: 0px;text-align: center;padding: 15px 20px;border: 1px solid #d7d6d6;border-left:none;border-top:none; background-color:white">
+                                        ${! schedule.amount}
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td style="margin: 0px;">
+                                    
+                                </td>
+                                <td style="margin: 0px; padding: 0px">
+                                    <div style="font-weight: bold;margin: 0px;float: right;width: 30%;padding: 16px 20px;background-color: #f0f0f0;border-bottom: 1px solid #d7d6d6;#f0f0f0;border-left: 1px solid #d7d6d6;#f0f0f0;border-right: 1px solid #d7d6d6;">
+                                        Total
+                                    </div>
+                                    
+                                </td>
+                                <td style="font-weight: bold; margin: 0px;text-align: center;padding: 15px 20px;border: 1px solid #d7d6d6;border-left:none;border-top:none; background-color: #fff;">
+                                    ${!gTotal}
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                
+                    
+                </div>
+                <div class="notice">
+                    <p>This schedule sets out your payment plan payments for this payment plan. </p>
+                </div>    
+                
+            </div>
+        </body>
+    </div>
+</apex:page>

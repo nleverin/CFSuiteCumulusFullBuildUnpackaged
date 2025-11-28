@@ -1,0 +1,48 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "549c265e-0d2a-4fa5-bf5f-1be643a6d0b0",
+  "label" : "Top Articles",
+  "regions" : [ {
+    "id" : "e1a6027f-f6b6-44eb-a147-39b2065ba547",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "566ab761-0ca8-4898-94c2-abcdd9701973",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5a133a6c-3f1f-4fb3-84d3-b3a1e1b573a8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "96456603-38bf-44b5-98e2-9a4dd62bc274",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Top Articles"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a361bccc-c474-4482-b73c-43129aea18c0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be95c128-0b1c-4bda-9c31-2773f517d78c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "top-articles"
+}

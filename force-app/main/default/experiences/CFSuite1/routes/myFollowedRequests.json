@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "00021f68-4b97-4ca8-9cc7-5f10adc8dd91",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "My_Followed_Requests__c",
+  "id" : "b6f139d0-ceb7-4bd4-9754-0c9a2426ed46",
+  "label" : "My followed requests",
+  "pageAccess" : "RequiresLogin",
+  "routeType" : "custom-my-followed-request",
+  "type" : "route",
+  "urlPrefix" : "my-followed-requests"
+}

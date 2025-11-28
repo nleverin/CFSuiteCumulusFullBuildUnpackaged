@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "dd93bd0b-91a0-4f71-841e-0f8b85e5d29f",
+    "propertyOverrides" : {
+      "activeViewId" : "fa9ed5e7-8b8b-432a-9b61-058f54af1692"
+    },
+    "targetId" : "59d51ad0-ee7c-4fbe-93c2-f0957b0a7cc2",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Question_Detail_Question_Detail_Page",
+  "id" : "c3ebd9d5-620e-4aaf-83ba-f76668c74145",
+  "type" : "experienceVariation"
+}

@@ -1,0 +1,78 @@
+<!--
+  @description       : 
+  @author            : Hugh Wheeler
+  @group             : 
+  @last modified on  : 05-25-2022
+  @last modified by  : Hugh Wheeler
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   02-14-2021   Hugh Wheeler   Initial Version
+-->
+<aura:component implements="forceCommunity:themeLayout">
+    <aura:attribute name="isGuest" type="Boolean" default="true" />
+    <aura:attribute name="headerContent" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="true" />
+    <aura:attribute name="search" type="Aura.Component[]" required="false" />
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
+    <aura:attribute name="footerContent" type="Aura.Component[]"/>
+    <ltng:require  styles="{!join(',',	
+                           $Resource.cfsuite1__FontAwesome + '/css/all.css')}"	
+                           scripts="{!join(',',	
+                           $Resource.cfsuite1__HeaderMobileResource + '/q.js')}"	
+                  />
+    <ltng:require styles="{!$Resource.ExternalCSS}" />
+    <div>	
+            <div class="slds-grid slds-grid_align-spread container header-top">	
+                	
+                	
+            <div class="slds-col logo-wrapper">	
+                        <a href="/s/">	
+                                                <div class="logoContainer" role="img" aria-label="Main homepage - CFSuite"></div>
+                             </a>	
+                        <div class="logoLine">Customer Portal</div>	
+               	
+            </div>	
+            <div class="slds-grid slds-grid_vertical login-wrapper">	
+                <div class="slds-col slds-size_1-of-1">	
+                    <div class="profileMenuRegion">	
+                        <!--{!v.profileMenu}-->	
+                        <c:HeaderLinks isGuest='{!v.isGuest}' />	
+                    </div>	
+                </div>	
+                <!--	
+            <div class="slds-col slds-size_1-of-1">	
+                <div class="searchRegion">	
+                    {!v.search}	
+                </div>	
+            </div>	
+-->	
+            </div>	
+            </div>	
+      
+        	
+        <c:HeaderMobile isGuest='{!v.isGuest}' notification="{!v.notification}"></c:HeaderMobile>	
+        	
+        <div class="slds-grid slds-text-align_center">	
+            <div class="slds-col slds-size_1-of-1">	
+                <div class="headerContent">	
+                    {!v.headerContent}	
+                            <div class="navbar">
+                        <div class="navbar-line"></div>
+                        <!--{!v.navBar}-->
+                    </div>
+                </div>	
+            </div>	
+        </div>	
+        	
+        <div class="slds-grid">	
+            <div class="slds-col slds-size_1-of-1 content">	
+                {!v.body}	
+            </div>	
+        </div>	
+        <div class="slds-grid template-footer">	
+            <div class="slds-col slds-size_1-of-1">	
+                {!v.footerContent}	
+            </div>	
+        </div>	
+    </div>	
+</aura:component>

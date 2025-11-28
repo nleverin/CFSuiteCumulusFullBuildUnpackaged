@@ -1,0 +1,29 @@
+{
+  "id": "omniscript-view",
+  "label": "OmniScript Placeholder",
+  "type": "view",
+  "appPageId":"32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName": "siteforce:sldsOneColLayout",
+  "themeLayoutType": "Inner",
+  "viewType": "omniscript",
+  "regions": [
+    {
+      "id": "main",
+      "regionName": "main",
+      "type": "region",
+      "components": [
+        {
+          "id": "placeholder",
+          "componentName": "forceCommunity:richTextInline",
+          "type": "component",
+          "componentAttributes": {},
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "properties": {
+            "richTextValue": "<p>OmniScript route placeholder (required by site template).</p>"
+          }
+        }
+      ]
+    }
+  ]
+}

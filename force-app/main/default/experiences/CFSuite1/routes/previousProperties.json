@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "0106d744-cc1a-4c3c-81c7-7153c88016b8",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "PreviousProperties__c",
+  "id" : "fb26b409-578e-445c-81c7-613a2d4dfbcc",
+  "label" : "PreviousProperties",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-previousproperties",
+  "type" : "route",
+  "urlPrefix" : "previousproperties"
+}

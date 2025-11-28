@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "3de704bd-41ac-43f3-8084-6a9476976e86",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Refund_credit_balance__c",
+  "id" : "593e9d7e-1111-4f36-9248-f4793a48a98c",
+  "label" : "Refund credit balance",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-refund-credit",
+  "type" : "route",
+  "urlPrefix" : "refund-credit"
+}

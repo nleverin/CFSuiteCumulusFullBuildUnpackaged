@@ -1,0 +1,1351 @@
+<!--
+  @description       : 
+  @author            : Hugh Wheeler
+  @group             : 
+  @last modified on  : 04-22-2021
+  @last modified by  : Hugh Wheeler
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   04-22-2021   Hugh Wheeler   Initial Version
+-->
+<apex:page sidebar="false" id="CreateAccount" controller="CommunitiesSelfRegControllers_ReqPortal" showheader="false" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0">
+     
+    <apex:slds />
+    <head>
+        <link rel="icon" href="{!URLFOR($Resource.CommunityFavicon)}" type="img/x-icon"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+        <title>Register</title>
+        <apex:stylesheet value="{!URLFOR($Resource.cfsuite1__FontAwesome,'/css/all.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.cfsuite1__Bootstrap,'/bootstrap.min.css')}"/>
+        <apex:includeScript value="{!$Resource.cfsuite1__jquery}"/>
+        <apex:includeScript value="{!URLFOR($Resource.cfsuite1__Bootstrap,'/bootstrap.min.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.ExternalCSS)}"/>
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+            body.slds-scope {
+            background: url('{!$Resource.cfsuite1__CommunityLoginBackground}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+            #verification {
+            margin: 3em auto 0em;
+            padding: 15px 30px 30px;
+            background: #fff;
+            width: 400px;
+            max-width: 100%;
+            position: relative;
+            }
+            #container { 
+            background: #fff;
+            width: 50%;
+            margin: 0 auto;
+            margin: 2em auto 0em;
+            max-width: 100%;
+            position: relative;
+            }
+            .modal-body ul {
+            list-style: lower-alpha;
+            font-size: .9rem;
+            color: #292929;
+            margin-left: 20px;
+            }
+            .modal-body ul.roman {
+            list-style: lower-roman;
+            margin-left: 40px;
+            }
+            
+            #container h1, #container h2, #container p, #verification {
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            .modal-dialog {
+            width: 90%;
+            margin: 2em auto;
+            }
+            @media (min-width: 576px) {
+            .modal-dialog {
+            max-width: 70%;
+            }
+            }
+            @media (min-width: 1000px) {
+            .modal-dialog {
+            max-width: 60%;
+            }
+            }
+            @media (max-width: 1024px){
+            #container {
+            width: 70%;
+            }
+            }
+            @media (max-width: 320px){
+            #container {
+            width: 100%;
+            margin: 0;
+            }
+            }
+            .title {
+            align-self: flex-end;
+            }
+            .content {
+            padding: 0px 0px 30px;
+            margin-top:20px;
+            }
+            img.logo {
+            padding: 15px;
+            }
+            .input-row {
+            margin-bottom: 15px;
+            position:relative;
+            }
+            .input-container .slds-input {
+            background-color: #fff;
+            border: solid 1px #d3d3d3;
+            color:#252525;
+            padding: 8px;
+            padding-left: 18px;
+            width: 100%;
+            }
+            i {
+            color: #B3B3B3;
+            }
+            .messageTable {
+            color: rgb(194, 57, 52);
+            text-align: center;
+            }
+            .message {
+            margin-bottom: 10px;
+            }
+            .slds-scope .btn-reg {
+            background-color: #573f8c;
+            border-color: #573f8c;
+            border-style: solid;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px;
+            min-width: 40%;
+            margin: 0 auto;
+            display:block;
+            }
+            .slds-scope .btn-reg:hover {
+            background-color: #6143aa;
+            }
+            .links {
+            text-align:center;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 1rem;
+            }
+            .links a,
+            .links a:hover,
+            .links a:active,
+            .links a:visited {
+            display: inline-block;
+            }
+            .links a, .slds-scope a {
+            color: #1a8fce;
+            text-decoration: underline;
+            }
+            .links a:hover, .slds-scope a:hover {
+            color: #1470a1;
+            text-decoration: none;
+            }
+            .slds-scope a:active, .links a:visited, .slds-scope a:focus {
+            color: #1470a1;
+            text-decoration: underline;
+            }
+            a:focus {
+            box-shadow: none;
+            outline: 2px solid #1a8fce;
+            outline-offset: 3px;
+            }           
+            .btn-reg:focus {
+            outline: #1a8fce 2px solid;
+            outline-offset: 2px;
+            box-shadow: none;
+            border: none;
+            background-color: #60469b !important;
+            color: #fff !important;
+            }
+            
+            /* 'Error' in message */
+            .messageTable .messageCell h4 {
+            display: none;
+            }
+            .header{
+            background-color: #343434;
+            padding: 15px;
+            }
+            .header > div {
+            align-self:center;
+            }
+            .header > div >h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-left: 15px;
+            color: #fff;
+            margin-top: 40px;
+            }
+            @media (max-width: 480px) {
+            .header > div >h1 {
+            text-align: center;
+            margin: 1.6rem 0px .9rem;
+            }
+            }
+            .tab-nav{
+            cursor:pointer;
+            }
+            .tab-nav>div {
+            padding: 20px 30px 16px 30px;
+            font-weight: normal;
+            font-size: 16px;
+            border: solid 1px #e6e6e6;
+            border-top: none;
+            background-color:#F9F9F9;
+            color:#7E7E7E;
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            .tab-nav>div span {
+            padding-right: 25px;
+            color:#7E7E7E;
+            cursor:pointer;
+            }
+            .tab-nav>div.active{
+            border:none;
+            background-color:#fff;
+            font-weight: 600;
+            color:#252525;
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            .tab-nav>div.active span {
+            color:#1a8fce;
+            }
+            .tabs>div {
+            visibility: hidden;
+            position: absolute;
+            padding: 40px 30px 30px 30px;
+            }
+            .tabs>div.active {
+            position:static;
+            visibility: visible !important;
+            }
+            .tabs>div h2{
+            font-weight: 600;
+            color:#252525;
+            margin-bottom: 25px;
+            font-size: 1rem !important;
+            font-weight: 600;
+            -webkit-font-smoothing: antialiased;
+            }
+            .tabs>div h3{
+            margin: 10px 0px 10px 0px;
+            font-weight: normal;
+            }
+            .hruler{
+            margin-top:20px;
+            margin-bottom:20px;
+            }
+            .separator20{
+            margin-bottom:20px !important;
+            }
+            .separator10{
+            margin-bottom:10px !important;
+            }
+            .separator5{
+            margin-bottom:5px !important;
+            }
+            .separator0{
+            margin:0px !important;
+            }
+            .hruler {
+            margin-top: 10px !important;
+            margin-bottom: 23px;
+            }
+            .hruler::before {
+            content: '';
+            border-top: solid 1px #d3d3d3;
+            display: block;
+            }
+            ul {
+            list-style: none; 
+            }
+            .input-row ul li {
+            align-content: center;
+            display: flex;
+            align-items: center;
+            }
+            ul li::before {
+            font-weight: bold;
+            display: inline-block;
+            width: 0.7em;
+            font-size: 1.9em;           
+            }
+            .modal-body ul li {
+            margin-top: 9px;
+            padding-left: 10px;
+            }
+            .modal-content ul li::before {
+            color: #292929;
+            line-height: 24px;
+            margin-right: 15px;
+            }
+            .flexme{
+            display:flex;
+            align-items: center;
+            }
+            .input-row ul li::before {
+            content: "\2022";
+            color:#573f8c;
+            line-height: 8px;
+            margin-top: 1px;
+            }
+            @media (max-width: 505px) {
+            .input-row ul li::before {
+            position: relative;
+            top: -9px;
+            }
+            }
+            .tac {
+            margin-right: 10px !important;
+            margin-top: 2px !important;
+            }
+            .tac-label{
+            font-size: .94rem;
+            margin:0;
+            -webkit-transition: text-shadow 500ms linear;
+            -moz-transition: text-shadow 500ms linear;
+            -ms-transition: text-shadow 500ms linear;
+            -o-transition: text-shadow 500ms linear;
+            transition: text-shadow 500ms linear;
+            }
+            .tac-label.glow {
+            text-shadow: 0 0 10px red
+            }
+            @media (max-width: 485px) {
+            input.tac {
+            position: relative;
+            top: -11px;
+            }
+            }
+            .help{
+            text-decoration: underline !important;
+            font-weight: 600;
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            .help span {
+            text-decoration: none !important;
+            margin-right: 5px;
+            }
+            .placeholder {
+            position:absolute;
+            z-index: 1000;
+            top: 16px;
+            line-height: 15px;
+            left: 25px;
+            padding: 0 4px;
+            color: #6b6b6b;
+            font-family: "Open Sans", Arial, sans-serif;
+            -webkit-transition:top 300ms, font-size 300ms, background 500ms;
+            -moz-transition:top 300ms, font-size 300ms, background 500ms;
+            -ms-transition:top 300ms, font-size 300ms, background 500ms;
+            -o-transition:top 300ms, font-size 300ms, background 500ms;
+            transition: top 300ms, font-size 300ms, background 500ms;
+            }
+            .placeholder {
+            font-size: .9rem;
+            }
+            .placeholder.active {
+            background-color: #fff;
+            border-radius: .25rem;
+            color: #167BB1;
+            font-size: 11px;
+            top: -7px; 
+            }
+            .placeholder.filled {
+            color: #706E6B;
+            }
+            .slds-scope .slds-input:focus {
+            border: solid 1px #1a8fce;
+            box-shadow: 0 0 0px #fff !important;
+            }
+            .slds-scope .slds-input.invalid, .slds-scope .slds-input.invalid:focus {
+            border: solid 1px #ad314b;
+            }
+            .required:after {  
+            content: " *";
+            color: #ad314b;  
+            font-weight: 300;
+            font-size: 15px;
+            -webkit-transition:font-size 300ms;
+            -moz-transition:font-size 300ms;
+            -ms-transition:font-size 300ms;
+            -o-transition:font-size 300ms;
+            transition: font-size 300ms;
+            }
+            .required.active:after {  
+            font-size:14px;
+            }     
+            #container .errors {
+            min-height:30px;
+            color: #ad314b; 
+            }
+            .errors p {
+            width: 100%;
+            text-align: center;
+            }
+            .chbx-yes, .chbx-no{
+            border: solid 1px silver;
+            cursor:pointer;
+            -webkit-transition:background-color 200ms, border-color 200ms;
+            -moz-transition:background-color 200ms, border-color 200ms;
+            -ms-transition:background-color 200ms, border-color 200ms;
+            -o-transition:background-color 200ms, border-color 200ms;
+            transition: background-color 200ms, border-color 200ms;
+            }
+            .slds-form .slds-grid {
+            margin-bottom: 10px;
+            }
+            .chbx-yes{
+            padding: 9px 37px 9px 42px;
+            border-radius: 10px 0px 0px 10px;
+            color: #252525;
+            }
+            .chbx-no{
+            padding: 9px 40px 9px 41px;
+            border-left: none;
+            border-radius: 0px 10px 10px 0px;
+            color: #252525;
+            }
+            .chbx-yes.active, .chbx-no.active{
+            background-color:#156B4E !important;
+            color: #fff !important;
+            border-color:#156B4E !important;
+            }
+            .hidden-ctrl{
+            visibility: hidden;
+            position: absolute;
+            }
+            .slds-scope .slds-input:required:focus{
+            box-shadow: 0 0 0px #fff !important;
+            }
+            .slds-scope .slds-input.active{
+            background: #fff !important;
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus, 
+            input:-webkit-autofill:active,
+            input:-internal-autofill-selected {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+            background-color: #fff !important;
+            }
+            input {
+            filter: none;
+            }
+            .dark-text {
+            color: #252525;
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            b {
+            font-weight: 600;
+            }
+            #verification h1 {
+            color: #6c6d70;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 20px 0px 15px 0px;
+            }
+            #verification p {
+            color: #6c6d70;
+            font-size: .96rem;
+            }
+            #verification img.logo {
+            padding: 25px 36px 8px;
+            }
+            #verification .slds-form img {
+            margin: 0 auto;
+            }
+            #verification .btn-reg {
+            width: 100%;
+            margin-bottom: 1rem;
+            }
+            #verification .actions {
+            text-align: center;
+            }
+            #verification .actions a {
+            color: #1a8fce;
+            text-decoration: underline;
+            font-size: 1rem;
+            }
+            .slds-scope a:hover {
+            text-decoration: none;
+            }
+            .apexerrors * {
+            text-align:center !important;
+            color: #ad314b !important;
+            }
+            .apexerrors li:before {
+            content:"*" !important;
+            font-size:1em !important;
+            color: #ad314b !important;
+            margin-right: 3px;
+            font-weight: normal;
+            }
+            .apexerrors li {
+            display:block;
+            }
+            .apexerrors ul {
+            display:inline-block !important;
+            padding:0 !important;
+            }
+            .modal-header{
+            border-bottom:none;
+            }
+            .modal-content {
+            padding: 1em;
+            }
+            @media (min-width: 30em) {
+            .modal-content {
+            padding: 2em;
+            }
+            }
+            .modal-footer {
+            border-top:none;
+            }
+            .modal-header .close {
+            font-size: 32px;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            }
+            .btn-primary{
+            background-color: #573f8c !important;
+            border-color:#573f8c !important;
+            color:#fff !important;
+            box-shadow: none !important;
+            width: 25%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            border-radius: 0px;
+            }
+            .btn-primary:hover {
+            background-color: #60469b;
+            border-color:#60469b;
+            color:#fff;
+            }
+            .modal-content, .modal-header h1, modal-body h2 {
+            font-family: "Open Sans", Arial, sans-serif;
+            }
+            .modal-title {
+            font-size: 1.8em !important;
+            font-weight: 600 !important;
+            color: #573f8c;
+            }
+            .modal-body h2 {
+            color: #292929;
+            font-size: 1.5em;
+            }
+            .modal-body p, modal-body li {
+            font-size: .9rem;
+            line-height: 1.7;
+            padding: 0;
+            font-family: inherit;
+            font-weight: normal;
+            text-rendering: optimizeLegibility;
+            color: #292929;
+            width: 100%;
+            }
+            .messageText {
+            background-color: #c23934 !important;
+            color: #fff !important;
+            border-radius: 3px;
+            padding: 8px;
+            }
+            .messageText a {
+            color: #fff !important;
+            }
+            .inactive{
+                display: none;
+            }
+            @media (max-width: 480px) {
+            .tab-nav>div {
+            font-size: 13px;
+            }
+            .logo-container {
+            width: 70%;
+            margin: auto;
+            }
+            .header {
+            padding: 6px;
+            }
+            #container .placeholder {
+            font-size: .96rem;
+            }
+            }
+            @media (max-width: 700px) {
+            .tab-nav>div {
+            padding: 20px 10px 16px 27px;
+            font-size: 14px;
+            }
+            #container {
+            width: 90%;
+            }
+            }
+            @media (max-width: 370px) {
+            #container {
+            width: 100%;
+            }
+            }
+            
+            
+            
+        </style>
+        
+    </head>
+    <script>
+    function bodyLoad() {
+      var text = "";
+        
+      document.getElementById("ie-login-form").style.width = "100%";
+        document.getElementById("ie-login-form1").style.width = "100%";
+    }
+    </script>
+
+    <body class="slds-scope" onload="bodyLoad()">
+        <!-- Begin Page Content -->
+        <apex:outputPanel rendered="{! verificationCodeId == '' }">
+            <div id="container">
+                <div class="content">
+                    <div class="slds-grid slds-grid_align-spread header">
+                        <div class="slds-col title slds-size_1-of-1 slds-small-size_2-of-3">
+                            <h1>Create an account</h1>
+                        </div>
+                        <div class="slds-col logo-container slds-small-size_1-of-3 slds-show_small">
+                            <a href="/s/">
+                    <div class="logoContainer" role="img" aria-label="Main homepage - CFSuite"></div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-grid slds-wrap tab-nav">
+                        <div class="slds-col slds-size_1-of-1 slds-x-small-size_1-of-2 active">
+                            <span class="fas fa-user-lock slds-show_small"></span>I am an individual
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-x-small-size_1-of-2">
+                            <span class="fas fa-users slds-show_small"></span>I am a business
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <div class="active">
+                            <h2>
+                                Fill in the details below to create your account
+                            </h2>
+                            <div class="slds-grid slds-grid_align-spread active">                          
+                                <div class="login-form" id="ie-login-form">
+                                    <apex:form id="theForm1" forceSSL="true">
+                                        <div class="slds-form">
+                                            <div class="input-container slds-grid slds-wrap slds-gutters">
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">First name</div>
+                                                    <apex:inputText required="true" id="firstName" styleClass="slds-input" value="{! firstName }"/>
+                                                </div>                                            
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder">Middle name</div>
+                                                    <apex:inputText id="middleName" styleClass="slds-input" value="{! middleName }"/>
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">Last name</div>
+                                                    <apex:inputText required="true" id="lastName" styleClass="slds-input" value="{! lastName }"/>
+                                                </div>
+                                                <div class="input-row slds-show_medium slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">Email</div>
+                                                    <apex:inputText required="true" id="email" styleClass="slds-input" value="{! email }"/>
+                                                    <div id="err-in-email" class="slds-text-color_error"></div>
+                                                </div>                                            
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">Mobile phone</div>
+                                                    <apex:inputText required="true" id="mobilePhone" styleClass="slds-input" value="{! mobilePhone }"/>
+                                                    <div id="err-in-mobilePhone" class="slds-text-color_error"></div>
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 hruler"></div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">Create Password</div>
+                                                    <apex:inputSecret id="password" value="{! password }" styleClass="slds-input"/>
+                                                    <div id="err-in-password" class="slds-text-color_error"></div>
+                                                </div>                                            
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                                                    <div class="placeholder required">Confirm Password</div>
+                                                    <apex:inputSecret id="confirmPassword" value="{! confirmPassword }" styleClass="slds-input"/>
+                                                    <div id="err-in-confirmPassword" class="slds-text-color_error"></div>
+                                                </div>
+                                                <div class="input-row slds-col slds-size_1-of-1 dark-text">
+                                                    <ul>
+                                                        <li class="dark-text">8 characters minimum and at least one number and one letter</li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 hruler"></div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                                    <input type="checkbox" name="tac1" class="tac" id="tac1" />
+                                                    <label for="tac1" class="dark-text tac-label">I have read and agree to the <a class='tacurl' data-toggle="modal" data-target="#tacModal" href="#">terms and conditions</a>.</label>                                                
+                                                </div>     
+                                                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 apexerrors">
+                                                    <apex:pagemessages escape="false"/>
+                                                </div>
+                                                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 errors individual"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- <apex:pageMessages id="error"/> -->
+                                        <apex:commandButton styleClass="btn-reg" action="{! registerUserAsIndividual }" onclick="return beforeSubmit(true)" value="Create an account" id="submit"/>
+                                        <br/>
+                                        <div class="links">
+                                            <!--<apex:outputLink value="{! $Page.CommunitiesLogin }">Already have an account?</apex:outputLink>-->
+                                            <a class="link-forgot" href="/apex/CustomCommunityLogin?IsAccountExist=true">Already have an account?</a>
+                                        </div>
+                                    </apex:form>
+                                </div>                    
+                            </div>                        
+                        </div>
+                        <div>
+                            <h2>
+                                Fill in the details below to create your business account
+                            </h2>
+                            <div class="slds-grid slds-grid_align-spread active">                            
+                                <div class="login-form" id="ie-login-form1">
+                                    <apex:form id="theForm2" forceSSL="true">
+                                        <div class="slds-form" >
+                                            <div class="input-container slds-grid slds-wrap slds-gutters">
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder required">Business name</div>
+                                                    <apex:inputText required="true" id="businessName" styleClass="slds-input required" value="{! businessName }"/>
+                                                </div>                                            
+                                              <!--  <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder">ABN</div>
+                                                    <apex:inputText id="ABN" styleClass="slds-input" value="{! ABN }"/>
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme separator5">
+                                                    <h2>
+                                                        Are you register for GST?                                                
+                                                    </h2>
+                                                </div>     
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                                    <apex:inputCheckbox id="GSTRegistered" styleClass="hidden-ctrl" value="{! GSTRegistered }"/>
+                                                    <div class="slds-grid">
+                                                        <div class="chbx-yes">
+                                                            Yes                                                
+                                                        </div>
+                                                        <div class="chbx-no">
+                                                            No                                                
+                                                        </div>
+                                                    </div>          
+                                                </div>  -->   
+                                                
+                                                <div class="separator5 slds-col slds-size_1-of-1 slds-small-size_1-of-1"></div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder required">Business mobile</div>
+                                                    <apex:inputText required="true" id="businessMobile" styleClass="slds-input" value="{! businessMobile }"/>
+                                                    <div id="err-b-businessMobile" class="slds-text-color_error"></div>
+                                                </div>
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder required">Email</div>
+                                                    <apex:inputText required="true" id="businessEmail" styleClass="slds-input" value="{! businessEmail }"/>
+                                                    <div id="err-b-businessEmail" class="slds-text-color_error"></div>
+                                                </div>
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                                    <a class="help businessmobilehelp" data-toggle="modal" data-target="#bmobileModal" href="#">
+                                                        <span class="fas fa-question-circle"></span>Why do we ask for a business mobile?
+                                                    </a>
+                                                </div>  
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 hruler"></div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder required">Create Password</div>
+                                                    <apex:inputSecret id="password" value="{! password }" styleClass="slds-input"/>
+                                                    <div id="err-b-password" class="slds-text-color_error"></div>
+                                                </div>                                            
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-2">
+                                                    <div class="placeholder required">Confirm Password</div>
+                                                    <apex:inputSecret id="confirmPassword" value="{! confirmPassword }" styleClass="slds-input"/>
+                                                    <div id="err-b-confirmPassword" class="slds-text-color_error"></div>
+                                                </div>
+                                                <div class="input-row slds-col slds-size_1-of-1 dark-text">
+                                                    <ul>
+                                                        <li class="dark-text">8 characters minimum and at least one number and one letter</li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 hruler"></div>
+                                                
+                                                <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                                    <input type="checkbox" name="tac2" class="tac" id="tac2" />
+                                                    <label for="tac2" class="dark-text tac-label">I have read and agree to the <a class='tacurl' data-toggle="modal" data-target="#tacModal" href="#">terms and conditions</a>.</label>                                                
+                                                </div>     
+                                                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 apexerrors">
+                                                    <apex:pagemessages escape="false"/>
+                                                </div>  
+                                                
+                                                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 errors business">
+                                                    
+                                                </div>                                           
+                                            </div>
+                                        </div>
+                                        <apex:commandButton styleClass="btn-reg" action="{! registerUserAsBusiness }" onclick="return beforeSubmit(false)" value="Create an account" id="submit"/>
+                                        <br/>
+                                        <div class="links">
+                                            <!--<apex:outputLink value="{! $Page.CommunitiesLogin }">Already have an account?</apex:outputLink>-->
+                                            <a class="link-forgot" href="/CustomCommunityLogin">Already have an account?</a>
+                                        </div>
+                                    </apex:form>
+                                </div>                    
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! verificationCodeId != '' }">
+            <div id="verification">
+                <div class="slds-grid slds-grid_align-spread active">                            
+                    <div class="login-form">
+                        <apex:form id="theForm3" forceSSL="true">
+                            <div class="slds-form">
+                                <div class="input-container slds-grid slds-wrap slds-gutters">                                    
+                                    <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                        <img class="logo" alt="Wollondilly Shire Council logo" src="{! $Resource.cfsuite1__Logos + '/wc-logo-black.jpg' }" />
+                                    </div>
+                                    
+                                    <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1">
+                                        <h1>
+                                            Now, check your email
+                                        </h1>
+                                        <p>
+                                            Check the email account you just registered with and enter the verification code below to complete your account creation.
+                                        </p>
+                                        <p>
+                                            Remember to look in your spam folder, where automated messages sometimes filter.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 separator10">
+                                        <apex:pageMessages id="error3" escape="false" />
+                                    </div>
+                                    <div class="input-row slds-col slds-size_1-of-1 slds-small-size_1-of-1 flexme">
+                                        <div class="placeholder required">Enter verification code</div>
+                                        <apex:inputText id="code" styleClass="slds-input" value="{! code }"/>                                             
+                                    </div>     
+                                    <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-1 actions"> 
+                                        <apex:commandButton styleClass="btn-reg" action="{! createCommunityUser }" value="Complete registration" id="submitcode"/>   
+                                        <apex:commandLink action="{! resendCode }" value="Resend verification email" id="resendLink" title="Click here if you didn't get verification email."/>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:form>
+                    </div>
+                </div>
+            </div>
+        </apex:outputPanel>
+             
+        <!-- Modal TAC -->
+        <div class="modal fade" id="tacModal" tabindex="-1" role="dialog" aria-labelledby="tacModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title slds-p-top_medium" id="tacModalLabel">Terms and Conditions</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="slds-p-bottom_medium">
+                           Wollondilly Portal 
+                        </h2>
+                        <p class="slds-p-bottom_x-small">This information is for persons who register on the Wollondilly portal.</p>
+                        <p class="slds-p-bottom_x-small">The following Terms and Conditions apply to the use of the Wollondilly portal.</p>
+                        <p class="slds-p-bottom_x-small">Please read and ensure you understand and accept these conditions.</p>
+                        <h2 class="slds-p-top_x-large slds-p-bottom_medium">
+                          1. Property Information  
+                        </h2>
+                        <p class="slds-p-bottom_small"><strong>In registering for the Wollondilly portal you agree:</strong>
+                        </p>
+                        <ul>
+                            <li><p>That you are the property owner, agent or nominated persons responsible for receiving notices and responsible for the said account;</p></li>
+                            <li><p>The information provided by you during registration for the Wollondilly portal is accurate, complete and not misleading and that we may rely on that information for the purpose of issuing electronic Rates Notices and any other property related business until we receive notification of any change from you;</p></li>
+                            <li><p>To update any information that relates to your property or the receiving of Rates Notices
+                                immediately if the information changes;</p></li>
+                            <li><p>To use the Wollondilly portal in a lawful, ethical and responsible manner, and to
+                                follow any instructions provided by us for the use of Wollondilly;</p></li>
+                            <li><p>At registration, you must provide a valid email address for the electronic delivery of
+                                Rates Notices and other communication from the Wollondilly Shire Council:</p></li>
+                        </ul>
+                        <ul class="roman">
+                            <li><p>You must keep your nominated email address current and active to continue to be
+                                registered for the Wollondilly portal;</p></li>
+                            <li><p>You can change your nominated email address or any other relevant details
+                                through the Wollondilly portal;</p></li>
+                            <li><p>If after successive failed delivery attempts of notifications to your nominated email address, we will contact you to advise you that the notifications could not be
+                                delivered and seek an alternative email address;</p></li>
+                            <li><p>If we do not hear from you we will revert to paper copies of your Rates Notice and other communication and you will no longer be registered for electronic Rates
+                                Notice or other communication.</p></li>
+                        </ul>
+                        <br />
+                        <!--
+                       
+                            <h2 class="slds-p-top_x-large slds-p-bottom_medium">
+                             2. Electronic Rates Notice   
+                        </h2>
+                            
+                     
+                        <p class="slds-p-bottom_small">
+                           <strong>Upon your request to receive your electronic Rates Notice via the Wollondilly portal you acknowledge and agree:</strong>
+                        </p>
+                        <ul>
+                            <li><p>You are the property owner, agent or nominated persons and are liable for responding to
+                                and making payment of the Rates Notice;</p></li>
+                            <li><p>To receive the Rates Notice electronically and recognise that a paper copy will no longer
+                                be issued;</p></li>
+                            <li><p>You will not be charged a fee by Wollondilly Shire Council for accessing a copy of your
+                                Rates Notice on the Wollondilly portal;</p></li>
+                            <li><p>It may take up to one Rates Notice Cycle for your Wollondilly portal to take effect;</p></li>
+                            <li><p>By using this facility the Rates Notice will be deemed to have been delivered, presented,
+                                reviewed and viewed by you once it has been sent via your nominated email address;</p></li>
+                            <li><p>If you cease to own the property then you will not have access to any property details or
+                                Rates Notices once the change of ownership is updated other than notices and
+                                information that are related to you as the previous owner;</p></li>
+                            <li><p>Not all communications from Wollondilly Shire Council will be electronically sent through
+                                your Wollondilly portal, you may still receive communications by post or other
+                                forms of communication;</p></li>
+                            <li><p>You may unsubscribe to the facility at any time however you may continue to receive
+                                account and/or notices through the portal for up to 30 days after you have unsubscribed
+                                while we process your request.</p></li>
+                            
+                        </ul>
+                        
+                        <br />
+                        -->
+                       
+                            <h2 class="slds-p-top_x-large slds-p-bottom_medium">
+                             2. General   
+                        </h2>
+                            
+                        <ul>
+                            <li><p>Any links to third party websites or software on this site are provided solely as a
+                                convenience to you and such links should not be taken to imply any type of association,
+                                sponsorship, endorsement, monitoring, approval of, or responsibility for, the linked site or
+                                its content. These sites may be located in jurisdictions outside Australia and be subject
+                                to license or other types of agreements, policy and legislation relating to those sites.
+                                Should you decide to access any of the third party sites, you do so entirely at your own
+                                risk and the Wollondilly Shire Council shall not be held liable for any claims, losses,
+                                expenses, injuries or damage arising for that access;</p></li>
+                            <li><p>These terms and conditions of use may be modified at any time by the Wollondilly Shire Council and you agree to continue to be bound by the terms of use as modified;</p></li>
+                            <li><p>Wollondilly Shire Council will give you notice of these changes by publishing new or
+                                updated terms and conditions of use for your information.</p></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="closeBtn" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+                  
+        <!-- Modal Why business mobile -->
+        <div class="modal fade" id="bmobileModal" tabindex="-1" role="dialog" aria-labelledby="bmobileModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="bmobileModalLabel">Why do we need your business mobile</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>We may use your mobile phone number for purposes like:</b></p>
+                        
+                        <ul class="slds-list_dotted">
+                            <li>Helping you log in. If you have forgotten any aspects of your account you can contact us. So you'll need an updated mobile number and email address for council staff to confirm we are talking to the right person.</li>
+                            <li>Wollondilly staff may need to contact you about your property or rates.</li>
+                            <li>Helping keep your account safe through unrecognised logins and providing secondary account verification.</li>
+                            <li>If you select to receive rates reminders or notifications via SMS.</li>
+                            <li>If your email has changed or your inbox is full, it is an alternate way for us to contact you on any important matters.</li>
+                            <li>Should you need to call council about a Rates enquiry or other service queries that is not available on the portal, it helps us identify that we are speaking to the right person.</li>
+                            
+                        </ul>  
+                        <br />
+                        <p>
+                            Note: Once you confirm your mobile phone number at the account creation stage, you can adjust your contact information if anything changes at any time.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        
+        var errors = {
+            individual: {
+                email: null,
+                pwdstrong: null,
+                pwdmatch: null,
+                phone:null
+            },
+            business: {
+                email: null,
+                pwdstrong: null,
+                pwdmatch: null,
+                phone:null
+            }
+        };
+        
+        function renderErrors() {
+            $('.errors.individual').empty();
+            $('.errors.business').empty();
+            let count = 0;
+            var errorElem = null;
+            
+            for(let i in errors.individual){
+                switch(i) {
+                    case "email": errorElem = $("#err-in-email");
+                        break;
+                    case "pwdstrong": errorElem = $("#err-in-password");
+                        break;
+                    case "pwdmatch": errorElem = $("#err-in-confirmPassword");
+                        break;
+                    case "phone":  errorElem = $("#err-in-mobilePhone");
+                        break;
+                    default: errorElem = null;
+                }
+                if(errorElem) {
+                    errorElem.text(errors.individual[i]);
+                }
+                
+                /*
+                if(errors.individual[i] != null) {
+                    $('.errors.individual').append($('<p>'+errors.individual[i]+'</p>'));
+                    ++count;
+                }
+                */
+            }
+            if(count > 0) {
+                $('.errors.individual').append($('<br />'));
+            }
+            
+            count = 0;
+            for(let i in errors.business){
+                switch(i) {
+                    case "email": errorElem = $("#err-b-businessEmail");
+                        break;
+                    case "pwdstrong": errorElem = $("#err-b-password");
+                        break;
+                    case "pwdmatch": errorElem = $("#err-b-confirmPassword");
+                        break;
+                    case "phone":  errorElem = $("#err-b-businessMobile");
+                        break;
+                    default: errorElem = null;
+                }
+                if(errorElem) {
+                    errorElem.text(errors.business[i]);
+                }
+                
+                /*
+                if(errors.business[i] != null) {
+                    $('.errors.business').append($('<p>'+errors.business[i]+'</p>'));
+                    ++count;
+                }
+                */
+            }
+            if(count > 0) {
+                $('.errors.business').append($('<br />'));
+            }
+        }
+        
+        function beforeSubmit(isIndividual){
+            cleanOtherForm(isIndividual);  //Cleans the form that won't be submitted                      
+            fixPlacehoders();
+            
+          
+            return isValid(isIndividual);
+        }
+        function isValid(isIndividual) {
+            let isValid = true;
+            let isValidEmail = true;
+            let isValidPas = true;
+            let isValidtac = true;
+            let isValidPhone = true;
+            
+            let errorType = (isIndividual ? 'individual' : 'business');
+            
+            let emailId = isIndividual ? '[id*=theForm1][id$=email]' : '[id*=theForm2][id$=businessEmail]';
+            isValidEmail = validateEmail(emailId, errorType);
+           
+            
+            let pwdid = '[id*=theForm' + (isIndividual ? '1' : '2') + '][id$=password]';
+            let confid = '[id*=theForm' + (isIndividual ? '1' : '2') + '][id$=confirmPassword]';
+            isValidPas = validatePass(pwdid, confid, errorType);
+            
+            let tacid = '#tac' + (isIndividual ? '1' : '2');
+            isValidtac = validateTAC(tacid);
+            
+            let phoneId = isIndividual ? '[id*=theForm1][id$=mobilePhone]' : '[id*=theForm2][id$=businessMobile]';
+            isValidPhone = validatePhone(phoneId, errorType);
+            
+            renderErrors();
+            
+            if(isValidEmail == true && isValidPas == true && isValidtac == true && isValidPhone == true)
+              return true;
+            else
+              return false;
+        }  
+        
+        function validateTAC(tacid) {
+            let tac = $(tacid);
+            if(!tac.prop('checked')) {
+                let label = tac.parent().find('label');
+                label.toggleClass('glow', true);
+                setTimeout(function() {
+                    label.toggleClass('glow', false);
+                }, 500);
+                return false;   
+            }            
+            return true;
+        }
+        
+        function validatePhone(phoneId, errorType) {
+            let isValid = true;
+            let phoneEl = $(phoneId);
+            isValid = isValidPhone(phoneEl.val());
+            
+            phoneEl.toggleClass('invalid', !isValid);
+            if(isValid) {
+                errors[errorType].phone = null;
+            }else {
+                errors[errorType].phone = '* Phone must be 10 digits long and cannot contain letters.';
+                isValid = false;
+            }               
+            
+            return isValid;
+        } 
+        
+        function validateEmail(emailId, errorType) {
+            let isValid = true;
+            let emailEl = $(emailId);
+            isValid = isValidEmail(emailEl.val());
+            
+            emailEl.toggleClass('invalid', !isValid);
+            if(isValid) {
+                errors[errorType].email = null;
+            }else {
+                errors[errorType].email = '* Please enter a valid email address.';
+                isValid = false;
+            }               
+            
+            return isValid;
+        }        
+        function validatePass(pid, cid, errorType) {
+            let isValid = true;
+            
+            let pwdEl = $(pid);
+            let confEl = $(cid);
+            
+            if(isStrongPassword(pwdEl.val())) {
+                errors[errorType].pwdstrong = null;
+                
+                if(isMatchPassword(pwdEl.val(), confEl.val())) {
+                    errors[errorType].pwdmatch = null;                
+                    confEl.toggleClass('invalid', false);
+                }else{
+                    isValid = false;
+                    confEl.toggleClass('invalid', true);
+                    errors[errorType].pwdmatch = '* Passwords don\'t match.';
+                }
+            }else{
+                isValid = false;
+                errors[errorType].pwdstrong = '* Password must contain at least 8 characters and at least one number and one letter.';
+              
+            }            
+            
+            pwdEl.toggleClass('invalid', !isValid);
+            return isValid;
+        }
+        function fixPlacehoders() {
+            $('.slds-input').each(function() {
+                if($(this).val().trim() == '') {
+                    $(this).parent().find('.placeholder').toggleClass('active', false).toggleClass('filled', false);
+                    $(this).toggleClass('active', false);
+                } else {
+                    $(this).parent().find('.placeholder').toggleClass('active', true).toggleClass('filled', true);
+                    $(this).toggleClass('active', true);
+                }
+            });
+        }
+        
+        $(document).ready(function(){            
+            $('.tab-nav>div').each(function(){
+                $(this).click(function(){
+                    if(!$(this).hasClass("active")) {
+                        $(".apexerrors>span").text("");
+                    }
+                    let i = $(this).index();
+                    
+                    $('.tab-nav>div').each(function(){
+                        $(this).toggleClass('active', false);
+                        
+                    });
+                    $('.tabs>div').each(function(){
+                        $(this).toggleClass('active', false);
+                    });
+                    $('.tab-nav>div').eq(i).toggleClass('active', true);
+                    $('.tabs>div').eq(i).toggleClass('active', true);
+                });
+            });
+            if($('[id*=businessName]').val() != '') {
+                let i = 1;
+                $('.tab-nav>div').each(function(){
+                    $(this).toggleClass('active', false);
+                });
+                $('.tabs>div').each(function(){
+                    $(this).toggleClass('active', false);
+                });
+                $('.tab-nav>div').eq(i).toggleClass('active', true);
+                $('.tabs>div').eq(i).toggleClass('active', true);
+            }
+            $('.placeholder').each(function() {   
+                $(this).click(function() {
+                    $(this).parent().find('.slds-input').focus();
+                });
+                $(this).parent().find('.slds-input').on('focus', function(){
+                    $(this).parent().find('.placeholder').toggleClass('active', true);
+                }).on('blur', function() {                    
+                    if($(this).val().trim() == '')
+                        $(this).parent().find('.placeholder').toggleClass('active', false).toggleClass('filled', false);
+                }).on('change', function() {
+                    fixPlacehoders();
+                });
+            });/*
+            $('.chbx-yes').click(function(){
+                $('[id*=GSTRegistered]').prop('checked', true);                
+                $('[id*=ABN]').prop('required', true).parent().find('.placeholder').toggleClass('required', true);
+                $(this).toggleClass('active', true);
+                $('.chbx-no').toggleClass('active', false);
+            });
+            $('.chbx-no').click(function(){
+                $('[id*=GSTRegistered]').prop('checked', false);       
+                $('[id*=ABN]').prop('required', false).parent().find('.placeholder').toggleClass('required', false);
+                $(this).toggleClass('active', true);
+                $('.chbx-yes').toggleClass('active', false);
+            });
+            
+            if($('[id*=GSTRegistered]').prop('checked')){
+                $('[id*=ABN]').prop('required', true).parent().find('.placeholder').toggleClass('required', true);
+                $('.chbx-yes').toggleClass('active', true);
+                $('.chbx-no').toggleClass('active', false);
+            }*/
+                        
+            $('[id*=theForm1][id$=email]').on('keyup blur input', function() {                
+                validateEmail('[id*=theForm1][id$=email]', 'individual');
+                renderErrors();
+            });
+             $('[id*=theForm1][id$=mobilePhone]').on('keyup blur input', function() {                
+                validatePhone('[id*=theForm1][id$=mobilePhone]', 'individual');
+                renderErrors();
+            });
+            $('[id*=theForm1][id$=password]').on('keyup blur input', function() {
+                validatePass('[id*=theForm1][id$=password]', '[id*=theForm1][id$=confirmPassword]', 'individual');
+                renderErrors();
+            });
+            $('[id*=theForm1][id$=confirmPassword]').on('keyup blur input', function() {
+                validatePass('[id*=theForm1][id$=password]', '[id*=theForm1][id$=confirmPassword]', 'individual');
+                renderErrors();
+            });
+             $('[id*=theForm2][id$=businessMobile]').on('keyup blur input', function() {                
+                validatePhone('[id*=theForm2][id$=businessMobile]', 'business');
+                renderErrors();
+            });
+            $('[id*=theForm2][id$=businessEmail]').on('keyup blur input', function() {
+                validateEmail('[id*=theForm2][id$=businessEmail]', 'business');
+                renderErrors();
+            });
+            $('[id*=theForm2][id$=password]').on('keyup blur input', function() {
+                validatePass('[id*=theForm2][id$=password]', '[id*=theForm2][id$=confirmPassword]', 'business');
+                renderErrors();
+            });
+            $('[id*=theForm2][id$=confirmPassword]').on('keyup blur input', function() {
+                validatePass('[id*=theForm2][id$=password]', '[id*=theForm2][id$=confirmPassword]', 'business');
+                renderErrors();
+            });
+            
+            fixPlacehoders();
+        });
+        
+        function cleanOtherForm(isIndividual) {
+            if(isIndividual) {
+                $('[id*=theForm2][id$=businessName').val('');
+                //   $('[id*=theForm2][id$=ABN').val('');
+                
+                $('.chbx-no').click();
+                
+                $('[id*=theForm2][id$=businessMobile').val('');
+                $('[id*=theForm2][id$=businessEmail').val('');
+                $('[id*=theForm2][id$=password').val('');
+                $('[id*=theForm2][id$=confirmPassword').val('');
+                $('#tac2').prop('checked', false);
+            } else {
+                $('[id*=theForm1][id$=firstName').val('');
+                $('[id*=theForm1][id$=middleName').val('');
+                $('[id*=theForm1][id$=lastName').val('');
+                $('[id*=theForm1][id$=email').val('');
+                $('[id*=theForm1][id$=mobilePhone').val('');
+                $('[id*=theForm1][id*=password').val('');
+                $('[id*=theForm1][id*=confirmPassword').val('');
+                $('#tac1').prop('checked', false);
+            }            
+        }
+        function isValidEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+        function isMatchPassword(pass, conf) {
+            return pass == conf;
+        }
+        function isStrongPassword(pass) {
+            var re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/;
+            return re.test(pass);
+        }
+         function isValidPhone(phone){                 
+               
+                 var letters = /^[A-Za-z]+$/;
+                 if(phone.length!=10 || phone.match(letters))
+                    return false;
+                 else
+                    return true;
+              }
+        /* function focusCloseBtn() {
+            var buttonElt = document.getElementsByClassName("btn btn-primary");
+            buttonElt[0].focus();
+            buttonElt[1].focus();
+             
+        }*/
+        </script>
+    </body>
+</apex:page>

@@ -1,0 +1,414 @@
+<!--
+  @description       : 
+  @author            : Hugh Wheeler
+  @group             : 
+  @last modified on  : 04-22-2021
+  @last modified by  : Hugh Wheeler
+  Modifications Log 
+  Ver   Date         Author         Modification
+  1.0   04-22-2021   Hugh Wheeler   Initial Version
+-->
+<apex:page sidebar="false" controller="CustomLoginController" showheader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+<apex:slds />
+    
+    <html>
+        <head>
+            <link rel="icon" href="{!URLFOR($Resource.CommunityFavicon)}" type="img/x-icon"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+            <title>Login</title>
+            <apex:stylesheet value="{!URLFOR($Resource.cfsuite1__FontAwesome,'/css/all.css')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.ExternalCSS)}"/>
+            <style>
+                * {
+                box-sizing: border-box;
+                }
+                body.slds-scope {
+                background: url('{!$Resource.cfsuite1__CommunityLoginBackground}') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                color: #414141;
+                }
+                #container {
+                background: #fff;
+				margin: 2em auto 0em;
+                width: 680px;
+                max-width:100%;
+                position: relative;
+               	font-family: "franklin-gothic-URW-Boo", Arial, sans-serif;
+                font-size: .94rem;
+
+                }
+                #container.single-col {
+                width: 420px;
+                max-width:100%;
+                position: relative;
+                }
+                #container.single-col .column1 {
+                	padding: 40px 50px;
+                }
+                #container.single-col img.logo {
+                width: 50%;
+                }
+                .slds-input-has-icon {
+                color: #868686;
+                }
+                .slds-input__icon i {
+				padding-left: 6px;               
+                }
+                form .input-container input::placeholder {
+                color: #6b6b6b;
+                opacity:
+                }
+                
+                @media (max-height:640px){
+                }
+                .content {
+                padding: 15px 30px 30px;
+                }
+                img.logo {               
+                margin-left: auto;
+                margin-right: auto;
+                width: 30%;
+                display: block;
+                padding: 19px 0px 15px 0px;
+                }
+                form {
+                margin: 0 auto;
+                margin-top: 20px;
+                }
+                .input {
+                margin: 10px 0;
+                }
+                .input i {
+                color: #B3B3B3;
+                }
+                form .input-container {
+                margin-bottom: 8px;
+                }                
+                form .input-container input {
+                background-color: #F0F0F0;
+                border-style: unset;
+                padding-top: 14px;
+                padding-bottom: 14px;
+                padding-left: 42px;
+                width: 100%;
+                color: #252525;
+                }
+                .message.errorM3 {
+                color: #cc0000;
+                font-size: 13px;              
+                }
+                .message.errorM3 span {
+                padding-right: 5px;
+                }
+                .error-message {
+                color: rgb(194, 57, 52);
+                margin-bottom: 6px;
+                text-align: center;
+                font-size: 13px;
+                }
+                .slds-scope .btn-login {
+                background-color: #573f8c;
+                border-color: #573f8c;
+                border: none;
+                color: white;
+                font-size: 1rem;
+                padding: 14px;
+                width: 100%;
+                margin-bottom: 20px;
+                border: none;
+                font-weight: normal;
+                font-family: "franklin-gothic-URW-Boo",Arial,sans-serif;
+                letter-spacing: 1px;
+                }
+                .slds-scope .btn-login:hover {
+                background-color: #6143aa;
+                }
+                .slds-scope .description {
+                margin-bottom: 20px;
+                }   
+                .links {
+                background-color: #EEEEEE;
+                padding: 15px 30px;
+                }
+                .links a,
+                .links a:hover,
+                .links a:active,
+                .links a:visited {
+                color: #5E5E5E;
+                display: inline-block;
+                text-decoration: none;
+                }
+                .link-register {
+                float: right;
+                }
+                @media (max-width: 420px) {
+                #container.single-col .column1 {
+               	padding: 30px;
+                }
+                }
+                @media (max-width: 480px) {
+                img.logo {
+                width: 50%;
+                margin: auto;
+                }
+                body.slds-scope {
+                background-size: auto;
+                }
+
+                #container.single-col {
+                width: 90%;
+                }
+                }
+                @media (max-width: 720px) {
+                #container {
+                width: 90%;
+                }
+                }
+                @media (min-width: 48em) {
+                #container {
+                margin-top: 3em;
+                font-size: .9rem;
+                }
+                }
+               	@media (min-width: 64em) {
+                #container {
+                margin-top: 7em;
+                }
+                }
+                    
+                .slds-input {
+                border: none;
+                background-color: #f0f0f0;
+                color: #000000;
+                padding: 8px 0 8px 30px;
+                width: 100%;
+                margin-bottom: 12px;
+                }
+                #container h2 {   
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 25px;
+                font-family: "brandon-grotesque-black",Arial,sans-serif;
+                }
+                .logoContainer {  
+                background-color: #333333;
+                padding: 5px;   
+                }
+                .column1 {
+                padding: 40px 20px 40px 40px;
+                }
+                .column2 {
+                padding: 40px 40px 40px 20px;
+                }
+                @media (max-width: 767px) {
+                .column1 {
+                padding-right: 40px;
+                }
+                .column2 {
+                padding-left: 40px;
+                }
+                }
+                
+                #container p {
+                margin-bottom: 10px;
+                }
+                
+                ul {
+                list-style: disc inside;
+                margin-bottom: 25px;
+                }
+                
+                .description ul li {
+                line-height: 24px;
+                list-style-position: outside;
+                margin-left: 20px;
+                }
+                
+                input.slds-input {
+                border: none;
+                background-color: #f0f0f0;
+                color: #000000;
+                padding: 8px 0 8px 30px;
+                width: 100%;
+                margin-bottom: 12px;
+                }
+                .slds-input-has-icon {
+                color: #696969;
+                }
+                ::placeholder {
+                color: #696969 !important;
+                }
+                
+                .login-input .slds-icon_container {
+                left: 6px;
+                position: absolute;
+                top: 19px;
+                z-index: 2;
+                }
+                
+                .login-input label.slds-form-element__label {
+                display: none;
+                }
+                .forgot-container {
+                text-align: center;
+                }
+                
+                a.forgot-password {
+                color: #1a8fce;
+                text-decoration: underline;
+                font-size: 16px;
+                }
+                a.forgot-password:hover {
+                text-decoration: none;
+                color: #1470a1;
+                }
+                a.forgot-password:active, a.forgot-password:visited {
+                color: #1470a1;
+                }
+                
+            a:focus, input:focus {
+            box-shadow: none;
+            outline: 2px solid #159D9D;
+            outline-offset: 3px;
+            }           
+            .btn-login:focus {
+            outline: #159D9D 2px solid;
+            outline-offset: 2px;
+            box-shadow: none;
+            border: none;
+           	background-color: #60469b !important;
+            color: #fff !important;
+            }
+                
+                .slds-scope .slds-list_dotted, .slds-scope .slds-list--dotted {
+                margin-left: 0px;
+                }
+                .hruler {               
+                border-top: solid 1px #d4d4d4;
+                }
+                #errorArea {
+                font-size: 13px;
+                }
+                
+                #container #errorArea h4 {
+                padding-right: 3px;
+                }
+                
+                
+
+
+   
+            </style>
+        </head>
+     </html>   
+        
+        
+ <body class="slds-scope">
+     <apex:form >
+   
+  <div id="container" class="{!IF(IsAccountExist ='true', 'single-col', '') }"> 
+  
+  <div class="logoContainer">
+      <a href="/s/">
+     <img class="logo" src="{!$Resource.cfsuite1__Logos + '/header-wsc-logo-144dpi.png'}" alt="Main homepage - Wollondilly Shire Council"/>
+      </a>
+   </div>
+  
+  
+  
+  
+  
+  
+  <div class="slds-grid slds-wrap">
+        <div class="{!IF(IsAccountExist ='true', 'column1 slds-col slds-size_1-of-1', 'column1 slds-col slds-size_1-of-1 slds-medium-size_1-of-2')}">
+            <h2>Login to your account</h2>
+            
+           <div class="input-container">
+                                        <div class=" slds-input-has-icon slds-input-has-icon_left">
+                                            <div class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <apex:inputtext value="{!username}" html-placeholder="Username" />
+                                        </div>
+                                    </div>
+                                    
+            
+           <div class="input-container">
+                                        <div class=" slds-input-has-icon slds-input-has-icon_left">
+                                            <div class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                                                <i class="fas fa-key"></i>
+                                            </div>
+                                            <apex:inputsecret value="{!password}" html-placeholder="Password" />
+                                        </div>
+                                    </div>
+                                    
+                                         
+                                <apex:outputPanel id="errorArea">
+                                    <apex:outputPanel rendered="{!error}"><i class="fas fa-exclamation-circle"></i>
+                                        <div class="error-message">
+                                            <apex:outputText value="{!errorMsg}" /> 
+                                        </div>
+                                    </apex:outputPanel> 
+                                </apex:outputPanel>
+                                
+                                <apex:pageMessages id="error"/>
+                                
+            
+            <div>
+                 <apex:commandbutton styleClass="btn-login" value="Login" action="{!doLogin}" />
+            </div>
+            
+            
+              <div class="forgot-container">
+                <a class="forgot-password" href="/CustomCommunityForgotPassword">Forgot your password?</a>
+            </div>
+            
+              
+        </div>
+        
+     <div class="slds-col slds-size_1-of-1 hruler slds-hide_small"></div>
+        <div class="column2 slds-col slds-size_1-of-1 slds-medium-size_1-of-2" style="{!IF(IsAccountExist ='true', 'display:none',IF(OR(portalName = 'Request',portalName = ""),'display:block','display:none'))}">
+            <h2>Create an account</h2>
+            
+            <div class="description">
+                <p>Creating an account is quick and easy and then you will be able to:</p>
+                <ul class="slds-list--dotted">
+                    <li class="slds-list__item"><span>Easily view and manage your requests</span></li>
+                    <li class="slds-list__item"><span>Track your requests from your online members portal</span></li>
+                    <li class="slds-list__item"><span>Follow other submitted requests and receive updates on their progress</span></li>
+
+                </ul>
+            </div>
+            
+            <div>
+            <apex:commandbutton styleClass="btn-login" value="Create an account" action="{!createPortal}"/>     
+            </div>
+        </div>
+        
+         <div class="column2 slds-col slds-size_1-of-1 slds-medium-size_1-of-2" style="{!IF(IsAccountExist ='true', 'display:none',IF(portalName = 'Rates','display:block','display:none'))}">
+            <h2>Create an account</h2>
+            
+            <div class="description">
+                <p>Creating an account is quick and easy and then you will be able to:</p>
+                <ul class="slds-list--dotted">
+                    <li class="slds-list__item"><span>Easily view and pay your rates notices</span></li>
+                    <li class="slds-list__item"><span>Track your requests from your online members portal</span></li>
+                    <li class="slds-list__item"><span>Pay your rates by installments or setup a direct debit</span></li>
+                    <li class="slds-list__item"><span>Pay, view and manage your rates</span></li>
+
+                </ul>
+            </div>
+            
+            <div>
+            <apex:commandbutton styleClass="btn-login" value="Create an account" action="{!createPortal}"/>     
+            </div>
+        </div>
+        
+        
+    </div></div></apex:form>
+    </body>
+</apex:page>

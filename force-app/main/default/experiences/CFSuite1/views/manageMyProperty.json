@@ -1,0 +1,58 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "271aefc7-d2be-4798-ae30-3b0792c52b48",
+  "label" : "Manage my property",
+  "regions" : [ {
+    "id" : "29a80df1-5e6c-439a-a96c-0b8ca959c219",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "dcee9953-9bf4-46b4-8e12-68320849bc70",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:myLinkedPropertyLWC",
+      "id" : "dadf0ad5-e8b5-43b6-9be7-d28563f4cdc2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9918e3b9-7ee9-4c43-9fc0-fe945dfcf7e8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ffb6b56d-72c5-44ac-9918-aa406989cb24",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Manage my property"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bac648bc-91db-48d9-9bc9-90424106f727",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f3774ca7-e6e3-4f94-a12f-09cf977ec535",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-mylinkedproperty"
+}

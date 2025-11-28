@@ -1,0 +1,3 @@
+.THIS .headerContent {
+    background-image: t('url(' + headerImageUrl + ')');
+}

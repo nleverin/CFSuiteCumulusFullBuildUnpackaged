@@ -1,0 +1,48 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "fd003a23-f8f8-45c9-b4fb-7f342031c1c0",
+  "label" : "Dashboard Detail",
+  "regions" : [ {
+    "id" : "cfa1648f-2a13-494a-a0bb-7ae14db00b6c",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "cec827f6-30f4-4700-9c49-f3bd21e299a9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "996b0be9-ace3-427b-81db-faa26158cb36",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5e621f6f-d238-4462-aa61-374e84ebc8d2",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "639af0ab-9bef-4a56-b270-1b4df7df6bcc",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3ad33eb1-efb3-4ce9-84d9-adabad058f53",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "detail-01Z"
+}

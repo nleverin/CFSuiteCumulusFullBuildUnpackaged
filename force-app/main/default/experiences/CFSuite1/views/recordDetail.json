@@ -1,0 +1,48 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "66209a9b-b17d-4814-9655-b00b01a87b09",
+  "label" : "Record Detail",
+  "regions" : [ {
+    "id" : "53bb5a78-b739-46fc-8544-08c2a107e47f",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Oops, You are not authorised to view this page. </p>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "58204e05-306e-41a8-aa12-77b40637f701",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "644ea049-f8a2-4c55-bedf-8906481e802f",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "37f5f5e3-86ac-4927-96d3-0a853147d996",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0417616f-f5ef-4c2e-be0f-c98a6395d3c1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bdd3e4ff-6dd7-4ea6-8758-2ba81db71cf1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "detail"
+}

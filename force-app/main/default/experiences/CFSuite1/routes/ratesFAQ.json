@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d4c97736-b7ce-41fc-9d62-2f3dee2eb51e",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Rates_FAQ__c",
+  "id" : "8ff3ff5a-896c-44ef-8666-e467a1064ad2",
+  "label" : "Rates FAQ",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-rates-faq",
+  "type" : "route",
+  "urlPrefix" : "rates-faq"
+}

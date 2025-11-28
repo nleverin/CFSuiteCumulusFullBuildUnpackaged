@@ -1,0 +1,43 @@
+<!-- c:Login -->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global"  controller="CustomLoginController">
+    <aura:attribute name="loginUrl" type="String" default="/CustomCommunityLogin" />
+    <aura:attribute name="isUserGuest" type="Boolean" default="true" />
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="photoUrl" type="String" />
+    <aura:attribute name="guestStorageKey" type="String" />
+    <aura:attribute name="notificationCount" type="Integer" default="0" />
+    
+    <ltng:require styles="{!$Resource.cfsuite1__FontAwesome + '/css/all.css'}" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div>
+        <div class="profile-container">
+            <aura:if isTrue="{! v.isUserGuest }">
+                <a href="{! v.loginUrl }" class="btn-login slds-button slds-button_brand">Login</a>
+                <aura:set attribute="else">
+                    <div aura:id="profile-menu" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                        <span class="user-photo">
+                            <i class="far fa-user-alt"></i>
+                        </span>
+                        
+                        <button class="slds-button menu-profile" aria-haspopup="true" onclick="{! c.menuToggle }" >
+                            <span class="name slds-truncate">{! v.name }</span>
+                            <i class="icon-dropdown fal fa-chevron-down"></i>
+                        </button>
+                        
+                        <div class="slds-dropdown slds-dropdown_right">
+                            <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                                <li class="slds-dropdown__item" role="presentation">
+                                    <a onclick="{! c.handleLogout }" role="menuitem" tabindex="-1">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "78904905-f3f7-44ca-b2aa-13d3306368d2",
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "configurationTags" : [ ],
+  "devName" : "Redirect_To_Profile__c",
+  "id" : "f4ac5c83-13c6-4bf7-a9db-0ccdb62a47f3",
+  "label" : "Redirect To Profile",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-redirect-to-profile",
+  "type" : "route",
+  "urlPrefix" : "redirect-to-profile"
+}

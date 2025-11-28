@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "72c7cb06-f5cf-46be-abd7-31d73646c765",
+    "propertyOverrides" : {
+      "activeViewId" : "b1fefa43-ed8b-4ae2-abec-52b855a4f1e6"
+    },
+    "targetId" : "784945e6-39a3-4f50-9b61-05055a7e1096",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Home_Councillor_Home_Page",
+  "id" : "cf4818a6-6be8-43e8-bb33-d4e9d9280a89",
+  "type" : "experienceVariation"
+}

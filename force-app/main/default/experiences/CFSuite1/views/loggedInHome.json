@@ -1,0 +1,92 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "cfsuite1:Top_2_1_ColumnLayout",
+  "dataProviders" : [ ],
+  "id" : "056804ae-99b8-4e5c-a3d5-78f139825cd3",
+  "label" : "Logged in Home",
+  "regions" : [ {
+    "id" : "f85fc778-ce82-46f2-8f0f-9b6218a87484",
+    "regionName" : "headerContent",
+    "type" : "region"
+  }, {
+    "id" : "0350a2d6-12c3-4ccf-950f-762c9b09ae83",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:Dashboard",
+      "id" : "1d60c425-78eb-4191-8c1e-1058c94ac675",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:myPropertiesLWC",
+      "id" : "70f835ee-fee6-4c01-af96-b0d294fe7ca2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "74d6c490-34c3-47c8-8a46-496f7b3a3fcb",
+    "regionName" : "content_col1",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "item0Link" : "0-Link",
+        "item0Order" : "0",
+        "item0Title" : "0-Title",
+        "item1Link" : "1-Link",
+        "item1Order" : "1",
+        "item1Title" : "1-Title",
+        "item2Link" : "2-Link",
+        "item2Order" : "2",
+        "item2Title" : "2-Title",
+        "item3Link" : "3-Link",
+        "item3Order" : "3",
+        "item3Title" : "3-Title",
+        "item4Link" : "4-Link",
+        "item4Order" : "4",
+        "item4Title" : "4-Title"
+      },
+      "componentName" : "cfsuite1:SmartSearch",
+      "id" : "668b3978-36e5-4998-9fda-c61d4ca6ec85",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:RecommendedActions",
+      "id" : "164a6b79-3822-47fc-9a63-5f5e9431b3e3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3fc31daa-783e-4aea-8daa-1586469a5de8",
+    "regionName" : "content_col2",
+    "type" : "region"
+  }, {
+    "id" : "530f0d1b-5750-4e55-925d-a8592a35a7c1",
+    "regionName" : "footerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "CFSuite Trial"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "35389e62-22b9-478f-add7-3ced29dddf1e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4a99ceb6-dc40-4ee9-9898-3110c70bb3d1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "GtbO0tr9w7N0LWO1i3gBgJYpujrogB",
+  "type" : "view",
+  "viewType" : "home"
+}

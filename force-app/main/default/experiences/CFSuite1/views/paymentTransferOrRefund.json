@@ -1,0 +1,83 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "cfsuite1:Top_2_1_ColumnLayout",
+  "dataProviders" : [ ],
+  "id" : "3256a2e7-5606-46a5-b9f2-7ca14b09b452",
+  "label" : "Payment transfer or refund",
+  "regions" : [ {
+    "id" : "caa17b9b-71a8-40b1-bb9e-cb5f7a0c0673",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "05825598-25bf-4bc6-873d-c2065065b728",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "297a3a20-701c-4f10-972b-5e5345e02b15",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "f8434cee-1680-4354-8b25-796196fec490",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Payment transfer or refund"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2cafd983-612e-4eef-a2e9-54c5a333bfb2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2968725a-85c8-4c4c-a171-f27cbba1b67c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "b103271d-8432-49d3-87f3-dca44c49422b",
+    "regionName" : "headerContent",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:paymentTransferOrRefundLWC",
+      "id" : "cfb7a428-3ec6-4bc0-a3e7-69f7d16a65c5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4ce929a3-d9ac-413a-b473-2840a873cfe5",
+    "regionName" : "content_col1",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:needHelpLWC",
+      "id" : "d4637e44-2464-4b68-a427-41a1dd1a1c13",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aded2c12-1e17-4eff-a375-2152039fa5bb",
+    "regionName" : "content_col2",
+    "type" : "region"
+  }, {
+    "id" : "d3f116d4-281b-4654-95de-271408daa1a3",
+    "regionName" : "footerContent",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-payment-transfer-or-refund"
+}

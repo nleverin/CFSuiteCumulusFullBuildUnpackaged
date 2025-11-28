@@ -1,0 +1,72 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d4c97736-b7ce-41fc-9d62-2f3dee2eb51e",
+  "label" : "Rates FAQ",
+  "regions" : [ {
+    "id" : "0c9c5a49-161b-403d-840d-b9776d2be5c8",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "My property & rates",
+        "link2Path" : "/s/mylinkedproperties"
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "f9de7e43-0997-48a3-a67f-325c3cc57f0a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "displayLines" : "4",
+        "faq1Answer" : "Answer 1",
+        "faq1Order" : "1",
+        "faq1Question" : "Question 1",
+        "faq2Answer" : "Answer 2",
+        "faq2Order" : "2",
+        "faq2Question" : "Question 2",
+        "faq3Answer" : "Answer 3",
+        "faq3Order" : "3",
+        "faq3Question" : "Question 3",
+        "faq4Answer" : "Answer 4",
+        "faq4Order" : "4",
+        "faq4Question" : "Question 4"
+      },
+      "componentName" : "cfsuite1:ratesFAQLWC",
+      "id" : "4367439d-086c-4882-b72c-375abdb4017c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4227abfa-a3ca-4738-becf-ab7278fd8005",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "eab4fb84-daff-4bc7-8f52-cdaa62e32048",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Rates FAQ"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8816bace-dc63-45bb-8ea1-e0e3b231e9e5",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "305f6da7-8b47-4f41-b3fa-9bd13423c883",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "3npau4hBnPJRTx1tOv0SkZPdk4OTCV",
+  "type" : "view",
+  "viewType" : "custom-rates-faq"
+}

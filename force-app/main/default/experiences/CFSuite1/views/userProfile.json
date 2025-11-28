@@ -1,0 +1,96 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "e28bf22b-985b-43ba-88e2-e33933a8da91",
+  "label" : "User Profile",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "link1Label" : "Home",
+        "link1Path" : "/s/",
+        "link2Label" : "",
+        "link2Path" : ""
+      },
+      "componentName" : "cfsuite1:Breadcrumbs",
+      "id" : "2664e6a4-b1f4-4aa5-8fbf-73cde9d7c661",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "49b2cd62-0a66-4a6e-9ec9-aeaf18fd0d46",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div class=\"user-profile slds-page-header\" style=\"padding: 1rem 0;background: none;margin-bottom: -1.5em;\">\n    <div class=\"slds-page-header__row\">\n        <div class=\"slds-page-header__col-title\">\n            <div class=\"slds-media\">\n                <div class=\"slds-media__figure\">\n                    <i class=\"fas fa-user\"></i>\n                </div>\n                <div class=\"slds-media__body\">\n                    <div class=\"slds-page-header__name\">\n                        <div class=\"slds-page-header__name-title\">\n                            <h1>\n                                <span class=\"slds-page-header__title slds-truncate\">\n                                    My Account\n                                </span>\n                            </h1>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "6dd381cb-33b3-4de3-bec9-48b9d2966d47",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "id" : "{!recordId}",
+        "showFullPhotoAsCircle" : true,
+        "showReputation" : false
+      },
+      "componentName" : "forceCommunity:userProfileHeader",
+      "id" : "7a71af36-8529-406b-a2d4-7b87a596805c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:UserProfileComp",
+      "id" : "fcc00e99-f50b-4d9a-9cae-15287ec51ab1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:ContactInformationComp",
+      "id" : "2497e35e-e177-45f8-a8bc-bd66ab98d78b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:MyAddressComp",
+      "id" : "28438917-3fdb-4c9d-9ea8-a13dfa663139",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "hideConnectedSources" : true,
+        "hideEmailNotificationSettings" : true,
+        "id" : "{!userId}"
+      },
+      "componentName" : "forceCommunity:userSettings",
+      "id" : "ad80425a-7205-40bb-a824-a70d7d4eecc2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:MyPreferenceComp",
+      "id" : "29ebaca4-42e2-4786-befd-af7a2dd5ec8f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "db55d4f4-e1c2-42e6-8660-761af6d35976",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "703d1e3d-ac56-4037-b713-2d9395b78db4",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "jt5MKZRJUTi9dXALqpAfGbfiIBQ96c",
+  "type" : "view",
+  "viewType" : "detail-005"
+}

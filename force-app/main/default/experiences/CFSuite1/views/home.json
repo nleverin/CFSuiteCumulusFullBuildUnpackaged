@@ -1,0 +1,198 @@
+{
+  "appPageId" : "32305c63-97e5-4b86-8020-41aabd6e158d",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "affcb0ff-5cb9-4996-9bec-3ec0d16bb110",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:HeaderImage",
+      "id" : "1b4875c8-52e6-4e91-be1e-bae58351ccf6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "environmentType" : "Community"
+      },
+      "componentName" : "cfsuite1:cf_SmartSearch",
+      "id" : "0a50aaf1-5233-4f4a-a8bf-9cf017359def",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "54e0397e-f64f-4c5b-964e-c3fb4cb0fe65",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "label" : "Ask a Question",
+        "showDetails" : false,
+        "showTopics" : true
+      },
+      "componentName" : "forceCommunity:askCommunity",
+      "id" : "85ac7eb7-0637-4160-a464-2d64eb300d39",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a2530133-676f-48ae-8715-9ef2e96dc1ee",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "Box10Color" : "#FFFFFF",
+        "Box11Color" : "#FFFFFF",
+        "Box12Color" : "#FFFFFF",
+        "Box1Color" : "#0F8C3B",
+        "Box1HoverText" : "Create a request about animals.",
+        "Box1Icon" : "fas fa-paw",
+        "Box1Link" : "/s/request-submit?id=DS-0004",
+        "Box1Order" : "1",
+        "Box1Title" : "Animals",
+        "Box2Color" : "#7BA63C",
+        "Box2HoverText" : "Create a request for anything to do with footpath maintenance.",
+        "Box2Icon" : "fas fa-walking",
+        "Box2Link" : "/s/request-submit?id=DS-0002",
+        "Box2Order" : "2",
+        "Box2Title" : "Footpaths",
+        "Box3Color" : "#B8BE23",
+        "Box3HoverText" : "Create a request about bill posting around the city.",
+        "Box3Icon" : "fas fa-paint-roller",
+        "Box3Link" : "/s/request-submit?id=DS-0003",
+        "Box3Order" : "3",
+        "Box3Title" : "Bill Posting",
+        "Box4Color" : "",
+        "Box4HoverText" : "",
+        "Box4Icon" : "",
+        "Box4Link" : "",
+        "Box4Order" : "4",
+        "Box4Title" : "",
+        "Box5Color" : "",
+        "Box5HoverText" : "",
+        "Box5Icon" : "",
+        "Box5Link" : "",
+        "Box5Order" : "5",
+        "Box5Title" : "",
+        "Box6Color" : "",
+        "Box6HoverText" : "",
+        "Box6Icon" : "",
+        "Box6Link" : "",
+        "Box6Order" : "6",
+        "Box6Title" : "",
+        "Box7Color" : "",
+        "Box7HoverText" : "",
+        "Box7Icon" : "",
+        "Box7Link" : "",
+        "Box7Order" : "7",
+        "Box7Title" : "",
+        "Box8Color" : "",
+        "Box8HoverText" : "",
+        "Box8Icon" : "",
+        "Box8Link" : "",
+        "Box8Order" : "8",
+        "Box8Title" : "",
+        "Box9Color" : "",
+        "Box9HoverText" : "",
+        "Box9Icon" : "",
+        "Box9Link" : "",
+        "Box9Order" : "9",
+        "Box9Title" : "",
+        "displayLines" : "1",
+        "numberoftiles" : "3"
+      },
+      "componentName" : "cfsuite1:ShowMoreTopics",
+      "id" : "5c46e9ef-35a0-4003-84c9-ca9f8d046227",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<hr />"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "bb9ff1ef-ece9-42e5-a4d5-adecd8f73cca",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "cfsuite1:CaseSearchBox",
+      "id" : "f8d05d39-3d19-41cb-a0fa-42ee28ca3881",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f9fc6b60-a9da-4e1b-8888-0f2cf3351362",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "channel" : "DefaultChannel",
+        "title" : ""
+      },
+      "componentName" : "forceCommunity:recommendations",
+      "id" : "15cf3a53-9bf3-40a1-9da2-afe1cc71e3dc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "display" : "LEVELS_POINTS",
+        "excludeInternalUsers" : false,
+        "knowledgeLabel" : "Knows about",
+        "numberOfUsers" : 5,
+        "showContextUser" : false,
+        "showTooltip" : false,
+        "showUserRank" : false,
+        "title" : "Leaderboard",
+        "tooltipText" : "Earn points and climb to new levels when you contribute in the community!"
+      },
+      "componentName" : "forceCommunity:reputationLeaderboard42",
+      "id" : "1c68c0e0-556f-4250-bf96-299765492185",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "numberOfTopics" : 5,
+        "showTopicsMetric" : true,
+        "title" : "Trending Topics"
+      },
+      "componentName" : "forceCommunity:trendingTopics",
+      "id" : "111b81da-f432-45d6-b72e-23e12919a355",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7a878df8-ec68-40bb-bf3e-2f210d48c139",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "22e1d1b3-9403-429c-983b-176bc0aa1d23",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "CFSuite Trial"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "da42e886-3624-4c89-8d96-474e543aee8b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "219d96ce-bd53-47a7-aaec-1d2332bd8f08",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "GmaO63hLh8WZvq0wKd17GoRLxmPf60",
+  "type" : "view",
+  "viewType" : "home"
+}
