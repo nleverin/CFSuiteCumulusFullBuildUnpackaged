@@ -6,7 +6,7 @@
     }
   ],
   "name": "CFSuiteFullBuildUnpackaged",
-  "namespace": "",
+  "namespace": "cfsuite1",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "65.0"
 }

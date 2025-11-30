@@ -1,7 +1,7 @@
 {
-"orgName": "Demo Company",
+"orgName": "CF Suite Requests Dev",
 "edition": "Enterprise",
-"features": ["PersonAccounts", "FieldService:5", "Knowledge", "ServiceCloud", "Entitlements", "AuthorApex", "Communities", "DefaultWorkflowUser", "MarketingUser","ServiceUser"],
+"features": ["PersonAccounts", "FieldService:25", "Knowledge", "ServiceCloud", "Entitlements", "AuthorApex", "Communities", "DefaultWorkflowUser", "MarketingUser"],
   "settings": {
     "nameSettings": {
       "enableMiddleName": true,
@@ -22,12 +22,12 @@
     "enhancedNotesSettings":{
      "enableEnhancedNotes": true
     },
+    "EmailAdministrationSettings":{
+      "enableEnhancedEmailEnabled": true
+     },
     "knowledgeSettings":{
      "enableLightningKnowledge": true
     },
-    "emailAdministrationSettings":{
-      "enableEnhancedEmailEnabled": true
-     },
     "entitlementSettings":{
      "enableEntitlements": true,
      "enableMilestoneStoppedTime": true
@@ -38,7 +38,10 @@
     "communitiesSettings":{
       "enableNetworksEnabled": true,
       "enableOotbProfExtUserOpsEnable": true
-     }
+     },
+     "userManagementSettings": {
+      "enableEnhancedConcealPersonalInfo": false
+      }
 
     
   }
