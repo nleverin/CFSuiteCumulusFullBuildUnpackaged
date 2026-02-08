@@ -277,6 +277,17 @@ tasks:
             ignore: "cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_Payment__c,cfsuite1__CFSuite_Bill__c,cfsuite1__CFSuite_Bill_Line_Item__c,cfsuite1__CFSuite_Inbox_Message__c,cfsuite1__CFSuite_Payment_Transaction_Log__c,CFSuite_Restricted_Page_Access__c,Resource__c, Asset,Case,Contact,cfsuite1__CFSuite_Misc__c,Knowledge__kav,Apex_Log__c,Campaign,Pricebook2,Product2,Opportunity,EmailMessage,SurveyInvitation,WorkOrder,WorkOrderLineItem,cfsuite1__Message_Queue__c,cfsuite1__SMS_Message__c,ContentVersion,cfsuite1__CFSuite_Article__c,cfsuite1__CFSuite_Categories__c,cfsuite1__Interested_Parties__c,cfsuite1__Installment_Plan__c" 
             namespace_prefix: "cfsuite1" 
             path: "datasets/fullTrialData/mapping.yml"
+    
+    data_mapping_trial_rates: 
+        description: pulls the data mappings from the trialforce org 
+        class_path: cumulusci.tasks.bulkdata.GenerateMapping 
+        options: 
+            mapping: "datasets/fullTrialDataRates/mapping.yml" 
+            sql_path: "datasets/fullTrialDataRates/data.sql" 
+            include: "Account,cfsuite1__Property__c,cfsuite1__Property_Customer__c,cfsuite1__CFSuite_Request_Flow__c,cfsuite1__CFSuite_Map__c,cfsuite1__CFSuite_Map_Layers__c,cfsuite1__CFSuite_Map_Management__c,cfsuite1__CFSuite_Preferred_Comms_Config__c,cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_User_Setting__c,cfsuite1__CFSuite_User_Team__c,cfsuite1__CFSuiteIntegrationSettings__c,cfsuite1__CFSuiteSettings__c,cfsuite1__Data_Settings__c,cfsuite1__CFSuiteRatesSettings__c" 
+            ignore: "cfsuite1__CFSuite_Restricted_Page_Access__c,cfsuite1__CFSuite_Payment__c,cfsuite1__CFSuite_Bill__c,cfsuite1__CFSuite_Bill_Line_Item__c,cfsuite1__CFSuite_Inbox_Message__c,cfsuite1__CFSuite_Payment_Transaction_Log__c,CFSuite_Restricted_Page_Access__c,Resource__c, Asset,Case,Contact,cfsuite1__CFSuite_Misc__c,Knowledge__kav,Apex_Log__c,Campaign,Pricebook2,Product2,Opportunity,EmailMessage,SurveyInvitation,WorkOrder,WorkOrderLineItem,cfsuite1__Message_Queue__c,cfsuite1__SMS_Message__c,ContentVersion,cfsuite1__CFSuite_Article__c,cfsuite1__CFSuite_Categories__c,cfsuite1__Interested_Parties__c,cfsuite1__Installment_Plan__c" 
+            namespace_prefix: "cfsuite1" 
+            path: "datasets/fullTrialDataRates/mapping.yml"
 
     delete_reference_data:
         description: this task removes all bill settings records
@@ -339,6 +350,27 @@ flows:
         steps: 
                 2: 
                     flow: deploy_unmanaged
+
+    install_post_objects:
+        steps:
+                0:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_first
+                1:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_second
+                2:
+                    task: update_admin_profile_scratch_org_no_rt
+                90: 
+                    task: None
+                91: 
+                    task: deploy_trial_data
+                95:
+                    task: execute_anon_entitlement_load
+                96:
+                    task: execute_anon_display_category_fix
 
     config_managed:
         steps:
@@ -410,6 +442,21 @@ orgs:
             namespaced: "True"
         
         dev_namespaced_4: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+        
+        dev_namespaced_5: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+        
+        dev_namespaced_6: 
+            config_file: orgs/dev.json 
+            days: 30 
+            namespaced: "True"
+      
+        dev_namespaced_7: 
             config_file: orgs/dev.json 
             days: 30 
             namespaced: "True"

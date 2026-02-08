@@ -7,3 +7,17 @@ cci org scratch_delete dev_namespaced
 
 cci flow run dev_org --org dev_namespaced_3 
 
+--import a cli org
+cci org import <sfdx_alias> <cci_alias>
+
+---Robot Tests-------
+
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/create_case_with_location.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/recategorise_case.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/create_child_case.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/create_case_from_account.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/assign_case.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/clone_case.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/customer_portal_login.robot -o vars "BROWSER:chrome" --org dev_namespaced_2
+cci task run robot --suites robot/CFSuiteCumulusFullBuildUnpackaged/tests/community_follow_case.robot --vars BROWSER:headlesschrome --org dev_namespaced_2

@@ -6,7 +6,7 @@ cci task run data_mapping_trial --org <CumulusConnectedOrgNameGoesHere>
 ----Pull the data from the source org into the data.sql in the trialforce directory
 
 cci task run extract_dataset -o mapping datasets/fullTrialData/mapping.yml -o sql_path datasets/fullTrialData/data.sql --org Source_ORG
-
+cci task run extract_dataset -o mapping datasets/fullTrialDataRates/mapping.yml -o sql_path datasets/fullTrialDataRates/data.sql --org Source_ORG
 
 
 

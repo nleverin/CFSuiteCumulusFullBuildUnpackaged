@@ -1,0 +1,650 @@
+:host {
+    --primary-font-color: #000;
+    --secondary-font-color: #757575;
+    --primary-accent-color: #1957A7;
+    --primary-link-color: #1957A7;
+    --border-color: #D6D6D6;
+    --light-bg-color: #f9f9f9;
+}
+
+
+
+.back {
+    background-color: var(--light-bg-color);
+}
+
+.slds-tabs_default__content {
+    padding-top: 0px;
+}
+
+.slds-button {
+    margin-top: 0px;
+}
+
+/* .container {
+  background-color: white;
+  display: block;
+  height: auto;
+  width: 100%;
+} */
+
+/* START timeline styles */
+
+.timeline {
+    height: 100%;
+}
+
+.timeline__marker {
+    background-color: var(--primary);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 20px;
+}
+
+.timeline__line {
+    border-left: 1px dashed #000;
+    height: calc(100% - 2.4rem);
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+/* END timeline styles */
+
+.badge_green {
+    color: var(--primary);
+    background-color: rgba(0, 96, 113, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-size: .95rem;
+    padding: .2rem .5rem;
+}
+
+
+
+
+.badge_green i {
+    color: var(--primary);
+}
+
+.cCustomRatesLayout .slds-has-error .slds-input-has-icon_left .slds-input__icon {
+    display: none;
+}
+
+
+/* START badge styles */
+
+
+/* END badge styles */
+
+
+/* START bill styles */
+
+.bill {
+    margin-top: 1rem;
+}
+
+.bill-date {
+    color: var(--secondary-font-color);
+    font-size: 1.125rem;
+    min-width: 123px;
+    max-width: 100%;
+}
+
+.bill-item {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.bill-item__subline p {
+    color: var(--secondary-font-color);
+    font-size: .9rem;
+    letter-spacing: .03rem;
+}
+
+.bill-item__action {
+    text-align: right;
+}
+
+.bill-item__action .slds-button {
+    color: var(--primary);
+    font-size: 1rem;
+    line-height: normal;
+}
+
+.bill-item .slds-media {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+}
+
+.bill-item ul {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--border-color);
+    border-radius: 6px;
+}
+
+.bill-item__subline {
+    color: var(--secondary-font-color);
+    font-size: .875rem;
+}
+
+.bill-item__amt p,
+.bill-item__details p {
+    color: var(--primary-font-color);
+}
+
+.bill-item__amt p {
+    font-size: 1.8rem;
+}
+
+.bill-item__details p {
+    font-size: 1.125rem;
+    margin-top: .4rem;
+}
+
+.bill-item__btnrow .slds-button {
+    color: var(--primary-accent-color);
+    font-size: .9rem;
+}
+
+.bill-item__btnrow .slds-button:first-child {
+    margin-right: 1rem;
+}
+
+.bill-item__btnrow .slds-button i {
+    margin-right: .5rem;
+}
+
+.bill-item__btnrow .slds-button span:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* END bills styles */
+
+/* START filters styles */
+
+.filters {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--border-color);
+}
+
+
+
+.filters .slds-dropdown-trigger_click button {
+    padding: 7px 28px;
+    font-size: 15px;
+    color: var(--textcolor);
+    border: none;
+    border-radius: 20px;
+    font-weight: 400;
+    min-width: auto;
+    margin: 0;
+    background: #E6E6E680;
+
+}
+
+/* END filters styles */
+
+/* START payment styles */
+
+.payment-item__subline {
+    color: var(--secondary-font-color);
+    font-size: .875rem;
+    margin-left: -28px;
+    margin-top: -16px;
+}
+
+
+.payment-item__details p {
+    color: var(--primary-font-color);
+    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+
+.payment-item__amount {
+
+    font-size: 1.125rem;
+}
+
+
+.payment-item {
+    margin-bottom: -0.5rem;
+    font-size: 1rem;
+}
+
+
+/* END Payment styles */
+
+
+.accountBox {
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 0px;
+    border: 1px solid #fb2017;
+    background-color: #FFF6F8;
+}
+
+.infoBox {
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 0px;
+    background-color: #F4FFF7;
+}
+
+.infoBox-Heading {
+    color: #027243;
+}
+
+.my-icon {
+    --slds-c-icon-color-foreground-default: #F44336;
+}
+
+.fa-circle-check {
+    color: #006071;
+}
+
+.btn-Width {
+    --slds-c-button-brand-color-background: #1957A7;
+}
+
+
+
+abbr[title] {
+    /* cursor: help; */
+    display: none;
+}
+
+
+
+.payment-wizard_col1 {
+    padding-top: 2rem;
+}
+
+.payment-wizard_col1 img {
+    position: relative;
+    top: 54px;
+    width: 100px;
+}
+
+.payment-wizard h2 {
+    color: #1F1F1F;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.payment-wizard input {
+    padding: .5rem 1rem;
+    min-height: 52px;
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.payment-wizard_form-row label {
+    display: block;
+    color: #1f1f1f;
+    font-size: 1rem;
+}
+
+.payment-wizard_form-wrapper {
+    margin-top: 1.2rem;
+}
+
+.payment-wizard_form-wrapper .payment-wizard_form-row {
+    margin-bottom: .75rem;
+    margin-top: .25rem;
+}
+
+c-bills-payments-guest-process .bill_wrapper {
+    align-items: start;
+}
+
+.slds-col.payment-wizard_col2 {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.slds-col.payment-wizard_details {
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 1.1rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.payment-wizard_summary-total {
+    font-size: 2.1rem;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.payment-wizard_summary p span {
+    font-size: 1rem;
+    color: #757575;
+    position: relative;
+    top: -5px;
+}
+
+.slds-col.payment-wizard_form-spacer {
+    position: relative;
+    top: 57px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.payment-wizard_form-csv a {
+    color: #006071;
+    position: relative;
+    top: 8px;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.payment-wizard_form-csv a:hover {
+    text-decoration: none;
+}
+
+.payment-wizard_form-csv {
+    position: relative;
+    display: block;
+}
+
+.payment-wizard_form-csv>div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 14px;
+    z-index: 1;
+}
+
+@media (min-width: 48em) {
+    .slds-col.payment-wizard_col1 {
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .payment-wizard_col1 {
+        order: 2;
+    }
+
+    .payment-wizard_col2 {
+        order: 1;
+    }
+
+    .payment-wizard_container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 30em) {
+    .payment-wizard_form-spacer {
+        display: none;
+    }
+
+    .payment-wizard .slds-button_brand {
+        width: 100%;
+    }
+
+    .payment-wizard h2 {
+        font-size: 1.2rem;
+    }
+
+    .payment-wizard_col1 img {
+        width: 80px;
+    }
+
+    .slds-col.payment-wizard_col1 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .payment-wizard_form-row label {
+        font-size: .95rem;
+    }
+}
+
+@media (min-width:) and (max-width: 1140px) {
+    .payment-wizard_col2 {
+        padding-right: 1rem;
+    }
+}
+
+
+/* Bills and Payment CSS Start */
+
+.cCustomLayoutFullwidth .bills-and-payment-header {
+    background: rgba(25, 87, 167, 1);
+}
+
+.cCustomLayoutFullwidth .bills-and-payment-header h2 {
+    color: #fff;
+    font-size: 1.9rem;
+}
+
+/* Bills and Payment CSS End */
+
+/* Start of new custom modal popup style */
+.permit-application-popuop {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+.slide-zoom-out {
+    animation: slideZoomOut 0.3s ease-out;
+}
+
+.permit-application-popuop,
+.permit-application {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.model-header {
+    /*position: absolute;
+    top: 0;*/
+    padding: 10px 0;
+    width: 100%;
+}
+
+.model-header-content img {
+    width: 164px;
+}
+
+.model-header-content i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.container .back-button {
+    color: #000;
+    font-weight: 600;
+    /* padding-top: 1rem;
+    padding-bottom: 0; */
+}
+
+.back-button {
+    color: var(--secondaryColor);
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 24px;
+    font-size: 1rem;
+}
+
+.pad-left {
+    padding-left: 10px;
+}
+
+.permit-application-box .permit-heading-box,
+.model-header {
+    padding: 26px;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.managedrainage-form {
+    position: relative;
+    background-color: #f9f9f9;
+    padding-bottom: 5rem;
+}
+
+
+
+/* End of new custom modal popup style */
+
+.custom-css [kx-scope=button][kx-type=underline]:hover:after,
+.custom-css [kx-scope=button][kx-type=underline]:focus:after {
+    transform: scaleX(0);
+}
+
+.cCFSuiteStaticPath {
+    margin-left: -7.5rem;
+}
+
+.cCFSuiteStaticPath {
+    margin-left: -7.5rem;
+}
+
+.cCFSuiteStaticPath .steps-container .line-wrapper .step-bullet {
+    padding: 0 5px !important;
+    background: #fff;
+}
+
+.payGuest_search-header h2,
+.thankYouHeader {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.payGuest_search-wrapper .fa-circle-check {
+    color: #006071 !important;
+    font-size: 1.3rem;
+    position: relative;
+    top: 4px;
+}
+
+c-bills-payments-guest-process .slds-is-absolute.fieldCheck {
+    right: 1rem;
+    top: 57%;
+}
+
+
+/* Bills and payment styling start */
+
+.bill-item__btnrow .slds-button {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+lightning-button.custom-css .slds-button {
+    color: var(--primary);
+}
+
+lightning-button.custom-css .slds-button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.filters .slds-radio,
+.filters .slds-checkbox {
+    margin-bottom: 0.2rem;
+}
+
+.payGuest_search-content .help.noticehelp {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.bills-application-popup .bills-application_container {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+
+
+.bills-application-popup .model-header {
+    background-color: #fff;
+}
+
+.bills-application-popup .bills-application_content {
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.bills-application-popup .managedrainage-form {
+    padding: 1.5rem 2rem
+}
+
+.bills-application-popup .model-header h2 {
+    font-weight: 600;
+}
+
+.bills-application-popup .payment-wizard_header {
+    display: none;
+}
+
+.bills-application-popup .slds-col.payment-wizard_col2 {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.bill .bill-item__details.overdue,
+.bill .bill-item__details.pending {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #AC2734;
+    background-color: #FFEFEF;
+    border: 1px solid #AC2734;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 2px 6px;
+}
+
+.bill .bill-item__details.overdue p,
+.bill .bill-item__details.pending p {
+    margin: 0;
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #AC2734 !important;
+}
+
+
+.bill .bill-item__details.pending {
+    color: #006071;
+    background-color: rgba(0, 96, 113, 0.1);
+    border: 1px solid #006071;
+}
+
+.bill .bill-item__details.pending p {
+    color: #006071 !important;
+}
