@@ -36,14 +36,14 @@ project:
 tasks:
     robot:
         options:
-            suites: robot/CFSuiteCumulusFullBuild/tests
+            suites: robot/tests
             options:
-                outputdir: robot/CFSuiteCumulusFullBuild/results
+                outputdir: robot/results
 
     robot_testdoc:
         options:
-            path: robot/CFSuiteCumulusFullBuild/tests
-            output: robot/CFSuiteCumulusFullBuild/doc/CFSuiteCumulusFullBuild_tests.html
+            path: robot/tests
+            output: robot/results/doc/test_documentation.html
 
     run_tests:
         options:
@@ -59,10 +59,12 @@ tasks:
         class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
         options:
             picklists: Case.Department__c
-            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details,Finance_Restricted,Finance_Unrestricted"
             entries:
                 - fullName: "Environmental Health and Community Compliance"
                   label: "Environmental Health and Community Compliance"
+                - fullName: "Finance_Rates"
+                  label: "Finance_Rates"
 
     add_division_values_no_ns:
         description: "adds form type to picklists."
@@ -89,7 +91,7 @@ tasks:
         class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
         options:
             picklists: Case.Work_Category__c
-            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details"
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details,Finance_Restricted,Finance_Unrestricted"
             entries:
                 - fullName: "Animals - Dog and Cat - Unauthorised Breeder"
                   label: "Animals - Dog and Cat - Unauthorised Breeder"
@@ -131,6 +133,46 @@ tasks:
             entries:
                 - fullName: "Flow"
                   label: "Flow"
+
+    add_case_classification_rates:
+        description: "Adds 'Rates' value to Case.Classification for all record types."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Classification__c
+            record_types: "Application,Assess_Assign,Councillor_Question,Investigation,Perform_Works,Request_New,Standard_Request_Initial,Standard_Request,Update_Details,Finance_Restricted,Finance_Unrestricted"
+            entries:
+                - fullName: "Rates"
+                  label: "Rates"
+
+    add_close_reason_values:
+        description: "Adds Case Close Reason values to Finance record types."
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: Case.Close_Reason__c
+            record_types: "Finance_Restricted,Finance_Unrestricted"
+            entries:
+                - fullName: "Other"
+                  label: "Other"
+                - fullName: "Agreement/Plan Already in Place"
+                  label: "Agreement/Plan Already in Place"
+                - fullName: "Contact Payment Provider"
+                  label: "Contact Payment Provider"
+                - fullName: "Insufficient Explanation"
+                  label: "Insufficient Explanation"
+                - fullName: "No Issue"
+                  label: "No Issue"
+                - fullName: "No Supporting Documentation"
+                  label: "No Supporting Documentation"
+                - fullName: "Policy"
+                  label: "Policy"
+                - fullName: "Unable to Find Transaction"
+                  label: "Unable to Find Transaction"
+                - fullName: "Unrealistic or Unworkable Proposal"
+                  label: "Unrealistic or Unworkable Proposal"
+                - fullName: "Approved as Submitted"
+                  label: "Approved as Submitted"
+                - fullName: "Renegotiated Agreed Terms"
+                  label: "Renegotiated Agreed Terms"
     update_admin_profile_scratch_org: 
         description: deploys the Trailforce data 
         class_path: cumulusci.tasks.salesforce.ProfileGrantAllAccess 
@@ -226,22 +268,24 @@ tasks:
                 - record_type: Case.Standard_Request 
                   default: true 
                 - record_type: Case.Standard_Request_Initial 
-                - record_type: Case.Update_Details 
-                - record_type: PersonAccount.PersonAccount 
-                  default: true 
+                - record_type: Case.Update_Details
+                - record_type: Case.Finance_Restricted
+                - record_type: Case.Finance_Unrestricted
+                - record_type: PersonAccount.PersonAccount
+                  default: true
                   person_account_default: true
-                - record_type: Account.Business 
+                - record_type: Account.Business
                   default: true
                 - record_type: Account.Overseas_Business
                 - record_type: Contact.Business_Contact
-                  default: true 
-                - record_type: Contact.Overseas_Contact 
-                - record_type: CFSuite_Misc__c.Category_Change_Log 
-                - record_type: CFSuite_Misc__c.Exception_Logs 
-                  default: true 
-                - record_type: CFSuite_Misc__c.File_Logs 
-                - record_type: CFSuite_Misc__c.Guest_User_Update 
-                - record_type: CFSuite_Misc__c.On_Behalf_Of 
+                  default: true
+                - record_type: Contact.Overseas_Contact
+                - record_type: CFSuite_Misc__c.Category_Change_Log
+                - record_type: CFSuite_Misc__c.Exception_Logs
+                  default: true
+                - record_type: CFSuite_Misc__c.File_Logs
+                - record_type: CFSuite_Misc__c.Guest_User_Update
+                - record_type: CFSuite_Misc__c.On_Behalf_Of
                 include_packaged_objects: true
                 api_names: "Admin,cfsuite community login user,cfsuite councillor login user,Action Officer,Contact Centre"
 
@@ -254,12 +298,57 @@ tasks:
             drop_missing_schema: True 
             ignore_row_errors: True
 
+    extract_automated_test_data:
+        description: Extracts test data for automated rates testing from current org
+        class_path: cumulusci.tasks.bulkdata.ExtractData
+        options:
+            mapping: "datasets/automatedTestingData/mapping.yml"
+            sql_path: "datasets/automatedTestingData/data.sql"
+            drop_missing_schema: True
+
+    deploy_automated_test_data:
+        description: Loads automated rates test data into target org
+        class_path: cumulusci.tasks.bulkdata.load.LoadData
+        options:
+            mapping: "datasets/automatedTestingData/mapping.yml"
+            sql_path: "datasets/automatedTestingData/data.sql"
+            drop_missing_schema: True
+            ignore_row_errors: True
+
     execute_anon_entitlement_load:
         description: Load the 2 trialforce data entitlements
         class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
         options:
             path: scripts\buildScripts\CreateEntitlement.apex
 
+
+    execute_anon_rates_test_data:
+        description: Create test data for Rates robot tests (defensive property balance fill)
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts\buildScripts\CreateRatesTestData.apex
+
+    execute_anon_enable_customer_users:
+        description: Enable Customer Community Login users for Hammy/Hilda/Horatio Hampster
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts\buildScripts\EnableCustomerUsers.apex
+
+    execute_anon_delete_svp_role:
+        description: Delete the SVP UserRole (idempotent)
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts\buildScripts\DeleteSVPRole.apex
+
+    activate_rates_encryption_flows:
+        description: Activates the 3 CFSuite Rates encryption flows
+        class_path: cumulusci.tasks.salesforce.activate_flow.ActivateFlow
+        options:
+            status: Active
+            developer_names:
+                - CFSuite_Rates_Raise_Encryption_Request
+                - CFSuite_Rates_Encrypt_Details
+                - CFSuite_Rates_Remove_Encrypted_Details
 
     execute_anon_display_category_fix:
         description: remove any form types from the display category
@@ -345,6 +434,10 @@ flows:
                     task: add_form_type_values_no_ns
                 3.5:
                     task: add_next_step_values_no_ns
+                3.6:
+                    task: add_case_classification_rates
+                3.8:
+                    task: add_close_reason_values
 
     install_prod: 
         steps: 
@@ -361,12 +454,22 @@ flows:
                     task: deploy_post_tokens
                     options:
                       path: unpackaged/post/load_second
+                1.5:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_third
                 2:
                     task: update_admin_profile_scratch_org_no_rt
                 90: 
                     task: None
-                91: 
+                91:
                     task: deploy_trial_data
+                91.5:
+                    task: execute_anon_delete_svp_role
+                92:
+                    task: execute_anon_enable_customer_users
+                93:
+                    task: activate_rates_encryption_flows
                 95:
                     task: execute_anon_entitlement_load
                 96:
@@ -382,12 +485,22 @@ flows:
                     task: deploy_post_tokens
                     options:
                       path: unpackaged/post/load_second
+                1.5:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_third
                 2:
                     task: update_admin_profile_scratch_org_no_rt
                 90: 
                     task: None
-                91: 
+                91:
                     task: deploy_trial_data
+                91.5:
+                    task: execute_anon_delete_svp_role
+                92:
+                    task: execute_anon_enable_customer_users
+                93:
+                    task: activate_rates_encryption_flows
                 95:
                     task: execute_anon_entitlement_load
                 96:
@@ -403,12 +516,22 @@ flows:
                     task: deploy_post_tokens
                     options:
                       path: unpackaged/post/load_second
+                1.5:
+                    task: deploy_post_tokens
+                    options:
+                      path: unpackaged/post/load_third
                 2:
                     task: update_admin_profile_scratch_org_no_rt
                 90: 
                     task: None
-                91: 
+                91:
                     task: deploy_trial_data
+                91.5:
+                    task: execute_anon_delete_svp_role
+                92:
+                    task: execute_anon_enable_customer_users
+                93:
+                    task: activate_rates_encryption_flows
                 95:
                     task: execute_anon_entitlement_load
                 96:

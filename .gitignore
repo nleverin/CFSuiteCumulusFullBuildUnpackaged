@@ -51,3 +51,8 @@ $RECYCLE.BIN/
 .idea
 .project
 .settings
+robot/evidence/
+robot/results/
+
+# Claude Code local config
+.claude/settings.local.json

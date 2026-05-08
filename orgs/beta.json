@@ -1,6 +1,8 @@
 {
   "orgName": "CFSuiteCumulusFullBuildUnpackaged - Beta Test Org",
   "edition": "Developer",
+  "country": "AU",
+  "language": "en_AU",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

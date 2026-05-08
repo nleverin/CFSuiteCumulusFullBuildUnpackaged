@@ -799,6 +799,10 @@ Insert cfsuite1__CFSuite_Application__c:
     cfsuite1__Account__c:
       table:
       - Account
+Insert cfsuite1__CommunitySettings__c:
+  sf_object: cfsuite1__CommunitySettings__c
+  fields:
+  - Name
 Insert cfsuite1__Customer_Settings__c:
   sf_object: cfsuite1__Customer_Settings__c
   fields:

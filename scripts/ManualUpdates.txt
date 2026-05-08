@@ -1,0 +1,256 @@
+cci task run deploy_automated_test_data --org <sandbox_alias>
+
+Rates Related edits
+
+Log in and create a new role.  Delete the SVP one there and create one called Council
+Navigate to the admin user and give them the new role.
+Go to the system Admin Profile and make the Action Officers app the default one.
+Give Community User all apex class access on Profile
+Give community user following Object Access:
+
+
+1. CFSuite Bills (R/C/E/D)
+2. CFSuite Bill Line Item (R/C/E/D)
+3. CFSuite Bills and Payments Settings (R)
+4. CFSuite Payments (R/C/E/D)
+5. CFSuite Payment Transaction Logs (R/C)
+6. CFSuite Product (R)
+7. Installment Plan(R/C/E/D)
+8. Properties (R)
+9. Property Customers (R/C/E)
+
+
+Common Profile Access
+1. Account (R/E)
+2. Case (R/C/E)
+3. Contact (R/C/E)
+4. CFSuite Community Requests (R)
+5. CFSuite Map Layers (R)
+6. CFSuite Misc (R/C/E/D)
+7. CFSuite MLG Community Links (R)
+8. CFSuite Preferred Comms Config (R)
+9. CFSuite Request Flow	(R)
+10. Interested Parties (R/C/E/D)
+11. Message Queue (R/C)
+12. SMS Messages (R/C/E)
+
+Navigate to Accounts and find Hammy Hampster
+Click the enable Customer User button and give them the Customer Community Login license 
+and the cfsuite Customer Community login profile.
+
+Repeat for Hilda Hampster and Horatio Hampster
+
+Navigate to the Community Builder
+
+On the home page hit the variations and create a new audience for the logged in user and the 
+Councillor User. Assign the audiences to the correct home page variations.
+
+Publish the community
+
+Add the Payments Named Credential
+
+First create the External Credential
+-------------------------------
+
+Label: Payments_Interface
+Name: Payments_Interface
+Authentication Protocol: Custom
+
+Create Principal
+------------------
+
+Parameter Name: Payments_Interface
+Sequence: 1
+Itentity Type: Named Principal
+
+Parameter 1
+------------
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+
+Create Named Credential
+---------------------
+
+Label: Payment_Interface
+Name: Payment_Interface
+URL: https://rates.cfsuite.au/payments
+Enabled for Callouts: True
+External Credential: Payments_Interface
+Generate Authorization Header: True
+Allowed Namespaces for Callouts: cfsuite1
+
+Add Custom Header
+
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+Sequence: 1
+
+Navigate to Custom Settings cfsuite Rates settings and 
+Add the Named credential to the Payment Transaction Named Credential setting.
+
+Add the Rates Notice Named Credential
+
+First create the External Credential
+-------------------------------
+
+Label: Rates_notices_interface
+Name: Rates_notices_interface
+Authentication Protocol: Custom
+
+Create Principal
+------------------
+
+Parameter Name: Rates_Interface
+Sequence: 1
+Itentity Type: Named Principal
+
+Parameter 1
+------------
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+
+Create Named Credential
+---------------------
+
+Label: Rates_notices_interface
+Name: Rates_notices_interface
+URL: https://rates.cfsuite.au/rates
+Enabled for Callouts: True
+External Credential: Rates_notices_interface
+Generate Authorization Header: True
+Allowed Namespaces for Callouts: cfsuite1
+
+Add Custom Header
+
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+Sequence: 1
+
+Navigate to Custom Settings cfsuite Rates settings and 
+Add the Named credential to the Rates Notice Credential setting.
+Add the external Principal access to the cfsuite Customer Community login profile.
+
+Add the Rates Notice Download Named Credential
+
+First create the External Credential
+-------------------------------
+
+Label: Rates_notices_download_interface
+Name: Rates_notices_download_interface
+Authentication Protocol: Custom
+
+Create Principal
+------------------
+
+Parameter Name: Rates_notices_download_interface
+Sequence: 1
+Itentity Type: Named Principal
+
+Parameter 1
+------------
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+
+Create Named Credential
+---------------------
+
+Label: Rates_notices_download_interface
+Name: Rates_notices_download_interface
+URL: https://rates.cfsuite.au/download
+Enabled for Callouts: True
+External Credential: Rates_notices_download_interface
+Generate Authorization Header: True
+Allowed Namespaces for Callouts: cfsuite1
+
+Add Custom Header
+
+Name: Api-Key
+Value: rates-payment-secret-key-2025
+Sequence: 1
+
+Navigate to Custom Settings cfsuite Rates settings and 
+Add the Named credential to the Download Notice Named Credential setting.
+
+
+Add the all three external Principals access to the cfsuite Customer Community login profile.
+Add the custom permission to the community profile (cfsuite1__Create_Modify_Payments)
+Add read access to the User External Credential Object.
+
+Find the sharing set and add the two CFSuite Profiles.
+
+Add the following objects to the sharing set
+1. Account
+2. Contact
+3. CFSuite Bill
+4. CFSuite Misc
+5. Installment Plan
+6. Interested Parties
+7. Property Customer
+
+Add a record in the cfsuite1__CommunitySettings__c custom setting
+
+Add work category to the Finance Record types. Finance - Update Personal Details - Business Name
+Add Rates to the case Classification Picklist and to all the record types. 
+
+Add values to the Rates-Unrestricted support process.
+
+Open
+Assigned
+In Progress
+On Hold
+Approved
+Not Approved
+
+Set the compact layout to rates for the Record Type - Finance-Restricted/Unrestricted record types
+
+Activate the following flows
+
+CFSuite Rates Raise Encryption Request
+CFSuite_Rates_Encrypt_Details
+CFSuite_Rates_Remove_Encrypted_Details
+
+
+
+Add the following values to the Case Close Reason picklist and map them to the correct status/RT
+
+Finance-Restricted and Finance-Unrestricted record types and Status = Not Approved
+Other
+Agreement/Plan Already in Place
+Contact Payment Provider
+Insufficient Explanation
+No Issue
+No Supporting Documentation
+Policy
+Unable to Find Transaction
+Unrealistic or Unworkable Proposal
+
+Finance-Restricted and Finance-Unrestricted record types and Status = Approved
+Approved as Submitted
+Renegotiated Agreed Terms
+
+
+add Case.Classification = 'Rates' to record type 'fiancé restricted '& 'fiancé unrestricted'
+add Case.Department = '	Finance_Rates' to record type 'fiancé restricted '& 'fiancé unrestricted'
+add case.cfsuite1__Work_Category__c = 'Finance - Update Personal Details - Business Name' to record type 'fiancé restricted '& 'fiancé unrestricted'
+ 
+Object access:
+User External Credentials - R
+ 
+Missing request flow:
+CJ-Rates - Extension Request-Financial Hardship-Over 5 days---
+CJ-Rates - Extension Request-Financial Hardship-Under 5 days---
+ 
+CJ-Rates - Extension Request-Non-receipt of Rates Notice-Over 5 days---
+CJ-Rates - Extension Request-Non-receipt of Rates Notice-Under 5 days---
+ 
+CJ-Rates - Extension Request-Other-Over 5 days---
+CJ-Rates - Extension Request-Other-Under 5 days---
+ 
+CJ-Rates - Extension Request-Previous Good Payment History-Over 5 days---
+CJ-Rates - Extension Request-Previous Good Payment History-Under 5 days---
+ 
+CJ-Rates - Extension Request-Sickness, Accident or Hospitalisation-Over 5 days---
+CJ-Rates - Extension Request-Sickness, Accident or Hospitalisation-Under 5 days---
+
+Add Bill type setting for Rates Installment
+Add CFSuite Product for Rates Installment

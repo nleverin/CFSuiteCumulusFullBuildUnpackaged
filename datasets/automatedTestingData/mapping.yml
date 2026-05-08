@@ -1,0 +1,97 @@
+# Automated Testing Data - Mapping
+# Contains only the data needed for rates automated testing:
+# - 3 Person Accounts (Hammy, Hilda, Horatio Hampster)
+# - 5 Properties
+# - 7 Property Customer relationships
+# - Request Flow records
+#
+# NOTE: CFSuiteRatesSettings, CFSuiteSettings and Data_Settings are NOT included.
+# These are environment-specific and should already exist in the target sandbox/org.
+
+Insert Account:
+  sf_object: Account
+  fields:
+  - FirstName
+  - LastName
+  - Name
+  - PersonEmail
+  - PersonDoNotCall
+  - PersonHasOptedOutOfEmail
+  - PersonHasOptedOutOfFax
+  - RecordTypeId
+  - cfsuite1__Authority_ID__c
+  - cfsuite1__Customer_Type__c
+  - cfsuite1__Preferred_Communication_Method__c
+  - cfsuite1__Rates_notice_notifications__c
+  - cfsuite1__Preferred_Notification_Cases__c
+  filters:
+  - 'IsPersonAccount = true'
+  - "Name IN ('Hammy Hampster', 'Hilda Hampster', 'Horatio Hampster')"
+  lookups:
+    ParentId:
+      table:
+      - Account
+      after: Insert Account
+
+Insert cfsuite1__Property__c:
+  sf_object: cfsuite1__Property__c
+  fields:
+  - Name
+  - cfsuite1__Assessment_Number__c
+  - cfsuite1__Valuation_Number__c
+  - cfsuite1__Council_value__c
+  - cfsuite1__Full_year_balance__c
+  - cfsuite1__Financial_Year__c
+  - cfsuite1__Quarter_1_Balance__c
+  - cfsuite1__Quarter_1_Due_Date__c
+  - cfsuite1__Quarter_2_Balance__c
+  - cfsuite1__Quarter_2_Due_Date__c
+  - cfsuite1__Quarter_3_Balance__c
+  - cfsuite1__Quarter_3_Due_Date__c
+  - cfsuite1__Quarter_4_Balance__c
+  - cfsuite1__Quarter_4_Due_Date__c
+  - cfsuite1__Name_on_Rates_Notice__c
+  - cfsuite1__Last_evaluated_date__c
+
+Insert cfsuite1__Property_Customer__c:
+  sf_object: cfsuite1__Property_Customer__c
+  fields:
+  - cfsuite1__Relationship_Type__c
+  - cfsuite1__Relationship_Status__c
+  lookups:
+    cfsuite1__Customer__c:
+      table: Account
+    cfsuite1__Property__c:
+      table: cfsuite1__Property__c
+
+Insert cfsuite1__CFSuite_Request_Flow__c:
+  sf_object: cfsuite1__CFSuite_Request_Flow__c
+  fields:
+  - Name
+  - RecordTypeId
+  - cfsuite1__Active__c
+  - cfsuite1__Case_Category__c
+  - cfsuite1__Case_Origin__c
+  - cfsuite1__Case_Record_Type__c
+  - cfsuite1__Case_Record_Type_Transition__c
+  - cfsuite1__Category_Type__c
+  - cfsuite1__Community_Description__c
+  - cfsuite1__Community_Image_Tag__c
+  - cfsuite1__Department__c
+  - cfsuite1__Determine_Work_Category__c
+  - cfsuite1__Display_Order__c
+  - cfsuite1__Division__c
+  - cfsuite1__Entitlement_Process__c
+  - cfsuite1__Form_Type__c
+  - cfsuite1__Icon__c
+  - cfsuite1__Notification_Method_Required__c
+  - cfsuite1__Owner_Queue__c
+  - cfsuite1__SLA__c
+  - cfsuite1__Sub_Reason__c
+  - cfsuite1__Team__c
+  - cfsuite1__Work_Category__c
+  lookups:
+    cfsuite1__Category_Journey__c:
+      table: cfsuite1__CFSuite_Request_Flow__c
+    cfsuite1__Display_Category__c:
+      table: cfsuite1__CFSuite_Request_Flow__c

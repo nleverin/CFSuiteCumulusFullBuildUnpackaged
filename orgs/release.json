@@ -1,6 +1,8 @@
 {
 "orgName": "Demo Company",
 "edition": "Enterprise",
+"country": "AU",
+"language": "en_AU",
 "features": ["PersonAccounts", "FieldService:5", "Knowledge", "ServiceCloud", "Entitlements", "AuthorApex", "Communities", "CustomerCommunityLogin", "DefaultWorkflowUser", "MarketingUser","ServiceUser"],
   "settings": {
     "nameSettings": {
