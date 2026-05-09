@@ -56,3 +56,8 @@ robot/results/
 
 # Claude Code local config
 .claude/settings.local.json
+
+# Scratch / inspection artifacts under scripts/
+scripts/_*.py
+scripts/_*.json
+scripts/_*.err
