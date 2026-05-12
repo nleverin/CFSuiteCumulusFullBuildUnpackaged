@@ -9,14 +9,14 @@ Suite Setup     Open Test Browser With Video
 
 Due Date Visible On Case Detail Page
     [Documentation]
-    ...  CFSUITE-SR-006 (CoM-Test-028) - Due Date Is Visible And Calculated.
+    ...  CFSUITE-SR-014 (CoM-Test-028) - Due Date Is Visible And Calculated.
     ...  Verifies that after creating a case with an SLA, both the SLA and
     ...  Due Date labels render on the case detail page (highlights panel
     ...  / details section) and the API value is non-null.
 
     # 1. Create a minimal case (default record type)
     ${case_id} =    Salesforce Insert    Case
-    ...    Subject=CFSUITE-SR-006 visible due date
+    ...    Subject=CFSUITE-SR-014 visible due date
     ...    Status=New
     ...    Origin=Web
     Log To Console    Created case ${case_id}
@@ -41,4 +41,4 @@ Due Date Visible On Case Detail Page
 
     # 4. Cleanup
     Salesforce Delete    Case    ${case_id}
-    Log To Console    CFSUITE-SR-006 complete
+    Log To Console    CFSUITE-SR-014 complete

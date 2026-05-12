@@ -9,13 +9,13 @@ Suite Setup     Open Test Browser With Video
 
 Track Case Field History After Update
     [Documentation]
-    ...  CFSUITE-SR-008 (CoM-Test-052) - Track Request History.
+    ...  CFSUITE-SR-038 (CoM-Test-052) - Track Request History.
     ...  Verifies that updating a tracked Case field produces a CaseHistory
     ...  row visible both via the API and on the record detail page.
 
     # 1. Create a fresh case
     ${case_id} =    Salesforce Insert    Case
-    ...    Subject=CFSUITE-SR-008 history test
+    ...    Subject=CFSUITE-SR-038 history test
     ...    Status=New
     ...    Origin=Web
     Log To Console    Created case ${case_id}
@@ -57,4 +57,4 @@ Track Case Field History After Update
 
     # 6. Cleanup
     Salesforce Delete    Case    ${case_id}
-    Log To Console    CFSUITE-SR-008 complete
+    Log To Console    CFSUITE-SR-038 complete

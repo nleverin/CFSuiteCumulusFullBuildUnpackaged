@@ -9,7 +9,7 @@ Suite Setup     Open Test Browser With Video
 
 Update SLA Updates Original Due Date
     [Documentation]
-    ...  CFSUITE-SR-004 (CoM-Test-024) - Correctly Calculate Request Due Date.
+    ...  CFSUITE-SR-010 (CoM-Test-024) - Correctly Calculate Request Due Date.
     ...  Auto-calc only runs when a case is created via the CFSuite Request
     ...  Flow path; bare API inserts don't trigger it. This test instead
     ...  verifies that when the Original Due Date is set explicitly,
@@ -22,7 +22,7 @@ Update SLA Updates Original Due Date
 
     # 1. Create a base case
     ${case_id} =    Salesforce Insert    Case
-    ...    Subject=CFSUITE-SR-004 due-date persistence
+    ...    Subject=CFSUITE-SR-010 due-date persistence
     ...    Status=New
     ...    Origin=Web
     Log To Console    Created case ${case_id}
@@ -42,4 +42,4 @@ Update SLA Updates Original Due Date
 
     # 4. Cleanup
     Salesforce Delete    Case    ${case_id}
-    Log To Console    CFSUITE-SR-004 complete
+    Log To Console    CFSUITE-SR-010 complete

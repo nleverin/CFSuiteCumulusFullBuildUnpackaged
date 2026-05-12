@@ -9,7 +9,7 @@ Suite Setup     Open Test Browser With Video
 
 Link Multiple Customers As Interested Parties
     [Documentation]
-    ...  CFSUITE-SR-007 (CoM-Test-049) - Link Customers To A Request As IPs.
+    ...  CFSUITE-SR-035 (CoM-Test-049) - Link Customers To A Request As IPs.
     ...  Verifies that two cfsuite1__Interested_Parties__c records can be
     ...  inserted against the same case, each pointing at a different
     ...  Person Account (Hammy Hampster, Hilda Hampster), and that
@@ -27,7 +27,7 @@ Link Multiple Customers As Interested Parties
 
     # 2. Create a case
     ${case_id} =    Salesforce Insert    Case
-    ...    Subject=CFSUITE-SR-007 IP test
+    ...    Subject=CFSUITE-SR-035 IP test
     ...    Status=New
     ...    Origin=Web
     Log To Console    Created case ${case_id}
@@ -61,4 +61,4 @@ Link Multiple Customers As Interested Parties
     Salesforce Delete    cfsuite1__Interested_Parties__c    ${ip1_id}
     Salesforce Delete    cfsuite1__Interested_Parties__c    ${ip2_id}
     Salesforce Delete    Case    ${case_id}
-    Log To Console    CFSUITE-SR-007 complete
+    Log To Console    CFSUITE-SR-035 complete

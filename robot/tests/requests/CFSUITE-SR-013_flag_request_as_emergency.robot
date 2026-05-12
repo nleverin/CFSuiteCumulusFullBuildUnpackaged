@@ -9,13 +9,13 @@ Suite Setup     Open Test Browser With Video
 
 Flag Request As Emergency Hazard
     [Documentation]
-    ...  CFSUITE-SR-005 (CoM-Test-027) - Flag Request as an Emergency.
+    ...  CFSUITE-SR-013 (CoM-Test-027) - Flag Request as an Emergency.
     ...  Verifies Case.cfsuite1__Is_Hazard__c can be flipped from No to Yes
     ...  and the change is reflected on the record detail page in the UI.
 
     # 1. Create a fresh case via API in the not-hazard state
     ${case_id} =    Salesforce Insert    Case
-    ...    Subject=CFSUITE-SR-005 hazard test
+    ...    Subject=CFSUITE-SR-013 hazard test
     ...    Status=New
     ...    Origin=Web
     ...    cfsuite1__Is_Hazard__c=No
@@ -40,4 +40,4 @@ Flag Request As Emergency Hazard
 
     # 6. Cleanup
     Salesforce Delete    Case    ${case_id}
-    Log To Console    CFSUITE-SR-005 complete
+    Log To Console    CFSUITE-SR-013 complete

@@ -1,8 +1,9 @@
 *** Settings ***
 
 Resource        ../resources/playwright_common.robot
+Resource        ../resources/test_data.robot
 
-Suite Setup     Open Test Browser With Video
+Suite Setup     Run Keywords    Ensure SR Baseline    AND    Open Test Browser With Video
 # Suite Teardown  Delete Records and Close Browser
 
 

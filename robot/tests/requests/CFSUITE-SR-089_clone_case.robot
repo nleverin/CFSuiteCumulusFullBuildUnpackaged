@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource        ../resources/playwright_common.robot
+Resource        ../resources/test_data.robot
 
 Suite Setup     Open Test Browser With Video
 # Suite Teardown  Delete Records and Close Browser
@@ -13,14 +14,9 @@ Clone Case
     ...  Test opens an existing Case, clicks "Clone Case" button,
     ...  selects category options, and validates the cloned case is created successfully.
 
-    # Query for an existing Case to clone
-    Log To Console    Querying for existing cases...
-    @{cases} =    Salesforce Query    Case    select=Id    limit=1
-
-    ${case_count} =    Get Length    ${cases}
-    Run Keyword If    ${case_count} == 0    Fail    No existing cases found in org.
-
-    ${source_case_id} =    Set Variable    ${cases}[0][Id]
+    # Need any existing Case to clone from. On a fresh org there may be
+    # none, so create a throwaway one as a fallback.
+    ${source_case_id} =    Get Existing Case Or Create Fallback    descriptor=clone-source
     Log To Console    Source case ID: ${source_case_id}
 
     # Navigate to the source case detail page

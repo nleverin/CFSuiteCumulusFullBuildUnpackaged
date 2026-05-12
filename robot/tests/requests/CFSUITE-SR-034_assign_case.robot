@@ -41,12 +41,18 @@ Assign A Case
     ${expected_sla} =    Set Variable    ${request_flows}[0][cfsuite1__SLA__c]
     Log To Console    Expected SLA after assignment: ${expected_sla}
 
-    # Query for User named "User User" to get their ID
-    Log To Console    Querying for user named 'User User'...
-    @{users} =    Salesforce Query    User    select=Id,Name    where=Name='User User'    limit=1
+    # Find any active internal (non-portal) user to assign the case to.
+    # Avoids hardcoding the scratch-admin name ("User User") which doesn't
+    # exist on sandboxes.
+    Log To Console    Querying for an active internal user to assign to...
+    @{users} =    Salesforce Query    User
+    ...    select=Id,Name
+    ...    where=IsActive=TRUE AND UserType='Standard' AND ContactId=NULL
+    ...    order_by=CreatedDate
+    ...    limit=1
 
     ${user_count} =    Get Length    ${users}
-    Run Keyword If    ${user_count} == 0    Fail    No user found with name 'User User'. Please check the username.
+    Run Keyword If    ${user_count} == 0    Fail    No active internal user found in this org.
 
     ${user_id} =    Set Variable    ${users}[0][Id]
     ${user_name} =    Set Variable    ${users}[0][Name]

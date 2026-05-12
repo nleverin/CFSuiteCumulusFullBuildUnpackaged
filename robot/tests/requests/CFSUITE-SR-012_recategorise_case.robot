@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource        ../resources/playwright_common.robot
+Resource        ../resources/test_data.robot
 
 Suite Setup     Open Test Browser With Video
 # Suite Teardown  Delete Records and Close Browser
@@ -15,15 +16,10 @@ Recategorise Existing Case
     ...  validates additional fields appear, clicks Re-Categorise button,
     ...  and validates the category fields are updated correctly.
 
-    # Query for an existing Case
-    Log To Console    Querying for existing cases...
-    @{cases} =    Salesforce Query    Case    select=Id    limit=1
-
-    ${case_count} =    Get Length    ${cases}
-    Run Keyword If    ${case_count} == 0    Fail    No existing cases found in org.
-
-    ${case_id} =    Set Variable    ${cases}[0][Id]
-    Log To Console    Found case to recategorise: ${case_id}
+    # Need any existing Case. On a fresh org there may be none, so create
+    # a throwaway one as a fallback.
+    ${case_id} =    Get Existing Case Or Create Fallback    descriptor=recategorise
+    Log To Console    Case to recategorise: ${case_id}
 
     # Navigate to the case detail page
     Navigate To Record    ${case_id}
