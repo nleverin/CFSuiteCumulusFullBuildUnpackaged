@@ -62,6 +62,9 @@ These don't depend on any fixture data — they each insert a Case via API and c
 | CFSUITE-SR-081 | Hammy account + active community user for Hammy | ensure_sr_baseline + manual community-user enablement | manual |
 | CFSUITE-SR-086 | Hammy account + active community user for Hammy | ensure_sr_baseline + manual community-user enablement | manual |
 | CFSUITE-SR-089 | An existing Case (fallback creates) | per-test fallback | OK |
+| CFSUITE-SR-078 | Category_Journey Request Flow with Form_Type='Flow' (Q&A) | transient — test creates + deletes its own | OK |
+| CFSUITE-SR-079 | Category_Journey record type (mgd-pkg); test creates a transient flow with Require_Customer=true | mgd-pkg + transient | OK |
+| CFSUITE-SR-087 | Same as SR-079 but Require_Customer=false | mgd-pkg + transient | OK |
 
 ## Open data gaps
 
@@ -75,6 +78,8 @@ These are requirements observed but not yet automated. Listed in order of impact
 
 4. **Sample Knowledge Articles for SR-008 / SR-022 (deferred).** When we revisit the deferred tests around Knowledge article display, we'll need at least one published Knowledge article mapped to a Request Flow category. **Action:** defer until those tests are picked up.
 
+5. **Community-portal UI signup flow (SR-075 / SR-076).** Both depend on the community portal sign-up form, browser-driven, and SR-076 specifically needs the duplicate-email match logic exercised. **Action:** defer until we have a mailbox testing service (the email verification step) and stable community-portal UI scaffolding.
+
 ## Per-batch data add summary
 
 As we extend the test suite, this table captures the *new* data adds each batch introduced.
@@ -86,5 +91,6 @@ As we extend the test suite, this table captures the *new* data adds each batch 
 | Batch C (case details) | Hammy alert fields (set + restore in-test) | none — handled in-test |
 | Batch D (categories/routing) | Display_Category + Category_Journey record types (mgd-pkg); Case_Assignment record with assignment data (mgd-pkg seed) | none — mgd-pkg provides |
 | Batch E (complaints) | none — all self-contained | none |
+| Batch F (community portal) | Transient Request Flow records with specific Form_Type / Require_Customer values | none — tests create + delete their own. SR-075 (signup UI) and SR-076 (account-link logic) deferred — both depend on the registration UI we can't easily exercise via API |
 
 Add a row each batch.
