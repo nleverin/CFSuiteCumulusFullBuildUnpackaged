@@ -12,7 +12,7 @@ Living tracker for the data prerequisites of each automated CFSuite robot test u
 
 | Source | Provides | Where |
 |---|---|---|
-| **`ensure_sr_baseline.py`** | 3 Person Accounts (Hammy, Hilda, Horatio Hampster) + admin Role check + community user check | [scripts/automatedTestTooling/ensure_sr_baseline.py](../scripts/automatedTestTooling/ensure_sr_baseline.py) |
+| **`ensure_sr_baseline.py`** | 3 Person Accounts (Hammy / Hilda / Horatio Hampster) + 1 Business Account ('CFSUITE-TEST Business Pty Ltd' with primary contact Bert Business) + admin Role check + community user checks for all | [scripts/automatedTestTooling/ensure_sr_baseline.py](../scripts/automatedTestTooling/ensure_sr_baseline.py) |
 | **`ensure_rates_baseline.py`** | SR baseline + 5 Properties + 7 Property_Customer relationships | [scripts/automatedTestTooling/ensure_rates_baseline.py](../scripts/automatedTestTooling/ensure_rates_baseline.py) |
 | **Managed package (`cfsuite1__`)** | Record types (Standard_Request, Display_Category, Case_Assignment, etc.); request categories (Animals > Dog > etc.); validation rules; triggers; out-of-box Case Assignment Request Flow records | Comes with package install |
 | **Per-test fallback** | `Get Existing Case Or Create Fallback` creates a throwaway Case if no case exists | [robot/tests/resources/test_data.robot](../robot/tests/resources/test_data.robot) |
@@ -65,6 +65,9 @@ These don't depend on any fixture data — they each insert a Case via API and c
 | CFSUITE-SR-078 | Category_Journey Request Flow with Form_Type='Flow' (Q&A) | transient — test creates + deletes its own | OK |
 | CFSUITE-SR-079 | Category_Journey record type (mgd-pkg); test creates a transient flow with Require_Customer=true | mgd-pkg + transient | OK |
 | CFSUITE-SR-087 | Same as SR-079 but Require_Customer=false | mgd-pkg + transient | OK |
+| CFSUITE-SR-083 | Hammy Hampster + active community user | ensure_sr_baseline + manual enablement | manual |
+| CFSUITE-SR-084 | CFSUITE-TEST Business Pty Ltd + Bert Business contact + active community user for that contact | ensure_sr_baseline (acct + contact) + manual community-user enablement on Contact | manual (community user) |
+| CFSUITE-SR-085 | Hammy Hampster + community user; toggle Sync_with_NAR__c with in-test save/restore | ensure_sr_baseline + in-test save/restore | OK |
 
 ## Open data gaps
 
@@ -92,5 +95,6 @@ As we extend the test suite, this table captures the *new* data adds each batch 
 | Batch D (categories/routing) | Display_Category + Category_Journey record types (mgd-pkg); Case_Assignment record with assignment data (mgd-pkg seed) | none — mgd-pkg provides |
 | Batch E (complaints) | none — all self-contained | none |
 | Batch F (community portal) | Transient Request Flow records with specific Form_Type / Require_Customer values | none — tests create + delete their own. SR-075 (signup UI) and SR-076 (account-link logic) deferred — both depend on the registration UI we can't easily exercise via API |
+| Batch G (customer profile editing) | 1 Business Account + Contact baseline ('CFSUITE-TEST Business Pty Ltd' + Bert Business); in-test NAR-sync toggle on Hammy | `ensure_sr_baseline.py` extended; community-user enablement on Bert remains manual |
 
 Add a row each batch.

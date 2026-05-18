@@ -48,6 +48,25 @@ BASELINE_PERSON_ACCOUNTS = [
 ]
 
 
+@dataclass(frozen=True)
+class BusinessAccount:
+    """Defines a Business Account + its primary Contact."""
+    business_name: str
+    contact_first_name: str
+    contact_last_name: str
+    contact_email: str
+
+
+BASELINE_BUSINESS_ACCOUNTS = [
+    BusinessAccount(
+        business_name="CFSUITE-TEST Business Pty Ltd",
+        contact_first_name="Bert",
+        contact_last_name="Business",
+        contact_email="bert.business@test.example.com",
+    ),
+]
+
+
 def get_salesforce_client(org_alias: str):
     """Return (sf_client, org_config) for the named cci org."""
     runtime = CliRuntime()
@@ -107,6 +126,59 @@ def insert_person_account(sf, pa: PersonAccount, record_type_id: str) -> str:
     if not result.get("success"):
         raise RuntimeError(f"Account insert failed for {pa.display_name}: {result}")
     return result["id"]
+
+
+def find_existing_business_accounts(sf) -> dict[str, dict]:
+    """Return {business_name: account_record} for the baseline business accounts."""
+    names = "', '".join(b.business_name for b in BASELINE_BUSINESS_ACCOUNTS)
+    rows = query_all(
+        sf,
+        f"SELECT Id, Name FROM Account "
+        f"WHERE IsPersonAccount = FALSE AND Name IN ('{names}')",
+    )
+    return {row["Name"]: row for row in rows}
+
+
+def find_contact_for_business(sf, account_id: str, first: str, last: str) -> dict | None:
+    return query_one(
+        sf,
+        f"SELECT Id, FirstName, LastName, Email FROM Contact "
+        f"WHERE AccountId = '{account_id}' AND FirstName = '{first}' AND LastName = '{last}' LIMIT 1",
+    )
+
+
+def insert_business_account(sf, ba: BusinessAccount) -> str:
+    result = sf.Account.create({"Name": ba.business_name})
+    if not result.get("success"):
+        raise RuntimeError(f"Business Account insert failed for {ba.business_name}: {result}")
+    return result["id"]
+
+
+def insert_business_contact(sf, account_id: str, ba: BusinessAccount) -> str:
+    result = sf.Contact.create({
+        "FirstName": ba.contact_first_name,
+        "LastName":  ba.contact_last_name,
+        "Email":     ba.contact_email,
+        "AccountId": account_id,
+    })
+    if not result.get("success"):
+        raise RuntimeError(f"Business Contact insert failed: {result}")
+    return result["id"]
+
+
+def check_business_community_user(sf, contact_id: str, label: str) -> tuple[bool, str]:
+    rows = query_all(
+        sf,
+        f"SELECT Id, Username, IsActive FROM User "
+        f"WHERE ContactId = '{contact_id}' AND IsActive = TRUE LIMIT 1",
+    )
+    if not rows:
+        return False, (
+            f"{label}: no active community user on the business contact. "
+            f"Fix manually: open the Contact, Manage External User > Enable Customer User "
+            f"(License: Customer Community Login, Profile: 'cfsuite community login user')."
+        )
+    return True, f"{label}: community user {rows[0]['Username']}"
 
 
 def check_admin_role(sf, admin_username: str) -> tuple[bool, str]:
@@ -192,6 +264,42 @@ def main(argv: list[str] | None = None) -> int:
     elif missing and not write_mode:
         print(f"  ({len(missing)} gap(s) NOT created -- dry-run. Pass --write to insert.)")
 
+    # -- Business Accounts + primary Contact -------------------------------
+    print("\n== Business Accounts ==")
+    existing_biz = find_existing_business_accounts(sf)
+    business_contact_ids: dict[str, str] = {}
+    for ba in BASELINE_BUSINESS_ACCOUNTS:
+        rec = existing_biz.get(ba.business_name)
+        if rec is None:
+            print(f"  GAP   {ba.business_name}  -- not present")
+            if write_mode:
+                try:
+                    acct_id = insert_business_account(sf, ba)
+                    print(f"  +     Created {ba.business_name}  (Id: {acct_id})")
+                    contact_id = insert_business_contact(sf, acct_id, ba)
+                    print(f"  +     Created contact {ba.contact_first_name} {ba.contact_last_name}  (Id: {contact_id})")
+                    business_contact_ids[ba.business_name] = contact_id
+                except Exception as exc:
+                    print(f"  FAIL  Insert {ba.business_name}: {exc}")
+            else:
+                print(f"        (NOT created -- dry-run. Pass --write to insert.)")
+            continue
+        acct_id = rec["Id"]
+        print(f"  OK    {ba.business_name}  (Id: {acct_id})")
+        existing_contact = find_contact_for_business(sf, acct_id, ba.contact_first_name, ba.contact_last_name)
+        if existing_contact:
+            print(f"  OK    contact {ba.contact_first_name} {ba.contact_last_name}  (Id: {existing_contact['Id']})")
+            business_contact_ids[ba.business_name] = existing_contact["Id"]
+        else:
+            print(f"  GAP   contact {ba.contact_first_name} {ba.contact_last_name}  -- not present")
+            if write_mode:
+                try:
+                    contact_id = insert_business_contact(sf, acct_id, ba)
+                    print(f"  +     Created contact (Id: {contact_id})")
+                    business_contact_ids[ba.business_name] = contact_id
+                except Exception as exc:
+                    print(f"  FAIL  Insert contact: {exc}")
+
     # -- Admin Role check (read-only) --------------------------------------
     print("\n== Admin user role ==")
     admin_username = getattr(org_config, "username", None) or "(unknown)"
@@ -214,16 +322,34 @@ def main(argv: list[str] | None = None) -> int:
         if not ok:
             community_gaps += 1
 
+    # -- Business community users (read-only) ------------------------------
+    print("\n== Business community users ==")
+    biz_user_gaps = 0
+    for ba in BASELINE_BUSINESS_ACCOUNTS:
+        contact_id = business_contact_ids.get(ba.business_name)
+        label = f"{ba.business_name} / {ba.contact_first_name} {ba.contact_last_name}"
+        if not contact_id:
+            print(f"  SKIP  {label} -- contact not present yet")
+            biz_user_gaps += 1
+            continue
+        ok, msg = check_business_community_user(sf, contact_id, label)
+        print(f"  {'OK   ' if ok else 'GAP  '}{msg}")
+        if not ok:
+            biz_user_gaps += 1
+
     # -- Summary -----------------------------------------------------------
     print("\n== Summary ==")
     accounts_missing = len([pa for pa in BASELINE_PERSON_ACCOUNTS if pa.display_name not in find_existing_baseline_accounts(sf)])
-    print(f"  Person Accounts missing: {accounts_missing}")
-    print(f"  Community user gaps:     {community_gaps}")
+    business_missing = len([ba for ba in BASELINE_BUSINESS_ACCOUNTS if ba.business_name not in find_existing_business_accounts(sf)])
+    print(f"  Person Accounts missing:        {accounts_missing}")
+    print(f"  Business Accounts missing:      {business_missing}")
+    print(f"  Community user gaps (persons):  {community_gaps}")
+    print(f"  Community user gaps (business): {biz_user_gaps}")
 
     # Exit code: 0 only when everything we *can* fix automatically is in place.
     # Read-only gaps (admin role, community users) don't fail the script but
     # are surfaced to the operator.
-    return 0 if accounts_missing == 0 else 2
+    return 0 if (accounts_missing == 0 and business_missing == 0) else 2
 
 
 if __name__ == "__main__":
